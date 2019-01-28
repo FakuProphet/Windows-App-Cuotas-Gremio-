@@ -1,0 +1,16 @@
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormPrincipal.resources
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormAdmAfiliados.resources
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.Properties.Resources.resources
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.csproj.GenerateResource.cache
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.csproj.CoreCompileInputs.cache
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\bin\Debug\WindowsCuotasApp.exe.config
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\bin\Debug\WindowsCuotasApp.exe
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\bin\Debug\WindowsCuotasApp.pdb
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\bin\Debug\MetroFramework.Design.dll
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\bin\Debug\MetroFramework.dll
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.csproj.CopyComplete
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.exe
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.pdb
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.csprojAssemblyReference.cache
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\WindowsCuotasApp\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormPagoCuota.resources
