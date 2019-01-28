@@ -73,6 +73,12 @@
     <Compile Include="FormAdmAfiliado.Designer.cs">
       <DependentUpon>FormAdmAfiliado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListadoSociosCuotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoSociosCuotas.Designer.cs">
+      <DependentUpon>FormListadoSociosCuotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPagoCuota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmAfiliado.resx">
       <DependentUpon>FormAdmAfiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoSociosCuotas.resx">
+      <DependentUpon>FormListadoSociosCuotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPagoCuota.resx">
       <DependentUpon>FormPagoCuota.cs</DependentUpon>
@@ -116,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8_PDF_32.png" />
     <None Include="Resources\icons8_Save_32.png" />
     <None Include="Resources\icons8_User_Groups_64.png" />
     <None Include="Resources\icons8_Add_32.png" />
