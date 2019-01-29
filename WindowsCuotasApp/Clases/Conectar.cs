@@ -9,7 +9,6 @@ namespace WindowsCuotasApp.Clases
         static string cadena = "Data Source=.;Initial Catalog=cuotasDB;Integrated Security=True";
 
 
-
         public static string pCadena
         {
             get { return cadena; }
