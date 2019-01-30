@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 
 namespace WindowsCuotasApp.Clases
 {
@@ -10,21 +10,13 @@ namespace WindowsCuotasApp.Clases
 
         public void registrarAfiliado(Afiliado a)
         {
-            /*INCOMPLETO*/
-            try
-            {
+                /*INCOMPLETO*/
+           
                 SqlCommand cmd = new SqlCommand("proc_insertar_afiliado",Conectar.ObtenerConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre; 
-            }
-            catch(Exception ex)
-            {
-
-            }
-            finally
-            {
-
-            }
+                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre;
+                cmd.Parameters.Add("@apellido", SqlDbType.VarChar).Value = a.apellido;
+          
 
         }
 
