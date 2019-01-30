@@ -263,6 +263,7 @@
             this.btnGrabar.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Save_32;
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnCancelar
             // 

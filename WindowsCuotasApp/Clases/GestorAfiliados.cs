@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 
@@ -6,9 +7,30 @@ namespace WindowsCuotasApp.Clases
 {
     class GestorAfiliados
     {
-        public DataTable consultarTabla(string nombreTabla)
+
+        public void registrarAfiliado(Afiliado a)
         {
-            
+            /*INCOMPLETO*/
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_insertar_afiliado",Conectar.ObtenerConexion());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre; 
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
+
+        }
+
+
+        public DataTable consultarTabla(string nombreTabla)
+        {       
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter();
             DataSet ds = new DataSet();
