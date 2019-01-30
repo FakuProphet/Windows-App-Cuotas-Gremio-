@@ -58,6 +58,7 @@
     <Compile Include="Clases\Conectar.cs" />
     <Compile Include="Clases\FormaPago.cs" />
     <Compile Include="Clases\GestorAfiliados.cs" />
+    <Compile Include="Clases\GestorDGV.cs" />
     <Compile Include="Clases\Localidad.cs" />
     <Compile Include="Clases\PagoCuota.cs" />
     <Compile Include="Clases\TipoAfiliado.cs" />
