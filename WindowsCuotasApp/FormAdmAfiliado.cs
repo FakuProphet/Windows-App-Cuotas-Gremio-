@@ -37,7 +37,7 @@ namespace WindowsCuotasApp
         {
             cargarCombo(cboLocalidades, "localidades");
             cargarCombo(cboForma, "formasPago");
-            cargarCombo(cboTipoSocio, "tiposAfiliado");
+            cargarCombo(cboTipoAfil, "tiposAfiliado");
             combosPorDefecto();
         }
 
@@ -136,7 +136,34 @@ namespace WindowsCuotasApp
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Afiliado nuevo = new Afiliado();
+                nuevo.nombre = txtNombre.Text;
+                nuevo.apellido = txtApellido.Text;
+                nuevo.nroDoc = Convert.ToInt32(txtNroDoc.Text);
+                nuevo.nroTel = txtNroTel.Text;
+                nuevo.email = txtEmail.Text;
+                nuevo.fechaNac = dtpFechaNac.Value.ToShortDateString();
+                nuevo.localidad = Convert.ToInt32(cboLocalidades.SelectedValue);
+                nuevo.formaPago = Convert.ToInt32(cboForma.SelectedValue);
+                nuevo.tipoAfiliado = Convert.ToInt32(cboTipoAfil.SelectedValue);
+                nuevo.barrio = txtBarrio.Text;
+                nuevo.direccion = txtDir.Text;
 
+                if (MetroFramework.MetroMessageBox.Show(this, "Desea registrar el afiliado dni nro: "  + nuevo.nroDoc +"?" , "Alta de afiliado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    g.registrarAfiliado(nuevo);
+                }
+                else
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this,"Error en el registro del afiliado: " + ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Hand);
+            }
         }
     }
 }

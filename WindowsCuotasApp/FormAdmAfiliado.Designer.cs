@@ -35,7 +35,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.cboForma = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.cboTipoSocio = new System.Windows.Forms.ComboBox();
+            this.cboTipoAfil = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -73,7 +73,7 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.cboForma);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.cboTipoSocio);
+            this.groupBox1.Controls.Add(this.cboTipoAfil);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtBuscar);
@@ -127,11 +127,11 @@
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
             // 
-            // cboTipoSocio
+            // cboTipoAfil
             // 
-            this.cboTipoSocio.FormattingEnabled = true;
-            resources.ApplyResources(this.cboTipoSocio, "cboTipoSocio");
-            this.cboTipoSocio.Name = "cboTipoSocio";
+            this.cboTipoAfil.FormattingEnabled = true;
+            resources.ApplyResources(this.cboTipoAfil, "cboTipoAfil");
+            this.cboTipoAfil.Name = "cboTipoAfil";
             // 
             // label12
             // 
@@ -344,7 +344,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cboForma;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cboTipoSocio;
+        private System.Windows.Forms.ComboBox cboTipoAfil;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
     }
 }

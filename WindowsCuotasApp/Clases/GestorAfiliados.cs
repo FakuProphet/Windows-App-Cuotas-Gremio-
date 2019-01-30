@@ -10,13 +10,25 @@ namespace WindowsCuotasApp.Clases
        
         public void registrarAfiliado(Afiliado a)
         {
-                /*INCOMPLETO*/
-           
-                SqlCommand cmd = new SqlCommand("proc_insertar_afiliado",Conectar.ObtenerConexion());
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre;
-                cmd.Parameters.Add("@apellido", SqlDbType.VarChar).Value = a.apellido;
-          
+                
+           /*sujeto a cambios*/
+            SqlCommand cmd = new SqlCommand("proc_insertar_afiliado",Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre;
+            cmd.Parameters.Add("@apellido", SqlDbType.VarChar).Value = a.apellido;
+            cmd.Parameters.Add("@nroDoc", SqlDbType.Int).Value = a.nroDoc;
+            cmd.Parameters.Add("@fechaNac", SqlDbType.VarChar).Value = a.fechaNac;
+            cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = a.email;
+            cmd.Parameters.Add("@nroTel", SqlDbType.VarChar).Value = a.nroTel;
+            cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = a.direccion;
+            cmd.Parameters.Add("@barrio", SqlDbType.VarChar).Value = a.barrio;
+            cmd.Parameters.Add("@localidad", SqlDbType.Int).Value = a.localidad;
+            cmd.Parameters.Add("@tipoAfiliadoID", SqlDbType.Int).Value = a.tipoAfiliado;
+            cmd.Parameters.Add("@formaPagoID", SqlDbType.Int).Value = a.formaPago;
+            
+            cmd.ExecuteNonQuery();
+            Conectar.CerrarConexion();
+
 
         }
 

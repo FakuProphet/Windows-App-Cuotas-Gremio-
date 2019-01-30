@@ -19,5 +19,6 @@ namespace WindowsCuotasApp.Clases
          public string barrio { get; set; }
          public int localidad { get; set; }
          public int tipoAfiliado { get; set; }
+         public int formaPago { get; set; }
     }
 }
