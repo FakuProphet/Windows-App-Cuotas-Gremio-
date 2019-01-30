@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Clases\Afiliado.cs" />
     <Compile Include="Clases\Conectar.cs" />
+    <Compile Include="Clases\Fecha.cs" />
     <Compile Include="Clases\FormaPago.cs" />
     <Compile Include="Clases\GestorAfiliados.cs" />
     <Compile Include="Clases\GestorDGV.cs" />
