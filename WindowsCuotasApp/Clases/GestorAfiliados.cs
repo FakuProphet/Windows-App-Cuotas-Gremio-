@@ -8,6 +8,7 @@ namespace WindowsCuotasApp.Clases
     class GestorAfiliados
     {
         /*Prueba*/
+        /*prueba 2*/
         public void registrarAfiliado(Afiliado a)
         {
                 /*INCOMPLETO*/
