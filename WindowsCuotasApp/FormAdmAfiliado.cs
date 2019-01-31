@@ -51,6 +51,16 @@ namespace WindowsCuotasApp
         {
             Afiliado[] miVector = convertir();
             txtNombre.Text = miVector[x].nombre;
+            txtApellido.Text = miVector[x].apellido;
+            txtNroDoc.Text = miVector[x].nroDoc.ToString();
+            txtEmail.Text = miVector[x].email;
+            txtNroTel.Text = miVector[x].nroTel;
+            txtDir.Text = miVector[x].direccion;
+            txtBarrio.Text = miVector[x].barrio;
+            cboLocalidades.SelectedValue = miVector[x].localidad;
+            cboTipoAfil.SelectedValue = miVector[x].tipoAfiliado;
+            cboForma.SelectedValue = miVector[x].formaPago;
+            txtCbu.Text = miVector[x].cbu;
         }
 
         
