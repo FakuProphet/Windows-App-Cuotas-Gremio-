@@ -8,11 +8,12 @@ namespace WindowsCuotasApp.Clases
     class GestorAfiliados
     {
        
-        public void registrarAfiliado(Afiliado a)
+        
+        public void registrarAfiliado(Afiliado a , string nombreProc )
         {
                 
-           /*sujeto a cambios*/
-            SqlCommand cmd = new SqlCommand("proc_insertar_afiliado",Conectar.ObtenerConexion());
+          
+            SqlCommand cmd = new SqlCommand(nombreProc,Conectar.ObtenerConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre;
             cmd.Parameters.Add("@apellido", SqlDbType.VarChar).Value = a.apellido;
@@ -25,12 +26,43 @@ namespace WindowsCuotasApp.Clases
             cmd.Parameters.Add("@localidad", SqlDbType.Int).Value = a.localidad;
             cmd.Parameters.Add("@tipoAfiliado", SqlDbType.Int).Value = a.tipoAfiliado;
             cmd.Parameters.Add("@metodoPagoID", SqlDbType.Int).Value = a.formaPago;
-            cmd.Parameters.Add("@nroCuenta", SqlDbType.VarChar).Value = a.cbu;
+            if (a.formaPago == 2)
+            {
+                cmd.Parameters.Add("@nroCuenta", SqlDbType.VarChar).Value = a.cbu;
+            }
             cmd.ExecuteNonQuery();
             Conectar.CerrarConexion();
 
 
         }
+
+        
+        /*sede*/
+        /*
+        public void registrarAfiliadoFormaUno(Afiliado a)
+        {
+
+            
+            SqlCommand cmd = new SqlCommand("proc_insertar_afiliado_a", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre;
+            cmd.Parameters.Add("@apellido", SqlDbType.VarChar).Value = a.apellido;
+            cmd.Parameters.Add("@nroDoc", SqlDbType.Int).Value = a.nroDoc;
+            cmd.Parameters.Add("@fechaNac", SqlDbType.VarChar).Value = a.fechaNac;
+            cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = a.email;
+            cmd.Parameters.Add("@nroTel", SqlDbType.VarChar).Value = a.nroTel;
+            cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = a.direccion;
+            cmd.Parameters.Add("@barrio", SqlDbType.VarChar).Value = a.barrio;
+            cmd.Parameters.Add("@localidad", SqlDbType.Int).Value = a.localidad;
+            cmd.Parameters.Add("@tipoAfiliado", SqlDbType.Int).Value = a.tipoAfiliado;
+            cmd.Parameters.Add("@metodoPagoID", SqlDbType.Int).Value = a.formaPago;
+            
+            cmd.ExecuteNonQuery();
+            Conectar.CerrarConexion();
+
+
+        }
+        */
 
 
         public DataTable consultarTabla(string nombreTabla)

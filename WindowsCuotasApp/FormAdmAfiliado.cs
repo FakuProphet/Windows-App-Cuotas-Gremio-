@@ -136,30 +136,45 @@ namespace WindowsCuotasApp
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+
+            int seleccionFormaPago = Convert.ToInt32(cboForma.SelectedValue);
+
             try
             {
-                Afiliado nuevo = new Afiliado();
-                nuevo.nombre = txtNombre.Text;
-                nuevo.apellido = txtApellido.Text;
-                nuevo.nroDoc = Convert.ToInt32(txtNroDoc.Text);
-                nuevo.nroTel = txtNroTel.Text;
-                nuevo.email = txtEmail.Text;
-                nuevo.fechaNac = dtpFechaNac.Value.ToShortDateString();
-                nuevo.localidad = Convert.ToInt32(cboLocalidades.SelectedValue);
-                nuevo.formaPago = Convert.ToInt32(cboForma.SelectedValue);
-                nuevo.tipoAfiliado = Convert.ToInt32(cboTipoAfil.SelectedValue);
-                nuevo.barrio = txtBarrio.Text;
-                nuevo.direccion = txtDir.Text;
-                nuevo.cbu = txtCbu.Text;
+               
 
-                if (MetroFramework.MetroMessageBox.Show(this, "Desea registrar el afiliado dni nro: "  + nuevo.nroDoc +"?" , "Alta de afiliado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    g.registrarAfiliado(nuevo);
-                }
-                else
-                {
+               
+                    Afiliado nuevo = new Afiliado();
+                    nuevo.nombre = txtNombre.Text;
+                    nuevo.apellido = txtApellido.Text;
+                    nuevo.nroDoc = Convert.ToInt32(txtNroDoc.Text);
+                    nuevo.nroTel = txtNroTel.Text;
+                    nuevo.email = txtEmail.Text;
+                    nuevo.fechaNac = dtpFechaNac.Value.ToShortDateString();
+                    nuevo.localidad = Convert.ToInt32(cboLocalidades.SelectedValue);
+                    nuevo.formaPago = Convert.ToInt32(cboForma.SelectedValue);
+                    nuevo.tipoAfiliado = Convert.ToInt32(cboTipoAfil.SelectedValue);
+                    nuevo.barrio = txtBarrio.Text;
+                    nuevo.direccion = txtDir.Text;
+                    nuevo.cbu = txtCbu.Text;
 
-                }
+                    if (MetroFramework.MetroMessageBox.Show(this, "Desea registrar el afiliado dni nro: " + nuevo.nroDoc + "?", "Alta de afiliado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (seleccionFormaPago == 2)
+                        {
+                            g.registrarAfiliado(nuevo, "proc_insertar_afiliado_b");
+                        }
+                        else
+                        {
+                            g.registrarAfiliado(nuevo, "proc_insertar_afiliado_a");
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                
+               
             }
             catch (Exception ex)
             {
