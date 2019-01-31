@@ -11,11 +11,9 @@ namespace WindowsCuotasApp
 
         GestorAfiliados g;
         ArrayList listado;
-        Afiliado[] vAfiliados;
         public FormAdmAfiliados()
         {
             InitializeComponent();
-            
             g = new GestorAfiliados();
         }
 
@@ -48,10 +46,11 @@ namespace WindowsCuotasApp
         }
 
       
-
+        
         private void cargarCampos(int x)
         {
-            txtNombre.Text = vAfiliados[x].nombre;
+            Afiliado[] miVector = convertir();
+            txtNombre.Text = miVector[x].nombre;
         }
 
         
@@ -207,7 +206,15 @@ namespace WindowsCuotasApp
             soloNumeros(sender, e);
         }
 
-        
+        /*
+         * Convertirmos el ArrayList a un vector, para facilitar el recorrido
+         * y cargar los campos correspondientes a cada item del ListBox
+         */
+        Afiliado[] convertir()
+        {
+            Afiliado[] vector = listado.ToArray(typeof(Afiliado)) as Afiliado[];
+            return vector;
+        }
 
       
 
