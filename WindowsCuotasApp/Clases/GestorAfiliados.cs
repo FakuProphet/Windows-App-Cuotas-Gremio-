@@ -23,9 +23,9 @@ namespace WindowsCuotasApp.Clases
             cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = a.direccion;
             cmd.Parameters.Add("@barrio", SqlDbType.VarChar).Value = a.barrio;
             cmd.Parameters.Add("@localidad", SqlDbType.Int).Value = a.localidad;
-            cmd.Parameters.Add("@tipoAfiliadoID", SqlDbType.Int).Value = a.tipoAfiliado;
-            cmd.Parameters.Add("@formaPagoID", SqlDbType.Int).Value = a.formaPago;
-            
+            cmd.Parameters.Add("@tipoAfiliado", SqlDbType.Int).Value = a.tipoAfiliado;
+            cmd.Parameters.Add("@metodoPagoID", SqlDbType.Int).Value = a.formaPago;
+            cmd.Parameters.Add("@nroCuenta", SqlDbType.VarChar).Value = a.cbu;
             cmd.ExecuteNonQuery();
             Conectar.CerrarConexion();
 

@@ -20,5 +20,6 @@ namespace WindowsCuotasApp.Clases
          public int localidad { get; set; }
          public int tipoAfiliado { get; set; }
          public int formaPago { get; set; }
+         public string cbu { get; set; }
     }
 }

@@ -150,6 +150,7 @@ namespace WindowsCuotasApp
                 nuevo.tipoAfiliado = Convert.ToInt32(cboTipoAfil.SelectedValue);
                 nuevo.barrio = txtBarrio.Text;
                 nuevo.direccion = txtDir.Text;
+                nuevo.cbu = txtCbu.Text;
 
                 if (MetroFramework.MetroMessageBox.Show(this, "Desea registrar el afiliado dni nro: "  + nuevo.nroDoc +"?" , "Alta de afiliado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
