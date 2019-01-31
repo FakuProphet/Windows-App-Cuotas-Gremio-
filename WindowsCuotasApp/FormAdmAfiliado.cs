@@ -119,15 +119,7 @@ namespace WindowsCuotasApp
             soloTexto(sender,e);
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void cboForma_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -180,6 +172,16 @@ namespace WindowsCuotasApp
             {
                 MetroFramework.MetroMessageBox.Show(this,"Error en el registro del afiliado: " + ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Hand);
             }
+        }
+
+        private void txtNroDoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumeros(sender, e);
+        }
+
+        private void txtNroTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumeros(sender, e);
         }
     }
 }

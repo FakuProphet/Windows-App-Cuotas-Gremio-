@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -7,8 +8,16 @@ namespace WindowsCuotasApp.Clases
 {
     class GestorAfiliados
     {
-       
-        
+        SqlCommand cmd;
+        SqlDataReader dr;
+        const int tam = 1000;
+
+
+
+        public SqlDataReader pDr
+        { set { dr = value; } get { return dr; } }
+
+
         public void registrarAfiliado(Afiliado a , string nombreProc )
         {
                 
@@ -37,33 +46,18 @@ namespace WindowsCuotasApp.Clases
         }
 
         
-        /*sede*/
-        /*
-        public void registrarAfiliadoFormaUno(Afiliado a)
+        public ArrayList listadoAfiliados()
         {
+            ArrayList listado = new ArrayList();
+            cmd = new SqlCommand("select * from afiliados", Conectar.ObtenerConexion());
+            dr = cmd.ExecuteReader();
+            while(dr.Read())
+            {
+                int idAfiliado = dr.GetInt32(0);
+            }
 
-            
-            SqlCommand cmd = new SqlCommand("proc_insertar_afiliado_a", Conectar.ObtenerConexion());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre;
-            cmd.Parameters.Add("@apellido", SqlDbType.VarChar).Value = a.apellido;
-            cmd.Parameters.Add("@nroDoc", SqlDbType.Int).Value = a.nroDoc;
-            cmd.Parameters.Add("@fechaNac", SqlDbType.VarChar).Value = a.fechaNac;
-            cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = a.email;
-            cmd.Parameters.Add("@nroTel", SqlDbType.VarChar).Value = a.nroTel;
-            cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = a.direccion;
-            cmd.Parameters.Add("@barrio", SqlDbType.VarChar).Value = a.barrio;
-            cmd.Parameters.Add("@localidad", SqlDbType.Int).Value = a.localidad;
-            cmd.Parameters.Add("@tipoAfiliado", SqlDbType.Int).Value = a.tipoAfiliado;
-            cmd.Parameters.Add("@metodoPagoID", SqlDbType.Int).Value = a.formaPago;
-            
-            cmd.ExecuteNonQuery();
-            Conectar.CerrarConexion();
-
-
+            return listado;
         }
-        */
-
 
         public DataTable consultarTabla(string nombreTabla)
         {       

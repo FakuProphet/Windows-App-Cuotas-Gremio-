@@ -143,7 +143,6 @@
             // 
             resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtBuscar
             // 
@@ -192,6 +191,7 @@
             // 
             resources.ApplyResources(this.txtNroTel, "txtNroTel");
             this.txtNroTel.Name = "txtNroTel";
+            this.txtNroTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroTel_KeyPress);
             // 
             // label6
             // 
@@ -222,6 +222,7 @@
             // 
             resources.ApplyResources(this.txtNroDoc, "txtNroDoc");
             this.txtNroDoc.Name = "txtNroDoc";
+            this.txtNroDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroDoc_KeyPress);
             // 
             // label3
             // 
