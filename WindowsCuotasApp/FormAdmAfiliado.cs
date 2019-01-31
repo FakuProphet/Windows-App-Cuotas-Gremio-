@@ -10,17 +10,20 @@ namespace WindowsCuotasApp
     {
 
         GestorAfiliados g;
+        ArrayList listado;
+        Afiliado[] vAfiliados;
         public FormAdmAfiliados()
         {
             InitializeComponent();
+            
             g = new GestorAfiliados();
         }
 
         private void FormAdmAfiliado_Load(object sender, EventArgs e)
         {
             cargarTodosLosCombos();
-            cargarLista();
             comprobarLista();
+            cargarLista();
         }
 
         private void cargarCombo(ComboBox combo, string nombreTabla)
@@ -37,13 +40,21 @@ namespace WindowsCuotasApp
 
         private void cargarLista()
         {
-            ArrayList listado = g.listadoAfiliados();
+            listado = g.listadoAfiliados();
             foreach (Afiliado a in listado)
             {
                 listBox1.Items.Add(a.nroDoc);
             }
         }
 
+      
+
+        private void cargarCampos(int x)
+        {
+            txtNombre.Text = vAfiliados[x].nombre;
+        }
+
+        
 
         private void cargarTodosLosCombos()
         {
@@ -194,6 +205,15 @@ namespace WindowsCuotasApp
         private void txtNroTel_KeyPress(object sender, KeyPressEventArgs e)
         {
             soloNumeros(sender, e);
+        }
+
+        
+
+      
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarCampos(listBox1.SelectedIndex);
         }
     }
 }

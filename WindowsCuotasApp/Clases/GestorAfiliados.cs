@@ -77,6 +77,8 @@ namespace WindowsCuotasApp.Clases
             return listado;
         }
 
+
+
         public DataTable consultarTabla(string nombreTabla)
         {       
             DataTable dt = new DataTable();
