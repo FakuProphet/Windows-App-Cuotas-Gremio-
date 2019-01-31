@@ -21,5 +21,26 @@ namespace WindowsCuotasApp.Clases
          public int tipoAfiliado { get; set; }
          public int formaPago { get; set; }
          public string cbu { get; set; }
+
+
+         
+         public Afiliado() { }
+
+        public Afiliado(int afiliadoID, string nombre, string apellido, int nroDoc, string fechaNac, string email, string nroTel, string direccion, string barrio, int localidad, int tipoAfiliado, int formaPago, string cbu)
+        {
+            this.afiliadoID = afiliadoID;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.nroDoc = nroDoc;
+            this.fechaNac = fechaNac;
+            this.email = email;
+            this.nroTel = nroTel;
+            this.direccion = direccion;
+            this.barrio = barrio;
+            this.localidad = localidad;
+            this.tipoAfiliado = tipoAfiliado;
+            this.formaPago = formaPago;
+            this.cbu = cbu;
+        }
     }
 }

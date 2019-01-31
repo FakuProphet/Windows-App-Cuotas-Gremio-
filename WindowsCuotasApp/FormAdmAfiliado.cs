@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Data;
 using System.Windows.Forms;
 using WindowsCuotasApp.Clases;
@@ -18,6 +19,7 @@ namespace WindowsCuotasApp
         private void FormAdmAfiliado_Load(object sender, EventArgs e)
         {
             cargarTodosLosCombos();
+            cargarLista();
             comprobarLista();
         }
 
@@ -30,6 +32,16 @@ namespace WindowsCuotasApp
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
             combo.SelectedIndex = 0;
+        }
+
+
+        private void cargarLista()
+        {
+            ArrayList listado = g.listadoAfiliados();
+            foreach (Afiliado a in listado)
+            {
+                listBox1.Items.Add(a.nroDoc);
+            }
         }
 
 

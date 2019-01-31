@@ -49,11 +49,29 @@ namespace WindowsCuotasApp.Clases
         public ArrayList listadoAfiliados()
         {
             ArrayList listado = new ArrayList();
-            cmd = new SqlCommand("select * from afiliados", Conectar.ObtenerConexion());
+            Afiliado nuevo;
+            cmd = new SqlCommand("select * from afiliados order by 4", Conectar.ObtenerConexion());
             dr = cmd.ExecuteReader();
+            Conectar.CerrarConexion();
             while(dr.Read())
             {
                 int idAfiliado = dr.GetInt32(0);
+                string nombre = dr.GetString(1);
+                string apellido = dr.GetString(2);
+                int nroDoc = dr.GetInt32(3);
+                string fechaNac = dr.GetString(4);
+                string email = dr.GetString(5);
+                string nroTel = dr.GetString(6);
+                string direccion = dr.GetString(7);
+                string barrio = dr.GetString(8);
+                int idLocalidad = dr.GetInt32(9);
+                int tipoAfilID = dr.GetInt32(10);
+                int metodoPagoID = dr.GetInt32(11);
+                string nroCuenta = dr.GetString(12);
+
+                nuevo = new Afiliado(idAfiliado,nombre,apellido,nroDoc,fechaNac,email,nroTel,
+                                    direccion,barrio,idLocalidad,tipoAfilID,metodoPagoID,nroCuenta);
+                listado.Add(nuevo);
             }
 
             return listado;
