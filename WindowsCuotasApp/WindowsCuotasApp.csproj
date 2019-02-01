@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8_Form_32.png" />
     <None Include="Resources\icons8_PDF_32.png" />
     <None Include="Resources\icons8_Save_32.png" />
     <None Include="Resources\icons8_User_Groups_64.png" />

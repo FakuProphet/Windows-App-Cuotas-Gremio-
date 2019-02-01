@@ -28,6 +28,11 @@ namespace WindowsCuotasApp
             lblAnio.Text = fecha.getAnio().ToString();
             lblDetalleMes.Text = fecha.detalleMes(Convert.ToInt16(fecha.getMes().ToString()));
         }
-       
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormReporte nuevo = new FormReporte();
+            nuevo.ShowDialog();
+        }
     }
 }

@@ -19,7 +19,8 @@ namespace WindowsCuotasApp
 
         private void FormReporte_Load(object sender, EventArgs e)
         {
-
+            //CrystalReport1 objReporte = new CrystalReport1();
+            //crystalReportViewer1.ReportSource = objReporte;
         }
     }
 }
