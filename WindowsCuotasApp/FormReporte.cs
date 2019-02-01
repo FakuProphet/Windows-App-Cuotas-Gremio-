@@ -19,8 +19,7 @@ namespace WindowsCuotasApp
 
         private void FormReporte_Load(object sender, EventArgs e)
         {
-            CrystalReport2 nuevo = new CrystalReport2();
-            crystalReportViewer1.ReportSource = nuevo;
+          
         }
     }
 }
