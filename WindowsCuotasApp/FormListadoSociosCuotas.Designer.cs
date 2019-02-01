@@ -28,22 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListadoSociosCuotas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblMes = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenerarPDF = new System.Windows.Forms.Button();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.lblMes = new MetroFramework.Controls.MetroLabel();
+            this.lblDetalleMes = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.lblAnio = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblAnio);
+            this.groupBox1.Controls.Add(this.metroLabel2);
+            this.groupBox1.Controls.Add(this.lblDetalleMes);
             this.groupBox1.Controls.Add(this.lblMes);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(933, 390);
@@ -51,12 +58,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado de socios a cobrar por débito";
             // 
+            // lblMes
+            // 
+            this.lblMes.AutoSize = true;
+            this.lblMes.Location = new System.Drawing.Point(62, 51);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.Size = new System.Drawing.Size(18, 19);
+            this.lblMes.TabIndex = 2;
+            this.lblMes.Text = "...";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(20, 51);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel1.TabIndex = 1;
+            this.metroLabel1.Text = "Mes:";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 116);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 90);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(892, 239);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(475, 265);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -83,23 +109,32 @@
             this.btnGenerarPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGenerarPDF.UseVisualStyleBackColor = true;
             // 
-            // metroLabel1
+            // lblDetalleMes
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(20, 51);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(36, 19);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Mes:";
+            this.lblDetalleMes.AutoSize = true;
+            this.lblDetalleMes.Location = new System.Drawing.Point(111, 51);
+            this.lblDetalleMes.Name = "lblDetalleMes";
+            this.lblDetalleMes.Size = new System.Drawing.Size(18, 19);
+            this.lblDetalleMes.TabIndex = 3;
+            this.lblDetalleMes.Text = "...";
             // 
-            // lblMes
+            // metroLabel2
             // 
-            this.lblMes.AutoSize = true;
-            this.lblMes.Location = new System.Drawing.Point(62, 51);
-            this.lblMes.Name = "lblMes";
-            this.lblMes.Size = new System.Drawing.Size(18, 19);
-            this.lblMes.TabIndex = 2;
-            this.lblMes.Text = "...";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(192, 51);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel2.TabIndex = 4;
+            this.metroLabel2.Text = "Año:";
+            // 
+            // lblAnio
+            // 
+            this.lblAnio.AutoSize = true;
+            this.lblAnio.Location = new System.Drawing.Point(234, 51);
+            this.lblAnio.Name = "lblAnio";
+            this.lblAnio.Size = new System.Drawing.Size(18, 19);
+            this.lblAnio.TabIndex = 5;
+            this.lblAnio.Text = "...";
             // 
             // FormListadoSociosCuotas
             // 
@@ -109,6 +144,8 @@
             this.Controls.Add(this.btnGenerarPDF);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormListadoSociosCuotas";
             this.Text = "Generar Listado ";
             this.Load += new System.EventHandler(this.FormListadoSociosCuotas_Load);
@@ -127,5 +164,8 @@
         private System.Windows.Forms.Button btnGenerarPDF;
         private MetroFramework.Controls.MetroLabel lblMes;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblDetalleMes;
+        private MetroFramework.Controls.MetroLabel lblAnio;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

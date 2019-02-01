@@ -11,6 +11,8 @@ namespace WindowsCuotasApp
 
         GestorAfiliados g;
         ArrayList listado;
+
+
         public FormAdmAfiliados()
         {
             InitializeComponent();
@@ -19,9 +21,9 @@ namespace WindowsCuotasApp
 
         private void FormAdmAfiliado_Load(object sender, EventArgs e)
         {
-            cargarTodosLosCombos();
-            comprobarLista();
+            cargarTodosLosCombos(); 
             cargarLista();
+            comprobarLista();
         }
 
         private void cargarCombo(ComboBox combo, string nombreTabla)
