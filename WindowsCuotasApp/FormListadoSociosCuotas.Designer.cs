@@ -37,7 +37,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGenerarPDF = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -122,22 +121,6 @@
             this.label1.Size = new System.Drawing.Size(933, 73);
             this.label1.TabIndex = 1;
             // 
-            // btnGenerarPDF
-            // 
-            this.btnGenerarPDF.FlatAppearance.BorderSize = 0;
-            this.btnGenerarPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.btnGenerarPDF.Image = global::WindowsCuotasApp.Properties.Resources.icons8_PDF_32;
-            this.btnGenerarPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarPDF.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenerarPDF.Location = new System.Drawing.Point(779, 475);
-            this.btnGenerarPDF.Name = "btnGenerarPDF";
-            this.btnGenerarPDF.Size = new System.Drawing.Size(156, 40);
-            this.btnGenerarPDF.TabIndex = 6;
-            this.btnGenerarPDF.Text = "Generar PDF";
-            this.btnGenerarPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGenerarPDF.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -160,7 +143,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 549);
-            this.Controls.Add(this.btnGenerarPDF);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -180,7 +162,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnGenerarPDF;
         private MetroFramework.Controls.MetroLabel lblMes;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblDetalleMes;
