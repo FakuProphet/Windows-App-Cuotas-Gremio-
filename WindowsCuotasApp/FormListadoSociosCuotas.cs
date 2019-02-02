@@ -6,6 +6,9 @@ namespace WindowsCuotasApp
     //FORMULARIO PARA LISTAR LOS AFILIADOS QUE EFECTUAN PAGO POR DEBITO.
     public partial class FormListadoSociosCuotas : MetroFramework.Forms.MetroForm
     {
+
+
+
         GestorDGV gestorDGV;
 
         public FormListadoSociosCuotas()
@@ -14,6 +17,7 @@ namespace WindowsCuotasApp
             gestorDGV = new GestorDGV();
             mostrarMes();
         }
+
 
         private void FormListadoSociosCuotas_Load(object sender, EventArgs e)
         {

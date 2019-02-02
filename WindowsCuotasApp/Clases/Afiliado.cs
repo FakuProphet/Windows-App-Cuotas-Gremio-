@@ -1,14 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace WindowsCuotasApp.Clases
 {
     class Afiliado
     {
-
+        /*
+         La forma de pago se establece en el afiliado
+         porque es una regla de negocio, por el momento
+         no es un debito automatico, sino que hay afiliados a los cuales
+         se los identifica como afiliados que pagan por medio de una persona
+         que realiza los debitos. 
+         El otro tipo de afiliado es el que paga en sede, y a este se le cobra personalmente
+         en la sede gremial.
+         En este ejemplo de app,  no he aplicado herencia ni composicion,
+         solo se plantea el modelo de la tabla en BBDD.
+         */
         public int afiliadoID { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
@@ -23,9 +29,7 @@ namespace WindowsCuotasApp.Clases
         public int formaPago { get; set; }
         public string cbu { get; set; }
         public int estadoGremialID { get; set; }
-
-
-         
+    
         public Afiliado() { }
 
         public Afiliado(int afiliadoID, string nombre, string apellido, int nroDoc, string fechaNac, string email, string nroTel, string direccion, string barrio, int localidad, int tipoAfiliado, int formaPago, string cbu, int estadoGremialID)

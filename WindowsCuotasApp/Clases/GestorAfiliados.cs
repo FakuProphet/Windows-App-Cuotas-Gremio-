@@ -45,6 +45,12 @@ namespace WindowsCuotasApp.Clases
 
         }
 
+
+        public void registrarPago(string procedimiento)
+        {
+            SqlCommand cmd = new SqlCommand(procedimiento,Conectar.ObtenerConexion());
+        }
+
         
         public ArrayList listadoAfiliados()
         {
