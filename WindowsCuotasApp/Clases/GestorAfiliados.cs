@@ -51,6 +51,7 @@ namespace WindowsCuotasApp.Clases
             ArrayList listado = new ArrayList();
             Afiliado nuevo;
             cmd = new SqlCommand("select * from afiliados order by 4", Conectar.ObtenerConexion());
+            
             dr = cmd.ExecuteReader();
             Conectar.CerrarConexion();
             while(dr.Read())

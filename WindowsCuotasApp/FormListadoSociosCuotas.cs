@@ -18,7 +18,7 @@ namespace WindowsCuotasApp
         private void FormListadoSociosCuotas_Load(object sender, EventArgs e)
         {
             gestorDGV.efectosDGV(dataGridView1);
-            gestorDGV.cargarDataGrid(dataGridView1, "SELECT * FROM V_LISTADO_SOCIOS_PAGO_DEBITO ORDER BY 2 ASC");
+            gestorDGV.cargarDataGrid(dataGridView1, "EXEC SP_LISTADO_AFIL_DEBITO");
         }
 
         private void mostrarMes()

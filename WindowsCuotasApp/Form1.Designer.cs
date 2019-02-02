@@ -38,6 +38,8 @@
             this.administracionAfiliadosConDébitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarListadoDeAfiliadosADebitarPagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.efectuarPagoCuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,14 +63,15 @@
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             resources.ApplyResources(this.nuevoToolStripMenuItem, "nuevoToolStripMenuItem");
-//            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // cuotasToolStripMenuItem
             // 
             this.cuotasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.toolStripMenuItem1,
-            this.toolStripSeparator2});
+            this.toolStripSeparator2,
+            this.toolStripMenuItem2});
             this.cuotasToolStripMenuItem.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Todo_List3_64;
             resources.ApplyResources(this.cuotasToolStripMenuItem, "cuotasToolStripMenuItem");
             this.cuotasToolStripMenuItem.Name = "cuotasToolStripMenuItem";
@@ -83,9 +86,9 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administracionAfiliadosConDébitoToolStripMenuItem,
             this.generarListadoDeAfiliadosADebitarPagoToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Debit_Card_48;
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-//            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             // 
             // administracionAfiliadosConDébitoToolStripMenuItem
             // 
@@ -103,6 +106,19 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.efectuarPagoCuotaToolStripMenuItem});
+            this.toolStripMenuItem2.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Receive_Cash_48;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            // 
+            // efectuarPagoCuotaToolStripMenuItem
+            // 
+            this.efectuarPagoCuotaToolStripMenuItem.Name = "efectuarPagoCuotaToolStripMenuItem";
+            resources.ApplyResources(this.efectuarPagoCuotaToolStripMenuItem, "efectuarPagoCuotaToolStripMenuItem");
             // 
             // FormPrincipal
             // 
@@ -133,6 +149,8 @@
         private System.Windows.Forms.ToolStripMenuItem administracionAfiliadosConDébitoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generarListadoDeAfiliadosADebitarPagoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem efectuarPagoCuotaToolStripMenuItem;
     }
 }
 

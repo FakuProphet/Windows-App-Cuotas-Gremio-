@@ -147,7 +147,7 @@
     <value>ImageAboveText</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 6</value>
+    <value>368, 6</value>
   </data>
   <data name="administracionAfiliadosConDébitoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>479, 34</value>
@@ -161,14 +161,29 @@
   <data name="generarListadoDeAfiliadosADebitarPagoToolStripMenuItem.Text" xml:space="preserve">
     <value>Generar listado de afiliados a debitar pago</value>
   </data>
+  <data name="toolStripMenuItem1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 34</value>
+    <value>371, 34</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>Sección afiliados con debito </value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 6</value>
+    <value>368, 6</value>
+  </data>
+  <data name="efectuarPagoCuotaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 34</value>
+  </data>
+  <data name="efectuarPagoCuotaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Efectuar pago cuota</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 34</value>
+  </data>
+  <data name="toolStripMenuItem2.Text" xml:space="preserve">
+    <value>Sección afiliados pago en sede</value>
   </data>
   <data name="cuotasToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -351,6 +366,18 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;efectuarPagoCuotaToolStripMenuItem.Name" xml:space="preserve">
+    <value>efectuarPagoCuotaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;efectuarPagoCuotaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormPrincipal</value>
