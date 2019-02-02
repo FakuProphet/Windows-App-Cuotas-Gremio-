@@ -37,6 +37,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnGenerarPagos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -44,7 +45,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lblAnio);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.lblDetalleMes);
@@ -54,7 +54,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(933, 390);
+            this.groupBox1.Size = new System.Drawing.Size(740, 390);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado de socios a cobrar por débito";
@@ -110,7 +110,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(20, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(475, 265);
+            this.dataGridView1.Size = new System.Drawing.Size(698, 276);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -118,8 +118,24 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(23, 456);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(933, 73);
+            this.label1.Size = new System.Drawing.Size(740, 73);
             this.label1.TabIndex = 1;
+            // 
+            // btnGenerarPagos
+            // 
+            this.btnGenerarPagos.FlatAppearance.BorderSize = 0;
+            this.btnGenerarPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnGenerarPagos.Image = global::WindowsCuotasApp.Properties.Resources.icons8_US_Dollar_32;
+            this.btnGenerarPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarPagos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnGenerarPagos.Location = new System.Drawing.Point(404, 476);
+            this.btnGenerarPagos.Name = "btnGenerarPagos";
+            this.btnGenerarPagos.Size = new System.Drawing.Size(156, 40);
+            this.btnGenerarPagos.TabIndex = 8;
+            this.btnGenerarPagos.Text = "Generar Pagos";
+            this.btnGenerarPagos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGenerarPagos.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -129,7 +145,7 @@
             this.button1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Form_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(756, 90);
+            this.button1.Location = new System.Drawing.Point(585, 476);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 40);
             this.button1.TabIndex = 7;
@@ -142,7 +158,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 549);
+            this.ClientSize = new System.Drawing.Size(785, 549);
+            this.Controls.Add(this.btnGenerarPagos);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -168,5 +186,6 @@
         private MetroFramework.Controls.MetroLabel lblAnio;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenerarPagos;
     }
 }
