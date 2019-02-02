@@ -153,6 +153,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8_Todo_List2_16.png" />
+    <None Include="Resources\icons8_Todo_List3_64.png" />
     <None Include="Resources\icons8_US_Dollar_32.png" />
     <None Include="Resources\Cash _96px.png" />
     <None Include="Resources\icons8_Form_32.png" />

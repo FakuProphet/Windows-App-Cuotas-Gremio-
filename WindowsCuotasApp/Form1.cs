@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace WindowsCuotasApp
 {
@@ -22,9 +14,17 @@ namespace WindowsCuotasApp
 
         }
 
-        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+      
+
+        private void administracionAfiliadosConDébitoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAdmAfiliados nuevo = new FormAdmAfiliados();
+            FormListadoSociosCuotas nuevo = new FormListadoSociosCuotas();
+            nuevo.ShowDialog();
+        }
+
+        private void generarListadoDeAfiliadosADebitarPagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReporte nuevo = new FormReporte();
             nuevo.ShowDialog();
         }
     }

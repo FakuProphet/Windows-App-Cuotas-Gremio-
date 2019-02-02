@@ -4,6 +4,8 @@ using System.Data;
 using System.Windows.Forms;
 using WindowsCuotasApp.Clases;
 
+
+
 namespace WindowsCuotasApp
 {
     public partial class FormAdmAfiliados : MetroFramework.Forms.MetroForm
@@ -19,12 +21,14 @@ namespace WindowsCuotasApp
             g = new GestorAfiliados();
         }
 
+
         private void FormAdmAfiliado_Load(object sender, EventArgs e)
         {
             cargarTodosLosCombos(); 
             cargarLista();
             comprobarLista();
         }
+
 
         private void cargarCombo(ComboBox combo, string nombreTabla)
         {
@@ -134,6 +138,7 @@ namespace WindowsCuotasApp
             }
         }
 
+
         private void soloTexto(object sender, KeyPressEventArgs e)
         {
             if ((char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -161,6 +166,7 @@ namespace WindowsCuotasApp
         {
             seleccionCombo();
         }
+
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
@@ -210,10 +216,12 @@ namespace WindowsCuotasApp
             }
         }
 
+
         private void txtNroDoc_KeyPress(object sender, KeyPressEventArgs e)
         {
             soloNumeros(sender, e);
         }
+
 
         private void txtNroTel_KeyPress(object sender, KeyPressEventArgs e)
         {
