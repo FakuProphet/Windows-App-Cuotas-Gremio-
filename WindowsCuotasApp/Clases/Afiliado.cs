@@ -8,25 +8,27 @@ namespace WindowsCuotasApp.Clases
 {
     class Afiliado
     {
-         public int afiliadoID { get; set; }
-         public string nombre { get; set; }
-         public string apellido { get; set; }
-         public int nroDoc { get; set; }
-         public string fechaNac { get; set; }
-         public string email { get; set; }
-         public string nroTel { get; set; }
-         public string direccion { get; set; }
-         public string barrio { get; set; }
-         public int localidad { get; set; }
-         public int tipoAfiliado { get; set; }
-         public int formaPago { get; set; }
-         public string cbu { get; set; }
+
+        public int afiliadoID { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public int nroDoc { get; set; }
+        public string fechaNac { get; set; }
+        public string email { get; set; }
+        public string nroTel { get; set; }
+        public string direccion { get; set; }
+        public string barrio { get; set; }
+        public int localidad { get; set; }
+        public int tipoAfiliado { get; set; }
+        public int formaPago { get; set; }
+        public string cbu { get; set; }
+        public int estadoGremialID { get; set; }
 
 
          
-         public Afiliado() { }
+        public Afiliado() { }
 
-        public Afiliado(int afiliadoID, string nombre, string apellido, int nroDoc, string fechaNac, string email, string nroTel, string direccion, string barrio, int localidad, int tipoAfiliado, int formaPago, string cbu)
+        public Afiliado(int afiliadoID, string nombre, string apellido, int nroDoc, string fechaNac, string email, string nroTel, string direccion, string barrio, int localidad, int tipoAfiliado, int formaPago, string cbu, int estadoGremialID)
         {
             this.afiliadoID = afiliadoID;
             this.nombre = nombre;
@@ -41,6 +43,7 @@ namespace WindowsCuotasApp.Clases
             this.tipoAfiliado = tipoAfiliado;
             this.formaPago = formaPago;
             this.cbu = cbu;
+            this.estadoGremialID = estadoGremialID;
         }
     }
 }

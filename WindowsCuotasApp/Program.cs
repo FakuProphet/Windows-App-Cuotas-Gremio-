@@ -16,7 +16,7 @@ namespace WindowsCuotasApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormListadoSociosCuotas());
+            Application.Run(new FormPrincipal());
         }
     }
 }

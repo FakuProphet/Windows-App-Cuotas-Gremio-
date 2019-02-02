@@ -68,9 +68,10 @@ namespace WindowsCuotasApp.Clases
                 int tipoAfilID = dr.GetInt32(10);
                 int metodoPagoID = dr.GetInt32(11);
                 string nroCuenta = dr.GetString(12);
+                int estadoGremialID = dr.GetInt32(13);
 
                 nuevo = new Afiliado(idAfiliado,nombre,apellido,nroDoc,fechaNac,email,nroTel,
-                                    direccion,barrio,idLocalidad,tipoAfilID,metodoPagoID,nroCuenta);
+                                    direccion,barrio,idLocalidad,tipoAfilID,metodoPagoID,nroCuenta,estadoGremialID);
                 listado.Add(nuevo);
             }
 

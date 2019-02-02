@@ -63,11 +63,15 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.cboEstadosGremiales = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboEstadosGremiales);
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.dtpFechaNac);
             this.groupBox1.Controls.Add(this.txtCbu);
             this.groupBox1.Controls.Add(this.label14);
@@ -291,6 +295,17 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
+            // cboEstadosGremiales
+            // 
+            this.cboEstadosGremiales.FormattingEnabled = true;
+            resources.ApplyResources(this.cboEstadosGremiales, "cboEstadosGremiales");
+            this.cboEstadosGremiales.Name = "cboEstadosGremiales";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
             // FormAdmAfiliados
             // 
             resources.ApplyResources(this, "$this");
@@ -348,5 +363,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cboTipoAfil;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.ComboBox cboEstadosGremiales;
+        private System.Windows.Forms.Label label15;
     }
 }

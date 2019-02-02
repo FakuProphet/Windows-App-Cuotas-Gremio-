@@ -63,6 +63,7 @@ namespace WindowsCuotasApp
             cboTipoAfil.SelectedValue = miVector[x].tipoAfiliado;
             cboForma.SelectedValue = miVector[x].formaPago;
             txtCbu.Text = miVector[x].cbu;
+            cboEstadosGremiales.SelectedValue = miVector[x].estadoGremialID;
         }
 
         
@@ -72,6 +73,7 @@ namespace WindowsCuotasApp
             cargarCombo(cboLocalidades, "localidades");
             cargarCombo(cboForma, "formasPago");
             cargarCombo(cboTipoAfil, "tiposAfiliado");
+            cargarCombo(cboEstadosGremiales,"estadosGremiales");
             combosPorDefecto();
         }
 
