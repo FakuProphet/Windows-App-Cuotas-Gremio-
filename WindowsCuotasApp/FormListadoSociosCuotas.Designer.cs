@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListadoSociosCuotas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblAnio = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.lblDetalleMes = new MetroFramework.Controls.MetroLabel();
@@ -51,7 +50,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lblAnio);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.lblDetalleMes);
@@ -61,7 +59,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 147);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(884, 295);
+            this.groupBox1.Size = new System.Drawing.Size(931, 295);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado de socios a cobrar por débito";
@@ -75,7 +73,7 @@
             this.button3.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Todo_List2_16;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(722, 223);
+            this.button3.Location = new System.Drawing.Point(771, 225);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(154, 40);
             this.button3.TabIndex = 7;
@@ -83,23 +81,6 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.button1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Todo_List2_16;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(722, 225);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Generar Listado";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblAnio
             // 
@@ -152,7 +133,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(18, 81);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(698, 184);
+            this.dataGridView1.Size = new System.Drawing.Size(747, 184);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -169,7 +150,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(18, 73);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(698, 184);
+            this.dataGridView2.Size = new System.Drawing.Size(747, 184);
             this.dataGridView2.TabIndex = 6;
             // 
             // groupBox2
@@ -179,7 +160,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(23, 448);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(884, 291);
+            this.groupBox2.Size = new System.Drawing.Size(931, 291);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalle de estado de cuota de los afiliados para el mes";
@@ -193,7 +174,7 @@
             this.button2.Image = global::WindowsCuotasApp.Properties.Resources.icons8_US_Dollar_32;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(722, 217);
+            this.button2.Location = new System.Drawing.Point(771, 217);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 40);
             this.button2.TabIndex = 8;
@@ -206,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 762);
+            this.ClientSize = new System.Drawing.Size(977, 762);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -214,7 +195,7 @@
             this.MaximizeBox = false;
             this.Name = "FormListadoSociosCuotas";
             this.Resizable = false;
-            this.Text = "Administracion afiliados con débito";
+            this.Text = "Administración afiliados con débito";
             this.Load += new System.EventHandler(this.FormListadoSociosCuotas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -235,7 +216,6 @@
         private MetroFramework.Controls.MetroLabel lblDetalleMes;
         private MetroFramework.Controls.MetroLabel lblAnio;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

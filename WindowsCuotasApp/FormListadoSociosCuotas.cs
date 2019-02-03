@@ -26,6 +26,7 @@ namespace WindowsCuotasApp
         {
             gestorDGV.efectosDGV(dataGridView1);
             gestorDGV.cargarDataGrid(dataGridView1, "EXEC SP_LISTADO_AFIL_DEBITO");
+            cargarDatosCuotasCanceladasMesAnioActual();
         }
 
         private void mostrarMes()
@@ -40,6 +41,12 @@ namespace WindowsCuotasApp
         {
             FormReporte nuevo = new FormReporte();
             nuevo.ShowDialog();
+        }
+
+        void cargarDatosCuotasCanceladasMesAnioActual()
+        {
+            gestorDGV.cargarDataGrid(dataGridView2, "SELECT * FROM V_DETALLE_CUOTAS_POR_MES_ANIO ORDER BY 1");
+            gestorDGV.efectosDGV(dataGridView2);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,6 +71,7 @@ namespace WindowsCuotasApp
                 }
 
                 MetroFramework.MetroMessageBox.Show(this, "Transacciones completadas con éxito. " +"\n"+ "Cantidad de registros:" +filasAfectadas, "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cargarDatosCuotasCanceladasMesAnioActual();
             }
 
             catch (SqlException error)
