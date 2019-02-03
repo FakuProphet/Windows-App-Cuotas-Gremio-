@@ -13,6 +13,8 @@ namespace WindowsCuotasApp
         GestorAfiliados gestorAfiliados;
         GestorDGV gestorDGV;
 
+
+
         public FormListadoSociosCuotas()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace WindowsCuotasApp
             cargarDatosCuotasCanceladasMesAnioActual();
         }
 
+
         private void mostrarMes()
         {
             Fecha fecha = new Fecha();
@@ -37,17 +40,20 @@ namespace WindowsCuotasApp
             lblDetalleMes.Text = fecha.detalleMes(Convert.ToInt16(fecha.getMes().ToString()));
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             FormReporte nuevo = new FormReporte();
             nuevo.ShowDialog();
         }
 
+
         void cargarDatosCuotasCanceladasMesAnioActual()
         {
             gestorDGV.cargarDataGrid(dataGridView2, "SELECT * FROM V_DETALLE_CUOTAS_POR_MES_ANIO ORDER BY 1");
             gestorDGV.efectosDGV(dataGridView2);
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
