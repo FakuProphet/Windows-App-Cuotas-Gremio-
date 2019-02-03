@@ -45,16 +45,18 @@ namespace WindowsCuotasApp
             
             
                 Fecha fecha = new Fecha();
-                
+            GestorTransaccion t = new GestorTransaccion();
                 
                 foreach  (DataGridViewRow fila in dataGridView1.Rows)
                 {
+                    /*
                     CuotaAfiliado c = new CuotaAfiliado();
-                   
                     c.afiliadoID = Convert.ToInt32(fila.Cells[0].Value);
                     c.anio = fecha.getAnio();
                     c.mes = fecha.getMes();
-                    new GestorTransaccion().transaccionCuotaAfiliado(c);
+                    */
+                    int id = Convert.ToInt32(fila.Cells[0].Value);
+                    t.transaccionCuotaAfiliado(id,fecha.getMes(),fecha.getAnio());
                 }
             
             // catch (Exception error)
