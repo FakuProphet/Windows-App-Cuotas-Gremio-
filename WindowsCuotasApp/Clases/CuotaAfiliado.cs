@@ -1,10 +1,10 @@
 ﻿
 namespace WindowsCuotasApp.Clases
 {
-    class PagoCuota
+    class CuotaAfiliado
     {
-        public int afiliadoID { get; set; }
         public int mes { get; set; }
         public int anio { get; set; }
+        public int afiliadoID { get; set; }
     }
 }

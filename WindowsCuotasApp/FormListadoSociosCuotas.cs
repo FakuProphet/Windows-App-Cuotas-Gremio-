@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using WindowsCuotasApp.Clases;
 
 namespace WindowsCuotasApp
@@ -37,6 +38,29 @@ namespace WindowsCuotasApp
         {
             FormReporte nuevo = new FormReporte();
             nuevo.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            
+                Fecha fecha = new Fecha();
+                
+                
+                foreach  (DataGridViewRow fila in dataGridView1.Rows)
+                {
+                    CuotaAfiliado c = new CuotaAfiliado();
+                   
+                    c.afiliadoID = Convert.ToInt32(fila.Cells[0].Value);
+                    c.anio = fecha.getAnio();
+                    c.mes = fecha.getMes();
+                    new GestorTransaccion().transaccionCuotaAfiliado(c);
+                }
+            
+            // catch (Exception error)
+            
+            //    MetroFramework.MetroMessageBox.Show(this, "Error en la transacción: " + error.ToString(),"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
     }
 }

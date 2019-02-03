@@ -67,8 +67,9 @@
     <Compile Include="Clases\FormaPago.cs" />
     <Compile Include="Clases\GestorAfiliados.cs" />
     <Compile Include="Clases\GestorDGV.cs" />
+    <Compile Include="Clases\GestorTransaccion.cs" />
     <Compile Include="Clases\Localidad.cs" />
-    <Compile Include="Clases\PagoCuota.cs" />
+    <Compile Include="Clases\CuotaAfiliado.cs" />
     <Compile Include="Clases\TipoAfiliado.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
