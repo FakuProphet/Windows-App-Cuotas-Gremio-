@@ -4,17 +4,18 @@ namespace WindowsCuotasApp.Clases
 {
     class Fecha
     {
-        private int mes { get; }
+        public int mes { get; set; }
+        public int anio { get; set; }
 
         public int getMes()
         {
-            int mes = DateTime.Now.Month;
+            mes = DateTime.Now.Month;
             return mes;
         }
 
         public int getAnio()
         {
-            int anio = DateTime.Now.Year;
+            anio = DateTime.Now.Year;
             return anio;
         }
 

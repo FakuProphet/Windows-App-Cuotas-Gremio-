@@ -18,6 +18,18 @@ namespace WindowsCuotasApp.Clases
         { set { dr = value; } get { return dr; } }
 
 
+        public void generarTransaccionCuota(TransaccionCuotaAfiliado t)
+        {
+            SqlCommand cmd = new SqlCommand("SP_TRANSACCION_CUOTA_AFIL", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@AFILIADOID", SqlDbType.Int).Value = t.a.afiliadoID;
+            cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = t.fecha.getAnio();
+            cmd.Parameters.Add("@MES", SqlDbType.Int).Value = t.fecha.getMes();
+            cmd.ExecuteNonQuery();
+            Conectar.CerrarConexion();
+        }
+
+
         public void registrarAfiliado(Afiliado a , string nombreProc )
         {
                 

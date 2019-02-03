@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using WindowsCuotasApp.Clases;
 
@@ -9,13 +10,14 @@ namespace WindowsCuotasApp
     {
 
 
-
+        GestorAfiliados gestorAfiliados;
         GestorDGV gestorDGV;
 
         public FormListadoSociosCuotas()
         {
             InitializeComponent();
             gestorDGV = new GestorDGV();
+            gestorAfiliados = new GestorAfiliados();
             mostrarMes();
         }
 
@@ -42,27 +44,37 @@ namespace WindowsCuotasApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            
-                Fecha fecha = new Fecha();
-            GestorTransaccion t = new GestorTransaccion();
-                
-                foreach  (DataGridViewRow fila in dataGridView1.Rows)
+       
+            try
+            {
+                Fecha fecha;
+                TransaccionCuotaAfiliado t;
+                Afiliado nuevo;
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
                 {
-                    /*
-                    CuotaAfiliado c = new CuotaAfiliado();
-                    c.afiliadoID = Convert.ToInt32(fila.Cells[0].Value);
-                    c.anio = fecha.getAnio();
-                    c.mes = fecha.getMes();
-                    */
-                    int id = Convert.ToInt32(fila.Cells[0].Value);
-                    t.transaccionCuotaAfiliado(id,fecha.getMes(),fecha.getAnio());
+                    t = new TransaccionCuotaAfiliado();
+                    nuevo = new Afiliado();
+                    fecha = new Fecha();
+                    nuevo.afiliadoID = Convert.ToInt32(fila.Cells[0].Value);
+                    t.a = nuevo;
+                    fecha.getAnio();
+                    fecha.getMes();
+                    t.fecha = fecha;
+                    gestorAfiliados.generarTransaccionCuota(t);
                 }
-            
-            // catch (Exception error)
-            
-            //    MetroFramework.MetroMessageBox.Show(this, "Error en la transacción: " + error.ToString(),"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+            }
+
+            catch (Exception error)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Error en la transacción: " + error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                Conectar.CerrarConexion();
+            }
+
+
         }
     }
 }
