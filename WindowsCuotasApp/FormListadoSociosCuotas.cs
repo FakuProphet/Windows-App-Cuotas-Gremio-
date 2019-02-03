@@ -44,12 +44,13 @@ namespace WindowsCuotasApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-       
+
+            Fecha fecha;
+            TransaccionCuotaAfiliado t;
+            Afiliado nuevo;
+            int filasAfectadas=0;
             try
             {
-                Fecha fecha;
-                TransaccionCuotaAfiliado t;
-                Afiliado nuevo;
                 foreach (DataGridViewRow fila in dataGridView1.Rows)
                 {
                     t = new TransaccionCuotaAfiliado();
@@ -57,23 +58,20 @@ namespace WindowsCuotasApp
                     fecha = new Fecha();
                     nuevo.afiliadoID = Convert.ToInt32(fila.Cells[0].Value);
                     t.a = nuevo;
-                    fecha.getAnio();
-                    fecha.getMes();
-                    t.fecha = fecha;
+                    t.fecha = fecha;              
                     gestorAfiliados.generarTransaccionCuota(t);
+                    filasAfectadas++;
                 }
+
+                MetroFramework.MetroMessageBox.Show(this, "Transacciones completadas con éxito. " +"\n"+ "Cantidad de registros:" +filasAfectadas, "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            catch (Exception error)
+            catch (SqlException error)
             {
                 MetroFramework.MetroMessageBox.Show(this, "Error en la transacción: " + error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            finally
-            {
-                Conectar.CerrarConexion();
-            }
-
+            
 
         }
     }
