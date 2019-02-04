@@ -40,6 +40,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.efectuarPagoCuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revisiónCuotasAfiliadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +86,8 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administracionAfiliadosConDébitoToolStripMenuItem,
-            this.generarListadoDeAfiliadosADebitarPagoToolStripMenuItem});
+            this.generarListadoDeAfiliadosADebitarPagoToolStripMenuItem,
+            this.revisiónCuotasAfiliadosToolStripMenuItem});
             this.toolStripMenuItem1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Debit_Card_48;
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -120,6 +122,12 @@
             this.efectuarPagoCuotaToolStripMenuItem.Name = "efectuarPagoCuotaToolStripMenuItem";
             resources.ApplyResources(this.efectuarPagoCuotaToolStripMenuItem, "efectuarPagoCuotaToolStripMenuItem");
             // 
+            // revisiónCuotasAfiliadosToolStripMenuItem
+            // 
+            this.revisiónCuotasAfiliadosToolStripMenuItem.Name = "revisiónCuotasAfiliadosToolStripMenuItem";
+            resources.ApplyResources(this.revisiónCuotasAfiliadosToolStripMenuItem, "revisiónCuotasAfiliadosToolStripMenuItem");
+            this.revisiónCuotasAfiliadosToolStripMenuItem.Click += new System.EventHandler(this.revisiónCuotasAfiliadosToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -151,6 +159,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem efectuarPagoCuotaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem revisiónCuotasAfiliadosToolStripMenuItem;
     }
 }
 

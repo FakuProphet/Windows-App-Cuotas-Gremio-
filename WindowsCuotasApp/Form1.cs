@@ -33,5 +33,11 @@ namespace WindowsCuotasApp
             FormAdmAfiliados nuevo = new FormAdmAfiliados();
             nuevo.ShowDialog();
         }
+
+        private void revisiónCuotasAfiliadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEditarDebitos formEditarDebitos = new FormEditarDebitos();
+            formEditarDebitos.ShowDialog();
+        }
     }
 }

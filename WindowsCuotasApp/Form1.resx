@@ -161,6 +161,12 @@
   <data name="generarListadoDeAfiliadosADebitarPagoToolStripMenuItem.Text" xml:space="preserve">
     <value>Generar listado de afiliados a debitar pago</value>
   </data>
+  <data name="revisiónCuotasAfiliadosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>479, 34</value>
+  </data>
+  <data name="revisiónCuotasAfiliadosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Revisión cuotas afiliados</value>
+  </data>
   <data name="toolStripMenuItem1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
@@ -377,6 +383,12 @@
     <value>efectuarPagoCuotaToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;efectuarPagoCuotaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;revisiónCuotasAfiliadosToolStripMenuItem.Name" xml:space="preserve">
+    <value>revisiónCuotasAfiliadosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;revisiónCuotasAfiliadosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

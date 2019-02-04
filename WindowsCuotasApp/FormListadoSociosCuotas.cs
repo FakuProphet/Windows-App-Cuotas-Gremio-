@@ -27,7 +27,7 @@ namespace WindowsCuotasApp
         private void FormListadoSociosCuotas_Load(object sender, EventArgs e)
         {
             gestorDGV.efectosDGV(dataGridView1);
-            gestorDGV.cargarDataGrid(dataGridView1, "EXEC SP_LISTADO_AFIL_DEBITO");
+            gestorDGV.cargarDataGrid(dataGridView1, "SP_LISTADO_AFIL_DEBITO");
             cargarDatosCuotasCanceladasMesAnioActual();
         }
 
