@@ -28,6 +28,7 @@ namespace WindowsCuotasApp
         {
             gestorDGV.efectosDGV(dataGridView1);
             gestorDGV.cargarDataGrid(dataGridView1, "SP_LISTADO_AFIL_DEBITO");
+          
             cargarDatosCuotasCanceladasMesAnioActual();
         }
 
@@ -52,6 +53,7 @@ namespace WindowsCuotasApp
         {
             gestorDGV.cargarDataGrid(dataGridView2, "SELECT * FROM V_DETALLE_CUOTAS_POR_MES_ANIO ORDER BY 1");
             gestorDGV.efectosDGV(dataGridView2);
+            gestorDGV.PersonalizarColorCeldasDGV(dataGridView2, 5, "Cancelada");
         }
 
 

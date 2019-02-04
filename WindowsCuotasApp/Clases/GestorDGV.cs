@@ -7,7 +7,18 @@ namespace WindowsCuotasApp.Clases
 {
     class GestorDGV
     {
-
+        public void PersonalizarColorCeldasDGV(DataGridView dgv,int celdaID,string parametro)
+        {
+            foreach  (DataGridViewRow fila in dgv.Rows)
+            {
+                string descripcion = fila.Cells[celdaID].Value.ToString();
+                if (descripcion.Equals(parametro))
+                {
+                    fila.Cells[celdaID].Style.BackColor = Color.Green;
+                    fila.Cells[celdaID].Style.ForeColor = Color.White;
+                }
+            }
+        }
 
         public void efectosDGV(DataGridView miDGV)
         {
