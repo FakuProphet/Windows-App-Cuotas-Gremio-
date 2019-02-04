@@ -7,6 +7,8 @@ namespace WindowsCuotasApp.Clases
 {
     class GestorDGV
     {
+
+        /*Personalizar celdas segun condicion*/
         public void PersonalizarColorCeldasDGV(DataGridView dgv,int celdaID,string parametro)
         {
             foreach  (DataGridViewRow fila in dgv.Rows)

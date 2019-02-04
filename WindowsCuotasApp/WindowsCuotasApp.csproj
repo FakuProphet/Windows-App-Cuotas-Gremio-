@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8_Down_Arrow_32.png" />
     <None Include="Resources\icons8_Receive_Cash_48.png" />
     <None Include="Resources\icons8_Debit_Card_48.png" />
     <None Include="Resources\icons8_Todo_List2_16.png" />

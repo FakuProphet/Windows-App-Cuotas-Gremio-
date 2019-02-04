@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsCuotasApp.Clases;
 
@@ -23,31 +16,44 @@ namespace WindowsCuotasApp
 
         private void FormEditarDebitos_Load(object sender, EventArgs e)
         {
-           
-            gestorDGV.cargarDataGrid(dgvListadoSalida, "SP_LISTADO_AFIL_DEBITO");
+            gestorDGV.cargarDataGrid(dgvListadoSalida, "SELECT * FROM V_DETALLE_CUOTAS_DEL_MES_ANIO_ACTUAL ORDER BY 1");
             gestorDGV.efectosDGV(dgvListadoSalida);
             gestorDGV.efectosDGV(dgvListadoEntrada);
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+         
+        }
+
+
+
+        private void dgvListadoEntrada_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*Borrar una fila del DGV*/
+            if (dgvListadoEntrada.CurrentRow.Index != -1)
+            {
+                int fila = dgvListadoEntrada.CurrentRow.Index;
+                dgvListadoEntrada.Rows.RemoveAt(fila);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             foreach (DataGridViewRow fila in dgvListadoSalida.SelectedRows)
             {
-                string nroComprobante =  fila.Cells[2].Value.ToString();
-                string nombre = fila.Cells[3].Value.ToString();
-                dgvListadoEntrada.Rows.Add(nombre, nroComprobante);
+                string nroComprobante = fila.Cells[0].Value.ToString();
+                string nombreCompleto = fila.Cells[1].Value.ToString();
+                string nroDoc = fila.Cells[2].Value.ToString();
+                dgvListadoEntrada.Rows.Add(nroComprobante, nombreCompleto, nroDoc);
             }
+        }
 
-            //For Each ROW As DataGridViewRow In DataGridView1.SelectedRows
-            //Dim id As String = ROW.Cells("ID").Value
-            //Dim nombre As String = ROW.Cells("NOMBRE").Value
-            //DataGridView2.Rows.Add(id, nombre)
-            //Next
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvListadoSalida = new System.Windows.Forms.DataGridView();
             this.dgvListadoEntrada = new System.Windows.Forms.DataGridView();
             this.NroComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -35,7 +36,8 @@
             this.NRODNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoEntrada)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -55,6 +57,7 @@
             // 
             // dgvListadoEntrada
             // 
+            this.dgvListadoEntrada.AllowUserToAddRows = false;
             this.dgvListadoEntrada.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvListadoEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListadoEntrada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -67,6 +70,7 @@
             this.dgvListadoEntrada.ReadOnly = true;
             this.dgvListadoEntrada.Size = new System.Drawing.Size(785, 172);
             this.dgvListadoEntrada.TabIndex = 1;
+            this.dgvListadoEntrada.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListadoEntrada_CellDoubleClick);
             // 
             // NroComprobante
             // 
@@ -101,7 +105,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -114,21 +117,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // metroButton1
+            // button1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(901, 306);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(61, 43);
-            this.metroButton1.TabIndex = 2;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.button1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Down_Arrow_32;
+            this.button1.Location = new System.Drawing.Point(904, 303);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(61, 46);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // FormEditarDebitos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 708);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,6 +164,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NRODNI;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
