@@ -65,6 +65,7 @@ namespace WindowsCuotasApp
             cboEstadosGremiales.Show();
             cargarLista();
             comprobarLista();
+            txtBuscar.Enabled = true;
             listBox1.SelectedIndex = 1;
         }
         
@@ -79,9 +80,20 @@ namespace WindowsCuotasApp
             cboEstadosGremiales.Hide();
             listBox1.Enabled = false;
             limpiarCampos();
+            txtBuscar.Enabled = false;
             txtNombre.Focus();
         }
 
+        void ActualizarAfiliado()
+        {
+            btnGrabar.Hide();
+            btnActualizar.Enabled = false;
+            btnNuevo.Enabled = false;
+            listBox1.Enabled = false;
+            txtBuscar.Enabled = false;
+            groupBox1.Enabled = true;
+            txtNombre.Focus();
+        }
 
         private void cargarCampos(int x)
         {
@@ -98,6 +110,7 @@ namespace WindowsCuotasApp
             cboForma.SelectedValue = miVector[x].formaPago;
             txtCbu.Text = miVector[x].cbu;
             cboEstadosGremiales.SelectedValue = miVector[x].estadoGremialID;
+            lblAfiliadoID.Text = miVector[x].afiliadoID.ToString();
         }
 
         
@@ -110,6 +123,7 @@ namespace WindowsCuotasApp
             CargarCombo(cboEstadosGremiales,"estadosGremiales");
             combosPorDefecto();
         }
+
 
         private void limpiarCampos()
         {
@@ -244,11 +258,11 @@ namespace WindowsCuotasApp
                     {
                         if (seleccionFormaPago == 2)
                         {
-                            g.registrarAfiliado(nuevo, "proc_insertar_afiliado_b");
+                            g.RegistrarAfiliado(nuevo, "proc_insertar_afiliado_b",1);
                         }
                         else
                         {
-                            g.registrarAfiliado(nuevo, "proc_insertar_afiliado_a");
+                            g.RegistrarAfiliado(nuevo, "proc_insertar_afiliado_a",1);
                         }
                     }
                     else
@@ -330,6 +344,58 @@ namespace WindowsCuotasApp
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             inicio();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarAfiliado();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            int i = listBox1.SelectedIndex;
+            int seleccionFormaPago = Convert.ToInt32(cboForma.SelectedValue);
+            
+            //try
+            //{
+                Afiliado afiliadoUpdate = new Afiliado();
+                afiliadoUpdate.nombre = txtNombre.Text;
+                afiliadoUpdate.apellido = txtApellido.Text;
+                afiliadoUpdate.nroDoc = Convert.ToInt32(txtNroDoc.Text);
+                afiliadoUpdate.nroTel = txtNroTel.Text;
+                afiliadoUpdate.email = txtEmail.Text;
+                afiliadoUpdate.fechaNac = dtpFechaNac.Value.ToShortDateString();
+                afiliadoUpdate.localidad = Convert.ToInt32(cboLocalidades.SelectedValue);
+                afiliadoUpdate.formaPago = Convert.ToInt32(cboForma.SelectedValue);
+                afiliadoUpdate.tipoAfiliado = Convert.ToInt32(cboTipoAfil.SelectedValue);
+                afiliadoUpdate.barrio = txtBarrio.Text;
+                afiliadoUpdate.direccion = txtDir.Text;
+                afiliadoUpdate.cbu = txtCbu.Text;
+                afiliadoUpdate.afiliadoID = Convert.ToInt32(lblAfiliadoID.Text);
+                afiliadoUpdate.estadoGremialID = Convert.ToInt32(cboEstadosGremiales.SelectedValue);
+
+                if (MetroFramework.MetroMessageBox.Show(this, "Desea proseguir con la actualización de los datos del afiliado DNI nro: " + afiliadoUpdate.nroDoc + "?", "Actualizar datos de afiliado " + afiliadoUpdate.apellido.ToUpper(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (seleccionFormaPago == 1)
+                    {
+                        g.RegistrarAfiliado(afiliadoUpdate, "NewUpdateCommand",2);
+                    }
+                    else
+                    {
+                        g.RegistrarAfiliado(afiliadoUpdate, "NewUpdateCommand",2);
+                    }
+                }
+                else
+                {
+
+                }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MetroFramework.MetroMessageBox.Show(this, "Error en el registro del afiliado: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            //}
         }
     }
 }

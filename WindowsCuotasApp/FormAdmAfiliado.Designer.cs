@@ -67,11 +67,13 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.lblCheck = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblAfiliadoID = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblAfiliadoID);
             this.groupBox1.Controls.Add(this.lblCheck);
             this.groupBox1.Controls.Add(this.cboEstadosGremiales);
             this.groupBox1.Controls.Add(this.lblEstadoGremial);
@@ -299,6 +301,7 @@
             this.btnActualizar.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Update_32;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnNuevo
             // 
@@ -321,6 +324,12 @@
             this.btnUpdate.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Save_32;
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // lblAfiliadoID
+            // 
+            resources.ApplyResources(this.lblAfiliadoID, "lblAfiliadoID");
+            this.lblAfiliadoID.Name = "lblAfiliadoID";
             // 
             // FormAdmAfiliados
             // 
@@ -331,11 +340,11 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.label10);
             this.MaximizeBox = false;
             this.Name = "FormAdmAfiliados";
             this.Opacity = 0.95D;
@@ -388,5 +397,6 @@
         private System.Windows.Forms.Label lblEstadoGremial;
         private System.Windows.Forms.Label lblCheck;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblAfiliadoID;
     }
 }

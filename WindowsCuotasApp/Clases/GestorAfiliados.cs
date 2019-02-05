@@ -28,36 +28,41 @@ namespace WindowsCuotasApp.Clases
             Conectar.CerrarConexion();
         }
 
-
-        public void registrarAfiliado(Afiliado a , string nombreProc )
+        
+        public void RegistrarAfiliado(Afiliado a ,string sp, int evento)
         {
                 
-          
-            SqlCommand cmd = new SqlCommand(nombreProc,Conectar.ObtenerConexion());
+            SqlCommand cmd = new SqlCommand(sp,Conectar.ObtenerConexion());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = a.nombre;
-            cmd.Parameters.Add("@apellido", SqlDbType.VarChar).Value = a.apellido;
-            cmd.Parameters.Add("@nroDoc", SqlDbType.Int).Value = a.nroDoc;
-            cmd.Parameters.Add("@fechaNac", SqlDbType.VarChar).Value = a.fechaNac;
-            cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = a.email;
-            cmd.Parameters.Add("@nroTel", SqlDbType.VarChar).Value = a.nroTel;
-            cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = a.direccion;
-            cmd.Parameters.Add("@barrio", SqlDbType.VarChar).Value = a.barrio;
-            cmd.Parameters.Add("@localidad", SqlDbType.Int).Value = a.localidad;
-            cmd.Parameters.Add("@tipoAfiliado", SqlDbType.Int).Value = a.tipoAfiliado;
-            cmd.Parameters.Add("@metodoPagoID", SqlDbType.Int).Value = a.formaPago;
+            cmd.Parameters.AddWithValue("@nombre", SqlDbType.VarChar).Value = a.nombre;
+            cmd.Parameters.AddWithValue("@apellido", SqlDbType.VarChar).Value = a.apellido;
+            cmd.Parameters.AddWithValue("@nroDoc", SqlDbType.Int).Value = a.nroDoc;
+            cmd.Parameters.AddWithValue("@fechaNac", SqlDbType.VarChar).Value = a.fechaNac;
+            cmd.Parameters.AddWithValue("@email", SqlDbType.VarChar).Value = a.email;
+            cmd.Parameters.AddWithValue("@nroTel", SqlDbType.VarChar).Value = a.nroTel;
+            cmd.Parameters.AddWithValue("@direccion", SqlDbType.VarChar).Value = a.direccion;
+            cmd.Parameters.AddWithValue("@barrio", SqlDbType.VarChar).Value = a.barrio;
+            cmd.Parameters.AddWithValue("@localidad", SqlDbType.Int).Value = a.localidad;
+            cmd.Parameters.AddWithValue("@tipoAfiliadoID", SqlDbType.Int).Value = a.tipoAfiliado;
+            cmd.Parameters.AddWithValue("@metodoPagoID", SqlDbType.Int).Value = a.formaPago;
             if (a.formaPago == 2)
             {
-                cmd.Parameters.Add("@nroCuenta", SqlDbType.VarChar).Value = a.cbu;
+                cmd.Parameters.AddWithValue("@nroCuenta", SqlDbType.VarChar).Value = a.cbu;
+            }
+            if(evento==2)
+            {
+                cmd.Parameters.AddWithValue("@estadoGremialID", SqlDbType.Int).Value = a.estadoGremialID;
+                cmd.Parameters.AddWithValue("@afiliadoID", SqlDbType.Int).Value = a.afiliadoID;
             }
             cmd.ExecuteNonQuery();
             Conectar.CerrarConexion();
 
-
         }
 
+       
 
-        public void registrarPago(string procedimiento)
+
+        public void RegistrarPago(string procedimiento)
         {
             SqlCommand cmd = new SqlCommand(procedimiento,Conectar.ObtenerConexion());
         }
