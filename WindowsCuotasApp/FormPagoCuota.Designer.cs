@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPagoCuota));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblEstadoAfil = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblNroDoc = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTipoAfiliado = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,10 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblCodigoAfil = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblNroDoc = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblEstadoAfil = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnOperar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +66,42 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Afiliado ";
+            // 
+            // lblEstadoAfil
+            // 
+            this.lblEstadoAfil.AutoSize = true;
+            this.lblEstadoAfil.Location = new System.Drawing.Point(261, 173);
+            this.lblEstadoAfil.Name = "lblEstadoAfil";
+            this.lblEstadoAfil.Size = new System.Drawing.Size(23, 18);
+            this.lblEstadoAfil.TabIndex = 11;
+            this.lblEstadoAfil.Text = "...";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(109, 173);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 18);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Estado:";
+            // 
+            // lblNroDoc
+            // 
+            this.lblNroDoc.AutoSize = true;
+            this.lblNroDoc.Location = new System.Drawing.Point(261, 140);
+            this.lblNroDoc.Name = "lblNroDoc";
+            this.lblNroDoc.Size = new System.Drawing.Size(23, 18);
+            this.lblNroDoc.TabIndex = 9;
+            this.lblNroDoc.Text = "...";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(109, 140);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 18);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Nro documento:";
             // 
             // dataGridView1
             // 
@@ -129,47 +166,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo:";
             // 
-            // lblNroDoc
+            // btnOperar
             // 
-            this.lblNroDoc.AutoSize = true;
-            this.lblNroDoc.Location = new System.Drawing.Point(261, 140);
-            this.lblNroDoc.Name = "lblNroDoc";
-            this.lblNroDoc.Size = new System.Drawing.Size(23, 18);
-            this.lblNroDoc.TabIndex = 9;
-            this.lblNroDoc.Text = "...";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(109, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Nro documento:";
-            // 
-            // lblEstadoAfil
-            // 
-            this.lblEstadoAfil.AutoSize = true;
-            this.lblEstadoAfil.Location = new System.Drawing.Point(261, 173);
-            this.lblEstadoAfil.Name = "lblEstadoAfil";
-            this.lblEstadoAfil.Size = new System.Drawing.Size(23, 18);
-            this.lblEstadoAfil.TabIndex = 11;
-            this.lblEstadoAfil.Text = "...";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(109, 173);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Estado:";
+            this.btnOperar.Location = new System.Drawing.Point(656, 483);
+            this.btnOperar.Name = "btnOperar";
+            this.btnOperar.Size = new System.Drawing.Size(101, 37);
+            this.btnOperar.TabIndex = 2;
+            this.btnOperar.Text = "button1";
+            this.btnOperar.UseVisualStyleBackColor = true;
+            this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
             // FormPagoCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 560);
+            this.Controls.Add(this.btnOperar);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -197,5 +209,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblNroDoc;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnOperar;
     }
 }

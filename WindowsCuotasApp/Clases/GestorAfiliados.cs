@@ -131,6 +131,28 @@ namespace WindowsCuotasApp.Clases
             return afiliado;
         }
 
+        public bool isMesPago(int afiliadoID,int anio)
+        {
+            bool flag = false;
+            cmd = new SqlCommand("EXEC SP_IS_PAGADO_MES", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@AFILIADOID", SqlDbType.Int).Value = afiliadoID;
+            cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = anio;
+            dr = cmd.ExecuteReader();
+            Conectar.CerrarConexion();
+
+            if (!dr.Read().Equals(null))
+            {
+                flag = true;
+            }
+            else
+            {
+                flag = false;
+            }
+
+
+            return flag;
+        }
 
         public DataTable consultarTabla(string nombreTabla)
         {       
