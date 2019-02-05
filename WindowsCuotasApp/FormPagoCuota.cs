@@ -43,7 +43,7 @@ namespace WindowsCuotasApp
                     nuevo.afiliadoID = afiliado.codigo;
                     t.a = nuevo;
                     t.fecha = fecha;
-                    gestorAfiliados.generarTransaccionCuota(t);
+                    gestorAfiliados.GenerarTransaccionCuota(t);
                     MetroFramework.MetroMessageBox.Show(this, "Transaccion completada con éxito.", "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                
             }

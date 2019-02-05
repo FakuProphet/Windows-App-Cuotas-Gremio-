@@ -33,7 +33,7 @@ namespace WindowsCuotasApp
         private void cargarCombo(ComboBox combo, string nombreTabla)
         {
             DataTable tabla = new DataTable();
-            tabla = g.consultarTabla(nombreTabla);
+            tabla = g.ConsultarTabla(nombreTabla);
             combo.DataSource = tabla;
             combo.DisplayMember = tabla.Columns[1].ColumnName;
             combo.ValueMember = tabla.Columns[0].ColumnName;
@@ -44,7 +44,7 @@ namespace WindowsCuotasApp
 
         private void cargarLista()
         {
-            listado = g.listadoAfiliados();
+            listado = g.ListadoAfiliados();
             foreach (Afiliado a in listado)
             {
                 listBox1.Items.Add(a.nroDoc);

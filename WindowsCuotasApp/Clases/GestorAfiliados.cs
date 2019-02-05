@@ -17,7 +17,7 @@ namespace WindowsCuotasApp.Clases
         { set { dr = value; } get { return dr; } }
 
 
-        public void generarTransaccionCuota(TransaccionCuotaAfiliado t)
+        public void GenerarTransaccionCuota(TransaccionCuotaAfiliado t)
         {
             SqlCommand cmd = new SqlCommand("SP_TRANSACCION_CUOTA_AFIL", Conectar.ObtenerConexion());
             cmd.CommandType = CommandType.StoredProcedure;
@@ -63,7 +63,7 @@ namespace WindowsCuotasApp.Clases
         }
 
         
-        public ArrayList listadoAfiliados()
+        public ArrayList ListadoAfiliados()
         {
             ArrayList listado = new ArrayList();
             Afiliado nuevo;
@@ -131,7 +131,7 @@ namespace WindowsCuotasApp.Clases
             return afiliado;
         }
 
-        public bool isMesPago(int afiliadoID,int anio)
+        public bool IsMesPago(int afiliadoID,int anio)
         {
             bool flag = false;
             cmd = new SqlCommand("EXEC SP_IS_PAGADO_MES", Conectar.ObtenerConexion());
@@ -154,7 +154,7 @@ namespace WindowsCuotasApp.Clases
             return flag;
         }
 
-        public DataTable consultarTabla(string nombreTabla)
+        public DataTable ConsultarTabla(string nombreTabla)
         {       
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter();

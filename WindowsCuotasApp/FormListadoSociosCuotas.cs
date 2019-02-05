@@ -73,7 +73,7 @@ namespace WindowsCuotasApp
                     nuevo.afiliadoID = Convert.ToInt32(fila.Cells[0].Value);
                     t.a = nuevo;
                     t.fecha = fecha;              
-                    gestorAfiliados.generarTransaccionCuota(t);
+                    gestorAfiliados.GenerarTransaccionCuota(t);
                     filasAfectadas++;
                 }
 
