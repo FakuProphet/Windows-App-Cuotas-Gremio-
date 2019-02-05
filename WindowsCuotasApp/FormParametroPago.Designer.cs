@@ -32,8 +32,8 @@
             this.btnValidar = new System.Windows.Forms.Button();
             this.txtParametro = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnContinuar = new System.Windows.Forms.Button();
             this.lblCheck = new System.Windows.Forms.Label();
+            this.btnContinuar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,17 +59,17 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // lblCheck
+            // 
+            resources.ApplyResources(this.lblCheck, "lblCheck");
+            this.lblCheck.Name = "lblCheck";
+            // 
             // btnContinuar
             // 
             resources.ApplyResources(this.btnContinuar, "btnContinuar");
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.UseVisualStyleBackColor = true;
             this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
-            // 
-            // lblCheck
-            // 
-            resources.ApplyResources(this.lblCheck, "lblCheck");
-            this.lblCheck.Name = "lblCheck";
             // 
             // FormParametroPago
             // 

@@ -20,12 +20,26 @@ namespace WindowsCuotasApp
 
         private void inicio()
         {
-            lblCodigoAfil.Text = afiliado.codigo.ToString();
-            lblNombreAfil.Text = afiliado.nombreCompleto;
-            lblTipoAfiliado.Text = afiliado.tipoAfiliado;
-            lblNroDoc.Text = afiliado.nroDocumento.ToString();
-            lblEstadoAfil.Text = afiliado.estado;
+            /*Si la cuota existe, no se muestra el formulario de pago*/
+            Fecha fecha = new Fecha();
+            bool condicion = gestorAfiliados.IsMesPago(afiliado.codigo, fecha.getAnio());
+            if(condicion)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El afiliado documento nro: " +afiliado.nroDocumento + " ha cancelado la cuotas del mes"  ,afiliado.nombreCompleto.ToUpper(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                lblCodigoAfil.Text = afiliado.codigo.ToString();
+                lblNombreAfil.Text = afiliado.nombreCompleto;
+                lblTipoAfiliado.Text = afiliado.tipoAfiliado;
+                lblNroDoc.Text = afiliado.nroDocumento.ToString();
+                lblEstadoAfil.Text = afiliado.estado;
+            }
         }
+
+        
+
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
@@ -37,14 +51,14 @@ namespace WindowsCuotasApp
             try
             {
                
-                    t = new TransaccionCuotaAfiliado();
-                    nuevo = new Afiliado();
-                    fecha = new Fecha();
-                    nuevo.afiliadoID = afiliado.codigo;
-                    t.a = nuevo;
-                    t.fecha = fecha;
-                    gestorAfiliados.GenerarTransaccionCuota(t);
-                    MetroFramework.MetroMessageBox.Show(this, "Transaccion completada con éxito.", "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                t = new TransaccionCuotaAfiliado();
+                nuevo = new Afiliado();
+                fecha = new Fecha();
+                nuevo.afiliadoID = afiliado.codigo;
+                t.a = nuevo;
+                t.fecha = fecha;
+                gestorAfiliados.GenerarTransaccionCuota(t);
+                MetroFramework.MetroMessageBox.Show(this, "Transaccion completada con éxito.", "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                
             }
 
@@ -52,6 +66,7 @@ namespace WindowsCuotasApp
             {
                 MetroFramework.MetroMessageBox.Show(this, "Error en la transacción: " + error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
     }
 }

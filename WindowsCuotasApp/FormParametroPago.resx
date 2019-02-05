@@ -174,6 +174,24 @@
   <data name="&gt;&gt;txtParametro.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="lblCheck.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 15.75pt, style=Bold</value>
+  </data>
+  <data name="lblCheck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 50</value>
+  </data>
+  <data name="lblCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="lblCheck.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblCheck.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="lblCheck.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
   <data name="&gt;&gt;lblCheck.Name" xml:space="preserve">
     <value>lblCheck</value>
   </data>
@@ -249,36 +267,6 @@
   <data name="&gt;&gt;btnContinuar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lblCheck.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 15.75pt, style=Bold</value>
-  </data>
-  <data name="lblCheck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 50</value>
-  </data>
-  <data name="lblCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
-  </data>
-  <data name="lblCheck.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblCheck.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="lblCheck.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lblCheck.Name" xml:space="preserve">
-    <value>lblCheck</value>
-  </data>
-  <data name="&gt;&gt;lblCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCheck.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblCheck.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -286,7 +274,7 @@
     <value>9, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>489, 315</value>
+    <value>489, 331</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 11.25pt</value>
