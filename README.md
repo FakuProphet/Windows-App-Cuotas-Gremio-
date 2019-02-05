@@ -1,1 +1,1 @@
-# Windows-App-Cuotas-Gremio-
+# Windows-Desktop-App-Cuotas-Gremio-
