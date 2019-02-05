@@ -117,7 +117,7 @@
             this.txtFiltrar.CustomButton.UseSelectable = true;
             this.txtFiltrar.CustomButton.Visible = false;
             this.txtFiltrar.Lines = new string[0];
-            this.txtFiltrar.Location = new System.Drawing.Point(235, 17);
+            this.txtFiltrar.Location = new System.Drawing.Point(189, 17);
             this.txtFiltrar.MaxLength = 32767;
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.PasswordChar = '\0';
@@ -139,7 +139,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.BackColor = System.Drawing.Color.White;
             this.metroLabel1.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel1.Location = new System.Drawing.Point(46, 19);
+            this.metroLabel1.Location = new System.Drawing.Point(16, 17);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(167, 19);
             this.metroLabel1.TabIndex = 6;
@@ -157,7 +157,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.metroLabel1);
             this.panel1.Controls.Add(this.txtFiltrar);
             this.panel1.Location = new System.Drawing.Point(24, 83);
@@ -193,9 +193,9 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.btnEfectuarCambios);
             this.panel3.Controls.Add(this.dgvListadoEntrada);
-            this.panel3.Location = new System.Drawing.Point(115, 378);
+            this.panel3.Location = new System.Drawing.Point(24, 378);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(838, 202);
+            this.panel3.Size = new System.Drawing.Size(1031, 202);
             this.panel3.TabIndex = 11;
             // 
             // FormEditarDebitos

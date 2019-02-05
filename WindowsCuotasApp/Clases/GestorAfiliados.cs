@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
+using WindowsCuotasApp.Clases.DTO;
 
 namespace WindowsCuotasApp.Clases
 {
@@ -97,6 +96,40 @@ namespace WindowsCuotasApp.Clases
             return listado;
         }
 
+        public AfiliadoDTO GetAfiliado(int parametroDoc,int parametroMetodoPago)
+        {
+
+            AfiliadoDTO afiliado = null;
+            
+            cmd = new SqlCommand("P_GET_AFILIADO_POR_DNI_MET_PAGO", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@NRODOC", SqlDbType.Int).Value = parametroDoc;
+            cmd.Parameters.Add("@METODOPAGO", SqlDbType.Int).Value = parametroMetodoPago;
+            dr =cmd.ExecuteReader();
+            Conectar.CerrarConexion();
+            if (dr.Read())
+            {
+                
+                string nombreCompleto = dr.GetString(0);
+                int nroDoc = dr.GetInt32(1);
+                string tipoAfiliado = dr.GetString(2);
+                string estado = dr.GetString(3);
+                string formaPago = dr.GetString(4);
+                int codigo = dr.GetInt32(5);
+
+                afiliado = new AfiliadoDTO
+                {
+                    codigo = codigo,
+                    nombreCompleto = nombreCompleto,
+                    nroDocumento = nroDoc,
+                    tipoAfiliado = tipoAfiliado,
+                    estado = estado,
+                    formaPago = formaPago
+                };
+            }
+            
+            return afiliado;
+        }
 
 
         public DataTable consultarTabla(string nombreTabla)

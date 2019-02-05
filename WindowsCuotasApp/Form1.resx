@@ -367,6 +367,12 @@
   <data name="&gt;&gt;generarListadoDeAfiliadosADebitarPagoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;revisiónCuotasAfiliadosToolStripMenuItem.Name" xml:space="preserve">
+    <value>revisiónCuotasAfiliadosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;revisiónCuotasAfiliadosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
     <value>toolStripSeparator2</value>
   </data>
@@ -383,12 +389,6 @@
     <value>efectuarPagoCuotaToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;efectuarPagoCuotaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;revisiónCuotasAfiliadosToolStripMenuItem.Name" xml:space="preserve">
-    <value>revisiónCuotasAfiliadosToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;revisiónCuotasAfiliadosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

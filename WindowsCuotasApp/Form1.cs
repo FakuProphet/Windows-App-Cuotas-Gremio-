@@ -39,5 +39,11 @@ namespace WindowsCuotasApp
             FormEditarDebitos formEditarDebitos = new FormEditarDebitos();
             formEditarDebitos.ShowDialog();
         }
+
+        private void efectuarPagoCuotaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormParametroPago nuevo = new FormParametroPago();
+            nuevo.ShowDialog();
+        }
     }
 }

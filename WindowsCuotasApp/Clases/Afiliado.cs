@@ -2,7 +2,7 @@
 
 namespace WindowsCuotasApp.Clases
 {
-    class Afiliado
+    public class Afiliado
     {
         /*
          La forma de pago se establece en el afiliado

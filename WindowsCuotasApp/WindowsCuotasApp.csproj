@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Clases\Afiliado.cs" />
     <Compile Include="Clases\Conectar.cs" />
+    <Compile Include="Clases\DTO\AfiliadoDTO.cs" />
     <Compile Include="Clases\Fecha.cs" />
     <Compile Include="Clases\FormaPago.cs" />
     <Compile Include="Clases\GestorAfiliados.cs" />
@@ -100,6 +101,12 @@
     <Compile Include="FormPagoCuota.Designer.cs">
       <DependentUpon>FormPagoCuota.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormParametroPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormParametroPago.Designer.cs">
+      <DependentUpon>FormParametroPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPagoCuota.resx">
       <DependentUpon>FormPagoCuota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormParametroPago.resx">
+      <DependentUpon>FormParametroPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReporte.resx">
       <DependentUpon>FormReporte.cs</DependentUpon>

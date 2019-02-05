@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmAfiliados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboEstadosGremiales = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.txtCbu = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -63,8 +65,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.cboEstadosGremiales = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +103,17 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // cboEstadosGremiales
+            // 
+            this.cboEstadosGremiales.FormattingEnabled = true;
+            resources.ApplyResources(this.cboEstadosGremiales, "cboEstadosGremiales");
+            this.cboEstadosGremiales.Name = "cboEstadosGremiales";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
             // 
             // dtpFechaNac
             // 
@@ -258,7 +269,7 @@
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
@@ -294,17 +305,6 @@
             this.btnNuevo.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Add_32;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // cboEstadosGremiales
-            // 
-            this.cboEstadosGremiales.FormattingEnabled = true;
-            resources.ApplyResources(this.cboEstadosGremiales, "cboEstadosGremiales");
-            this.cboEstadosGremiales.Name = "cboEstadosGremiales";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
             // 
             // FormAdmAfiliados
             // 

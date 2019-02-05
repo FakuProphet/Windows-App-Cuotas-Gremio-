@@ -37,10 +37,10 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.administracionAfiliadosConDébitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarListadoDeAfiliadosADebitarPagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revisiónCuotasAfiliadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.efectuarPagoCuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.revisiónCuotasAfiliadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +104,12 @@
             resources.ApplyResources(this.generarListadoDeAfiliadosADebitarPagoToolStripMenuItem, "generarListadoDeAfiliadosADebitarPagoToolStripMenuItem");
             this.generarListadoDeAfiliadosADebitarPagoToolStripMenuItem.Click += new System.EventHandler(this.generarListadoDeAfiliadosADebitarPagoToolStripMenuItem_Click);
             // 
+            // revisiónCuotasAfiliadosToolStripMenuItem
+            // 
+            this.revisiónCuotasAfiliadosToolStripMenuItem.Name = "revisiónCuotasAfiliadosToolStripMenuItem";
+            resources.ApplyResources(this.revisiónCuotasAfiliadosToolStripMenuItem, "revisiónCuotasAfiliadosToolStripMenuItem");
+            this.revisiónCuotasAfiliadosToolStripMenuItem.Click += new System.EventHandler(this.revisiónCuotasAfiliadosToolStripMenuItem_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -121,12 +127,7 @@
             // 
             this.efectuarPagoCuotaToolStripMenuItem.Name = "efectuarPagoCuotaToolStripMenuItem";
             resources.ApplyResources(this.efectuarPagoCuotaToolStripMenuItem, "efectuarPagoCuotaToolStripMenuItem");
-            // 
-            // revisiónCuotasAfiliadosToolStripMenuItem
-            // 
-            this.revisiónCuotasAfiliadosToolStripMenuItem.Name = "revisiónCuotasAfiliadosToolStripMenuItem";
-            resources.ApplyResources(this.revisiónCuotasAfiliadosToolStripMenuItem, "revisiónCuotasAfiliadosToolStripMenuItem");
-            this.revisiónCuotasAfiliadosToolStripMenuItem.Click += new System.EventHandler(this.revisiónCuotasAfiliadosToolStripMenuItem_Click);
+            this.efectuarPagoCuotaToolStripMenuItem.Click += new System.EventHandler(this.efectuarPagoCuotaToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
