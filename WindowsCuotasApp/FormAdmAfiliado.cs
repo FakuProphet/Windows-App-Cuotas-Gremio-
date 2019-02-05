@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using WindowsCuotasApp.Clases;
 
@@ -13,24 +14,24 @@ namespace WindowsCuotasApp
 
         GestorAfiliados g;
         ArrayList listado;
-
-
+        Validar validar;
+        private bool bandera;
         public FormAdmAfiliados()
         {
             InitializeComponent();
             g = new GestorAfiliados();
+            validar = new Validar();
+            bandera = false;
         }
 
 
         private void FormAdmAfiliado_Load(object sender, EventArgs e)
         {
-            cargarTodosLosCombos(); 
-            cargarLista();
-            comprobarLista();
+            inicio();  
         }
 
 
-        private void cargarCombo(ComboBox combo, string nombreTabla)
+        private void CargarCombo(ComboBox combo, string nombreTabla)
         {
             DataTable tabla = new DataTable();
             tabla = g.ConsultarTabla(nombreTabla);
@@ -51,8 +52,37 @@ namespace WindowsCuotasApp
             }
         }
 
-      
+        private void inicio()
+        {
+            cargarTodosLosCombos();
+            listBox1.Enabled = true;
+            groupBox1.Enabled = false;
+            btnGrabar.Enabled = false;
+            btnActualizar.Enabled = true;
+            btnCancelar.Enabled = false;
+            btnNuevo.Enabled = true;
+            lblEstadoGremial.Show();
+            cboEstadosGremiales.Show();
+            cargarLista();
+            comprobarLista();
+            listBox1.SelectedIndex = 1;
+        }
         
+
+        private void NuevoAfiliado()
+        {
+            groupBox1.Enabled = true;
+            btnNuevo.Enabled = false;
+            btnCancelar.Enabled = true;
+            btnActualizar.Enabled = false;
+            lblEstadoGremial.Hide();
+            cboEstadosGremiales.Hide();
+            listBox1.Enabled = false;
+            limpiarCampos();
+            txtNombre.Focus();
+        }
+
+
         private void cargarCampos(int x)
         {
             Afiliado[] miVector = convertir();
@@ -74,13 +104,31 @@ namespace WindowsCuotasApp
 
         private void cargarTodosLosCombos()
         {
-            cargarCombo(cboLocalidades, "localidades");
-            cargarCombo(cboForma, "formasPago");
-            cargarCombo(cboTipoAfil, "tiposAfiliado");
-            cargarCombo(cboEstadosGremiales,"estadosGremiales");
+            CargarCombo(cboLocalidades, "localidades");
+            CargarCombo(cboForma, "formasPago");
+            CargarCombo(cboTipoAfil, "tiposAfiliado");
+            CargarCombo(cboEstadosGremiales,"estadosGremiales");
             combosPorDefecto();
         }
 
+        private void limpiarCampos()
+        {
+            foreach (Control c in groupBox1.Controls)
+            {
+                if(c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = 0;
+                    combosPorDefecto();
+                }
+            }
+            foreach (Control c in groupBox1.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Clear();
+                }
+            }
+        }
 
         private void comprobarLista()
         {
@@ -88,6 +136,9 @@ namespace WindowsCuotasApp
             {
                 MessageBox.Show("Lista Vacia.");
                 btnActualizar.Enabled = false;
+                btnCancelar.Enabled = false;
+                btnGrabar.Enabled = false;
+                groupBox1.Enabled = false;
             }
             else
                 listBox1.SelectedIndex = 0;
@@ -102,7 +153,6 @@ namespace WindowsCuotasApp
                 cboLocalidades.SelectedValue = 59;
             }
            
-            txtEmail.Text = "@";
         }
 
 
@@ -176,8 +226,6 @@ namespace WindowsCuotasApp
             try
             {
                
-
-               
                     Afiliado nuevo = new Afiliado();
                     nuevo.nombre = txtNombre.Text;
                     nuevo.apellido = txtApellido.Text;
@@ -243,6 +291,45 @@ namespace WindowsCuotasApp
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarCampos(listBox1.SelectedIndex);
+        }
+
+
+
+        private void txtNroDoc_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtNroDoc.Text))
+            {
+                if (txtNroDoc.TextLength is 8)
+                {
+                    int nroDoc = Convert.ToInt32(txtNroDoc.Text);
+                    bandera = validar.existeDocumento(nroDoc);
+                    if (bandera)
+                    {
+                        lblCheck.ForeColor = Color.Red;
+                        btnGrabar.Enabled = false;
+                    }
+                    else
+                    {
+                        lblCheck.ForeColor = Color.Green;
+                        btnGrabar.Enabled = true; 
+                    }
+                }
+                else
+                {
+                    lblCheck.ForeColor = Color.Black;
+                    btnGrabar.Enabled = false;
+                }
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            NuevoAfiliado();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            inicio();
         }
     }
 }

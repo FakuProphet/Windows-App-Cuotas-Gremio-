@@ -71,6 +71,7 @@
     <Compile Include="Clases\Localidad.cs" />
     <Compile Include="Clases\TipoAfiliado.cs" />
     <Compile Include="Clases\TransaccionCuotaAfiliado.cs" />
+    <Compile Include="Clases\Validar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmAfiliados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboEstadosGremiales = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblEstadoGremial = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.txtCbu = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -65,13 +65,15 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.lblCheck = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblCheck);
             this.groupBox1.Controls.Add(this.cboEstadosGremiales);
-            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.lblEstadoGremial);
             this.groupBox1.Controls.Add(this.dtpFechaNac);
             this.groupBox1.Controls.Add(this.txtCbu);
             this.groupBox1.Controls.Add(this.label14);
@@ -79,9 +81,6 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.cboTipoAfil);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtBuscar);
-            this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.cboLocalidades);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtBarrio);
@@ -110,10 +109,10 @@
             resources.ApplyResources(this.cboEstadosGremiales, "cboEstadosGremiales");
             this.cboEstadosGremiales.Name = "cboEstadosGremiales";
             // 
-            // label15
+            // lblEstadoGremial
             // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
+            resources.ApplyResources(this.lblEstadoGremial, "lblEstadoGremial");
+            this.lblEstadoGremial.Name = "lblEstadoGremial";
             // 
             // dtpFechaNac
             // 
@@ -167,8 +166,8 @@
             // 
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
             resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.FormattingEnabled = true;
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -239,6 +238,7 @@
             resources.ApplyResources(this.txtNroDoc, "txtNroDoc");
             this.txtNroDoc.Name = "txtNroDoc";
             this.txtNroDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroDoc_KeyPress);
+            this.txtNroDoc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNroDoc_KeyUp);
             // 
             // label3
             // 
@@ -289,6 +289,7 @@
             this.btnCancelar.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Cancel_32;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnActualizar
             // 
@@ -305,6 +306,12 @@
             this.btnNuevo.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Add_32;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // lblCheck
+            // 
+            resources.ApplyResources(this.lblCheck, "lblCheck");
+            this.lblCheck.Name = "lblCheck";
             // 
             // FormAdmAfiliados
             // 
@@ -316,6 +323,9 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.listBox1);
             this.MaximizeBox = false;
             this.Name = "FormAdmAfiliados";
             this.Opacity = 0.95D;
@@ -324,6 +334,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -364,6 +375,7 @@
         private System.Windows.Forms.ComboBox cboTipoAfil;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.ComboBox cboEstadosGremiales;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblEstadoGremial;
+        private System.Windows.Forms.Label lblCheck;
     }
 }

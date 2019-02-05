@@ -9,7 +9,7 @@ namespace WindowsCuotasApp.Clases
     {
         SqlCommand cmd;
         SqlDataReader dr;
-        const int tam = 1000;
+        //const int tam = 1000;
 
 
 
