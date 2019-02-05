@@ -1033,7 +1033,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnGrabar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 650</value>
+    <value>221, 650</value>
   </data>
   <data name="btnGrabar.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 40</value>
@@ -1072,7 +1072,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>537, 650</value>
+    <value>597, 650</value>
   </data>
   <data name="btnCancelar.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 40</value>
@@ -1111,7 +1111,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnActualizar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 650</value>
+    <value>409, 650</value>
   </data>
   <data name="btnActualizar.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 40</value>
@@ -1150,7 +1150,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnNuevo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>728, 650</value>
+    <value>785, 650</value>
   </data>
   <data name="btnNuevo.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 40</value>
@@ -1175,6 +1175,45 @@
   </data>
   <data name="&gt;&gt;btnNuevo.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="btnUpdate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnUpdate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 650</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 40</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Confirmar cambios</value>
+  </data>
+  <data name="btnUpdate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

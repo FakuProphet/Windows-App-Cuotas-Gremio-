@@ -66,6 +66,7 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.lblCheck = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -313,6 +314,14 @@
             resources.ApplyResources(this.lblCheck, "lblCheck");
             this.lblCheck.Name = "lblCheck";
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Save_32;
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
             // FormAdmAfiliados
             // 
             resources.ApplyResources(this, "$this");
@@ -326,6 +335,7 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnUpdate);
             this.MaximizeBox = false;
             this.Name = "FormAdmAfiliados";
             this.Opacity = 0.95D;
@@ -377,5 +387,6 @@
         private System.Windows.Forms.ComboBox cboEstadosGremiales;
         private System.Windows.Forms.Label lblEstadoGremial;
         private System.Windows.Forms.Label lblCheck;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
