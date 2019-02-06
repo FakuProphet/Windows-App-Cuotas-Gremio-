@@ -63,6 +63,7 @@ namespace WindowsCuotasApp
             btnNuevo.Enabled = true;
             lblEstadoGremial.Show();
             cboEstadosGremiales.Show();
+            listBox1.Items.Clear();
             cargarLista();
             comprobarLista();
             txtBuscar.Enabled = true;
@@ -257,6 +258,7 @@ namespace WindowsCuotasApp
                     if (MetroFramework.MetroMessageBox.Show(this, "Desea registrar el afiliado dni nro: " + nuevo.nroDoc + "?", "Alta de afiliado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         g.RegistrarAfiliado(nuevo, "SP_REGISTRAR_AFILIADO", 0);
+                        inicio();
                     }
                     else
                     {
