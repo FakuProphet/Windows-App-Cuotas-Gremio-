@@ -45,15 +45,16 @@ namespace WindowsCuotasApp.Clases
             cmd.Parameters.AddWithValue("@localidad", SqlDbType.Int).Value = a.localidad;
             cmd.Parameters.AddWithValue("@tipoAfiliadoID", SqlDbType.Int).Value = a.tipoAfiliado;
             cmd.Parameters.AddWithValue("@metodoPagoID", SqlDbType.Int).Value = a.formaPago;
-            if (a.formaPago == 2)
-            {
-                cmd.Parameters.AddWithValue("@nroCuenta", SqlDbType.VarChar).Value = a.cbu;
-            }
-            if(evento==2)
+            cmd.Parameters.AddWithValue("@nroCuenta", SqlDbType.VarChar).Value = a.cbu;
+
+            /*Update*/
+            if (evento==2)
             {
                 cmd.Parameters.AddWithValue("@estadoGremialID", SqlDbType.Int).Value = a.estadoGremialID;
                 cmd.Parameters.AddWithValue("@afiliadoID", SqlDbType.Int).Value = a.afiliadoID;
+                
             }
+           
             cmd.ExecuteNonQuery();
             Conectar.CerrarConexion();
 

@@ -235,7 +235,7 @@ namespace WindowsCuotasApp
         private void btnGrabar_Click(object sender, EventArgs e)
         {
 
-            int seleccionFormaPago = Convert.ToInt32(cboForma.SelectedValue);
+           
 
             try
             {
@@ -256,14 +256,7 @@ namespace WindowsCuotasApp
 
                     if (MetroFramework.MetroMessageBox.Show(this, "Desea registrar el afiliado dni nro: " + nuevo.nroDoc + "?", "Alta de afiliado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        if (seleccionFormaPago == 2)
-                        {
-                            g.RegistrarAfiliado(nuevo, "proc_insertar_afiliado_b",1);
-                        }
-                        else
-                        {
-                            g.RegistrarAfiliado(nuevo, "proc_insertar_afiliado_a",1);
-                        }
+                        g.RegistrarAfiliado(nuevo, "SP_REGISTRAR_AFILIADO", 0);
                     }
                     else
                     {
@@ -356,9 +349,9 @@ namespace WindowsCuotasApp
 
             int i = listBox1.SelectedIndex;
             int seleccionFormaPago = Convert.ToInt32(cboForma.SelectedValue);
-            
-            //try
-            //{
+
+            try
+            {
                 Afiliado afiliadoUpdate = new Afiliado();
                 afiliadoUpdate.nombre = txtNombre.Text;
                 afiliadoUpdate.apellido = txtApellido.Text;
@@ -374,28 +367,22 @@ namespace WindowsCuotasApp
                 afiliadoUpdate.cbu = txtCbu.Text;
                 afiliadoUpdate.afiliadoID = Convert.ToInt32(lblAfiliadoID.Text);
                 afiliadoUpdate.estadoGremialID = Convert.ToInt32(cboEstadosGremiales.SelectedValue);
+                afiliadoUpdate.cbu = txtCbu.Text;    
 
                 if (MetroFramework.MetroMessageBox.Show(this, "Desea proseguir con la actualización de los datos del afiliado DNI nro: " + afiliadoUpdate.nroDoc + "?", "Actualizar datos de afiliado " + afiliadoUpdate.apellido.ToUpper(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (seleccionFormaPago == 1)
-                    {
-                        g.RegistrarAfiliado(afiliadoUpdate, "NewUpdateCommand",2);
-                    }
-                    else
-                    {
-                        g.RegistrarAfiliado(afiliadoUpdate, "NewUpdateCommand",2);
-                    }
+                    g.RegistrarAfiliado(afiliadoUpdate, "NewUpdateComando",2);
                 }
                 else
                 {
 
                 }
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MetroFramework.MetroMessageBox.Show(this, "Error en el registro del afiliado: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Error en el registro del afiliado: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
         }
     }
 }
