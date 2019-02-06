@@ -27,7 +27,7 @@ namespace WindowsCuotasApp
 
         private void FormAdmAfiliado_Load(object sender, EventArgs e)
         {
-            inicio();  
+            Inicio();  
         }
 
 
@@ -43,7 +43,7 @@ namespace WindowsCuotasApp
         }
 
 
-        private void cargarLista()
+        private void CargarLista()
         {
             listado = g.ListadoAfiliados();
             foreach (Afiliado a in listado)
@@ -52,9 +52,9 @@ namespace WindowsCuotasApp
             }
         }
 
-        private void inicio()
+        private void Inicio()
         {
-            cargarTodosLosCombos();
+            CargarTodosLosCombos();
             listBox1.Enabled = true;
             groupBox1.Enabled = false;
             btnGrabar.Enabled = false;
@@ -64,8 +64,8 @@ namespace WindowsCuotasApp
             lblEstadoGremial.Show();
             cboEstadosGremiales.Show();
             listBox1.Items.Clear();
-            cargarLista();
-            comprobarLista();
+            CargarLista();
+            ComprobarLista();
             txtBuscar.Enabled = true;
             listBox1.SelectedIndex = 1;
         }
@@ -80,7 +80,7 @@ namespace WindowsCuotasApp
             lblEstadoGremial.Hide();
             cboEstadosGremiales.Hide();
             listBox1.Enabled = false;
-            limpiarCampos();
+            LimpiarCampos();
             txtBuscar.Enabled = false;
             txtNombre.Focus();
         }
@@ -96,7 +96,7 @@ namespace WindowsCuotasApp
             txtNombre.Focus();
         }
 
-        private void cargarCampos(int x)
+        private void CargarCampos(int x)
         {
             Afiliado[] miVector = convertir();
             txtNombre.Text = miVector[x].nombre;
@@ -116,24 +116,24 @@ namespace WindowsCuotasApp
 
         
 
-        private void cargarTodosLosCombos()
+        private void CargarTodosLosCombos()
         {
             CargarCombo(cboLocalidades, "localidades");
             CargarCombo(cboForma, "formasPago");
             CargarCombo(cboTipoAfil, "tiposAfiliado");
             CargarCombo(cboEstadosGremiales,"estadosGremiales");
-            combosPorDefecto();
+            CombosPorDefecto();
         }
 
 
-        private void limpiarCampos()
+        private void LimpiarCampos()
         {
             foreach (Control c in groupBox1.Controls)
             {
                 if(c is ComboBox)
                 {
                     ((ComboBox)c).SelectedIndex = 0;
-                    combosPorDefecto();
+                    CombosPorDefecto();
                 }
             }
             foreach (Control c in groupBox1.Controls)
@@ -145,7 +145,7 @@ namespace WindowsCuotasApp
             }
         }
 
-        private void comprobarLista()
+        private void ComprobarLista()
         {
             if (listBox1.Items.Count == 0)
             {
@@ -160,7 +160,7 @@ namespace WindowsCuotasApp
         }
 
 
-        private void combosPorDefecto()
+        private void CombosPorDefecto()
         {
 
             if (cboLocalidades.Items.Count != 0)
@@ -258,7 +258,7 @@ namespace WindowsCuotasApp
                     if (MetroFramework.MetroMessageBox.Show(this, "Desea registrar el afiliado dni nro: " + nuevo.nroDoc + "?", "Alta de afiliado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         g.RegistrarAfiliado(nuevo, "SP_REGISTRAR_AFILIADO", 0);
-                        inicio();
+                        Inicio();
                     }
                     else
                     {
@@ -299,7 +299,7 @@ namespace WindowsCuotasApp
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cargarCampos(listBox1.SelectedIndex);
+            CargarCampos(listBox1.SelectedIndex);
         }
 
 
@@ -338,7 +338,7 @@ namespace WindowsCuotasApp
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            inicio();
+            Inicio();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
