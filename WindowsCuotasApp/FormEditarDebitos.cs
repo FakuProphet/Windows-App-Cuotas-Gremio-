@@ -83,5 +83,10 @@ namespace WindowsCuotasApp
         {
 
         }
+
+        private void btnEfectuarCambios_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

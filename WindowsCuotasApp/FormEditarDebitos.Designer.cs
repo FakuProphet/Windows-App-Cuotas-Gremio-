@@ -82,21 +82,21 @@
             this.NroComprobante.HeaderText = "NRO COMPROBANTE";
             this.NroComprobante.Name = "NroComprobante";
             this.NroComprobante.ReadOnly = true;
-            this.NroComprobante.Width = 186;
+            this.NroComprobante.Width = 170;
             // 
             // AFILIADO
             // 
             this.AFILIADO.HeaderText = "NOMBRE AFILIADO";
             this.AFILIADO.Name = "AFILIADO";
             this.AFILIADO.ReadOnly = true;
-            this.AFILIADO.Width = 177;
+            this.AFILIADO.Width = 158;
             // 
             // NRODNI
             // 
             this.NRODNI.HeaderText = "NRO. DOCUMENTO";
             this.NRODNI.Name = "NRODNI";
             this.NRODNI.ReadOnly = true;
-            this.NRODNI.Width = 170;
+            this.NRODNI.Width = 159;
             // 
             // toolTip1
             // 
@@ -187,6 +187,7 @@
             this.btnEfectuarCambios.Text = "Efectuar cambios";
             this.btnEfectuarCambios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEfectuarCambios.UseVisualStyleBackColor = true;
+            this.btnEfectuarCambios.Click += new System.EventHandler(this.btnEfectuarCambios_Click);
             // 
             // panel3
             // 

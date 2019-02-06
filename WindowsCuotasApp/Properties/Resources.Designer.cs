@@ -103,6 +103,16 @@ namespace WindowsCuotasApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Debit_Card_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Debit_Card_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Down_Arrow_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Down_Arrow_32", resourceCulture);
