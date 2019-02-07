@@ -42,8 +42,10 @@
             this.lblCodigoAfil = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOperar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -176,11 +178,22 @@
             this.btnOperar.UseVisualStyleBackColor = true;
             this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsCuotasApp.Properties.Resources.Cash__96px1;
+            this.pictureBox1.Location = new System.Drawing.Point(378, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormPagoCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 560);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOperar);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -192,6 +205,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +224,6 @@
         private System.Windows.Forms.Label lblNroDoc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnOperar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

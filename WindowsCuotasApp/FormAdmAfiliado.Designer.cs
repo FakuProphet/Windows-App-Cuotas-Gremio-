@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmAfiliados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAfiliadoID = new System.Windows.Forms.Label();
+            this.lblCheck = new System.Windows.Forms.Label();
             this.cboEstadosGremiales = new System.Windows.Forms.ComboBox();
             this.lblEstadoGremial = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
@@ -39,9 +41,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.cboTipoAfil = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.cboLocalidades = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBarrio = new System.Windows.Forms.TextBox();
@@ -60,15 +59,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.lblCheck = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.lblAfiliadoID = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -105,6 +107,16 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // lblAfiliadoID
+            // 
+            resources.ApplyResources(this.lblAfiliadoID, "lblAfiliadoID");
+            this.lblAfiliadoID.Name = "lblAfiliadoID";
+            // 
+            // lblCheck
+            // 
+            resources.ApplyResources(this.lblCheck, "lblCheck");
+            this.lblCheck.Name = "lblCheck";
             // 
             // cboEstadosGremiales
             // 
@@ -155,24 +167,6 @@
             resources.ApplyResources(this.label12, "label12");
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label12.Name = "label12";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // txtBuscar
-            // 
-            resources.ApplyResources(this.txtBuscar, "txtBuscar");
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
-            // 
-            // listBox1
-            // 
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Name = "listBox1";
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // cboLocalidades
             // 
@@ -270,11 +264,36 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // txtBuscar
+            // 
+            resources.ApplyResources(this.txtBuscar, "txtBuscar");
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
+            // 
+            // listBox1
+            // 
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_User_Groups_48;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // btnGrabar
             // 
@@ -312,11 +331,6 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // lblCheck
-            // 
-            resources.ApplyResources(this.lblCheck, "lblCheck");
-            this.lblCheck.Name = "lblCheck";
-            // 
             // btnUpdate
             // 
             this.btnUpdate.FlatAppearance.BorderSize = 0;
@@ -326,15 +340,11 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // lblAfiliadoID
-            // 
-            resources.ApplyResources(this.lblAfiliadoID, "lblAfiliadoID");
-            this.lblAfiliadoID.Name = "lblAfiliadoID";
-            // 
             // FormAdmAfiliados
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnActualizar);
@@ -352,6 +362,7 @@
             this.Load += new System.EventHandler(this.FormAdmAfiliado_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +409,6 @@
         private System.Windows.Forms.Label lblCheck;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblAfiliadoID;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
