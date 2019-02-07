@@ -52,7 +52,7 @@ namespace WindowsCuotasApp
             {
 
                 int parametro = Convert.ToInt32(txtParametro.Text);
-                int parametroDos = 2;/*debito*/
+                int parametroDos = 1;/*debito*/
                 
 
                 if(!string.IsNullOrEmpty(txtParametro.Text))

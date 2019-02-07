@@ -38,6 +38,17 @@ namespace WindowsCuotasApp.Clases
             Conectar.CerrarConexion();
         }
 
+        public void SolicitudDebito(Fecha fecha )
+        {
+            SqlCommand cmd = new SqlCommand("SP_SOLICITUD_DEBITO", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = fecha.getAnio();
+            cmd.Parameters.Add("@MES", SqlDbType.Int).Value = fecha.getMes();
+            cmd.ExecuteNonQuery();
+            Conectar.CerrarConexion();
+        }
+
+
         public void RegistrarAfiliado(Afiliado a ,string sp, int evento)
         {
                 
@@ -144,6 +155,25 @@ namespace WindowsCuotasApp.Clases
             }
             
             return afiliado;
+        }
+
+        public bool IsPedidoDebitosRealizada()
+        {
+            bool flag = false;
+            Fecha fecha = new Fecha();
+            cmd = new SqlCommand("SP_AUDITORIA_CONSULTA", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MES", SqlDbType.Int).Value =  fecha.getMes();
+            cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = fecha.getAnio();
+            dr = cmd.ExecuteReader();
+            Conectar.CerrarConexion();
+
+            if (dr.Read())
+            {
+                flag = true;
+            }
+
+            return flag;
         }
 
         public bool IsMesPago(int afiliadoID,int anio)

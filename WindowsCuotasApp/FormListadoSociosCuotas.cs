@@ -29,6 +29,19 @@ namespace WindowsCuotasApp
             gestorDGV.efectosDGV(dataGridView1);
             gestorDGV.cargarDataGrid(dataGridView1, "SP_LISTADO_AFIL_DEBITO");
             cargarDatosCuotasCanceladasMesAnioActual();
+            inicio();
+        }
+
+        private void inicio()
+        {
+            if (gestorAfiliados.IsPedidoDebitosRealizada())
+            {
+                button2.Enabled = false;
+            }
+            else
+            {
+                button2.Enabled = true;
+            }
         }
 
 
@@ -77,8 +90,10 @@ namespace WindowsCuotasApp
                     filasAfectadas++;
                 }
 
+                gestorAfiliados.SolicitudDebito(fecha = new Fecha());
                 MetroFramework.MetroMessageBox.Show(this, "Transacciones completadas con éxito. " +"\n"+ "Cantidad de registros:" +filasAfectadas, "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cargarDatosCuotasCanceladasMesAnioActual();
+                inicio();
             }
 
             catch (SqlException error)

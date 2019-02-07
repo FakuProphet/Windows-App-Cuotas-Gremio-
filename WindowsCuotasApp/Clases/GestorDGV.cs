@@ -34,6 +34,15 @@ namespace WindowsCuotasApp.Clases
         }
 
 
+        public void colorCeldasDGV(DataGridView dgv,Color color,int idCelda)
+        {
+            foreach  (DataGridViewRow fila in dgv.Rows)
+            {
+                fila.Cells[idCelda].Style.BackColor = color;
+            }
+        }
+
+
         public void cargarDataGrid(DataGridView miDataGrid, string consulta)
         {
             DataSet miDataSet = new DataSet();

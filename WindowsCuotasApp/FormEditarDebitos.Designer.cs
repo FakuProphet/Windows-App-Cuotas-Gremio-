@@ -75,7 +75,7 @@
             this.dgvListadoEntrada.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListadoEntrada.Name = "dgvListadoEntrada";
             this.dgvListadoEntrada.ReadOnly = true;
-            this.dgvListadoEntrada.Size = new System.Drawing.Size(644, 172);
+            this.dgvListadoEntrada.Size = new System.Drawing.Size(530, 172);
             this.dgvListadoEntrada.TabIndex = 1;
             this.dgvListadoEntrada.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListadoEntrada_CellDoubleClick);
             // 
