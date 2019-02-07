@@ -279,10 +279,18 @@ namespace WindowsCuotasApp
                 txtNroTel.Focus();
                 b = false;
             }
+            else if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                MessageBox.Show("El campo esta vacio", "Campo vacio");
+                txtEmail.Focus();
+                b = false;
+            }
             else
             {
                 b = true;
             }
+
+          
 
             return b;
         }
