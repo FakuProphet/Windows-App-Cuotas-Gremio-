@@ -285,6 +285,7 @@ namespace WindowsCuotasApp
                 txtEmail.Focus();
                 b = false;
             }
+            
             else
             {
                 b = true;

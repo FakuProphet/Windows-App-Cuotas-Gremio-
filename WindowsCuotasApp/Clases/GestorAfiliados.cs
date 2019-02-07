@@ -28,7 +28,16 @@ namespace WindowsCuotasApp.Clases
             Conectar.CerrarConexion();
         }
 
-        
+        public void UpdateTransaccion(TransaccionCuotaAfiliado t)
+        {
+            SqlCommand cmd = new SqlCommand("SP_TRANSACCION_CUOTA_AFIL_UPDATE", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@NROCOMPROBANTE", SqlDbType.Int).Value = t.nro;
+            cmd.Parameters.Add("@CONDICION", SqlDbType.Int).Value = t.condicion;
+            cmd.ExecuteNonQuery();
+            Conectar.CerrarConexion();
+        }
+
         public void RegistrarAfiliado(Afiliado a ,string sp, int evento)
         {
                 
