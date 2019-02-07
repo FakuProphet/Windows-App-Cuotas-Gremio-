@@ -27,7 +27,7 @@ namespace WindowsCuotasApp
 
         private void FormAdmAfiliado_Load(object sender, EventArgs e)
         {
-            Inicio();  
+            Inicio();
         }
 
 
@@ -70,7 +70,7 @@ namespace WindowsCuotasApp
             txtFechaNac.Show();
             listBox1.SelectedIndex = 1;
         }
-        
+
 
         private void NuevoAfiliado()
         {
@@ -119,14 +119,14 @@ namespace WindowsCuotasApp
             txtFechaNac.Text = miVector[x].fechaNac.ToString();
         }
 
-        
+
 
         private void CargarTodosLosCombos()
         {
             CargarCombo(cboLocalidades, "localidades");
             CargarCombo(cboForma, "formasPago");
             CargarCombo(cboTipoAfil, "tiposAfiliado");
-            CargarCombo(cboEstadosGremiales,"estadosGremiales");
+            CargarCombo(cboEstadosGremiales, "estadosGremiales");
             CombosPorDefecto();
         }
 
@@ -135,7 +135,7 @@ namespace WindowsCuotasApp
         {
             foreach (Control c in groupBox1.Controls)
             {
-                if(c is ComboBox)
+                if (c is ComboBox)
                 {
                     ((ComboBox)c).SelectedIndex = 0;
                     CombosPorDefecto();
@@ -174,14 +174,14 @@ namespace WindowsCuotasApp
             {
                 cboLocalidades.SelectedValue = 59;
             }
-           
+
         }
 
 
 
         private void seleccionCombo()
         {
-            if(cboForma.SelectedIndex==1)
+            if (cboForma.SelectedIndex == 1)
             {
                 txtCbu.Enabled = true;
             }
@@ -198,7 +198,7 @@ namespace WindowsCuotasApp
             soloNumeros(sender, e);
         }
 
-       
+
 
         private void soloNumeros(object sender, KeyPressEventArgs e)
         {
@@ -224,20 +224,69 @@ namespace WindowsCuotasApp
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            soloTexto(sender,e);
+            soloTexto(sender, e);
         }
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            soloTexto(sender,e);
+            soloTexto(sender, e);
         }
 
-       
+
 
         private void cboForma_SelectedIndexChanged(object sender, EventArgs e)
         {
             seleccionCombo();
         }
+
+        private bool comprobarCampos()
+        {
+            bool b = false;
+            int seleccion = cboForma.SelectedIndex;
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("El campo esta vacio", "Campo vacio");
+                txtNombre.Focus();
+                b = false;
+            }
+            else if (string.IsNullOrEmpty(txtApellido.Text))
+            {
+                MessageBox.Show("El campo esta vacio", "Campo vacio");
+                txtApellido.Focus();
+                b = false;
+            }
+            else if (string.IsNullOrEmpty(txtNroTel.Text))
+            {
+                MessageBox.Show("El campo esta vacio", "Campo vacio");
+                txtNroTel.Focus();
+                b = false;
+            }
+            else if (string.IsNullOrEmpty(txtDir.Text))
+            {
+                MessageBox.Show("El campo esta vacio", "Campo vacio");
+                txtDir.Focus();
+                b = false;
+            }
+            else if (string.IsNullOrEmpty(txtBarrio.Text))
+            {
+                MessageBox.Show("El campo esta vacio", "Campo vacio");
+                txtBarrio.Focus();
+                b = false;
+            }
+            else if (string.IsNullOrEmpty(txtNroTel.Text))
+            {
+                MessageBox.Show("El campo esta vacio", "Campo vacio");
+                txtNroTel.Focus();
+                b = false;
+            }
+            else
+            {
+                b = true;
+            }
+
+            return b;
+        }
+
 
 
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -245,7 +294,8 @@ namespace WindowsCuotasApp
 
             try
             {
-                
+                if (comprobarCampos())
+                {
                     Afiliado nuevo = new Afiliado();
                     nuevo.nombre = txtNombre.Text;
                     nuevo.apellido = txtApellido.Text;
@@ -270,8 +320,8 @@ namespace WindowsCuotasApp
                     {
 
                     }
-                
-               
+
+                }
             }
             catch (Exception ex)
             {
