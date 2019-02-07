@@ -67,6 +67,7 @@ namespace WindowsCuotasApp
             CargarLista();
             ComprobarLista();
             txtBuscar.Enabled = true;
+            txtFechaNac.Show();
             listBox1.SelectedIndex = 1;
         }
         
@@ -83,13 +84,16 @@ namespace WindowsCuotasApp
             LimpiarCampos();
             txtBuscar.Enabled = false;
             txtNombre.Focus();
+            txtFechaNac.Hide();
         }
 
         void ActualizarAfiliado()
         {
             btnGrabar.Hide();
+            txtFechaNac.Hide();
             btnActualizar.Enabled = false;
             btnNuevo.Enabled = false;
+            btnCancelar.Enabled = true;
             listBox1.Enabled = false;
             txtBuscar.Enabled = false;
             groupBox1.Enabled = true;
@@ -112,6 +116,7 @@ namespace WindowsCuotasApp
             txtCbu.Text = miVector[x].cbu;
             cboEstadosGremiales.SelectedValue = miVector[x].estadoGremialID;
             lblAfiliadoID.Text = miVector[x].afiliadoID.ToString();
+            txtFechaNac.Text = miVector[x].fechaNac.ToString();
         }
 
         
@@ -144,6 +149,8 @@ namespace WindowsCuotasApp
                 }
             }
         }
+
+
 
         private void ComprobarLista()
         {
@@ -236,11 +243,9 @@ namespace WindowsCuotasApp
         private void btnGrabar_Click(object sender, EventArgs e)
         {
 
-           
-
             try
             {
-               
+                
                     Afiliado nuevo = new Afiliado();
                     nuevo.nombre = txtNombre.Text;
                     nuevo.apellido = txtApellido.Text;
@@ -260,6 +265,7 @@ namespace WindowsCuotasApp
                         g.RegistrarAfiliado(nuevo, "SP_REGISTRAR_AFILIADO", 0);
                         Inicio();
                     }
+
                     else
                     {
 
@@ -271,6 +277,7 @@ namespace WindowsCuotasApp
             {
                 MetroFramework.MetroMessageBox.Show(this,"Error en el registro del afiliado: " + ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Hand);
             }
+
         }
 
 
@@ -385,6 +392,11 @@ namespace WindowsCuotasApp
             {
                 MetroFramework.MetroMessageBox.Show(this, "Error en el registro del afiliado: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -2,14 +2,13 @@
 
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace WindowsCuotasApp.Clases
 {
     class Validar
     {
         SqlCommand cmd;
-
-
 
 
 
@@ -25,6 +24,7 @@ namespace WindowsCuotasApp.Clases
                 return false;
             }
         }
+
 
         public bool existeDocumento(int doc)
         {
@@ -42,6 +42,22 @@ namespace WindowsCuotasApp.Clases
                 bandera = true;
             }
 
+            return bandera;
+        }
+
+
+        public bool validarCampos(GroupBox groupBox)
+        {
+            bool bandera = true;
+            foreach (TextBox t in groupBox.Controls)
+            {
+                if (string.IsNullOrEmpty(t.Text))
+                {
+                    MessageBox.Show("El campo esta vacio","Campo vacio");
+                    t.Focus();
+                    bandera = false;
+                }
+            }
             return bandera;
         }
 

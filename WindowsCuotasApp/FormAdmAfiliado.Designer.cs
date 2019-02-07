@@ -69,12 +69,14 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtFechaNac);
             this.groupBox1.Controls.Add(this.lblAfiliadoID);
             this.groupBox1.Controls.Add(this.lblCheck);
             this.groupBox1.Controls.Add(this.cboEstadosGremiales);
@@ -287,6 +289,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox1
             // 
@@ -339,6 +342,11 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txtFechaNac
+            // 
+            resources.ApplyResources(this.txtFechaNac, "txtFechaNac");
+            this.txtFechaNac.Name = "txtFechaNac";
             // 
             // FormAdmAfiliados
             // 
@@ -410,5 +418,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblAfiliadoID;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtFechaNac;
     }
 }
