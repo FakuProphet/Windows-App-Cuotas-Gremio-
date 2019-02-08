@@ -52,9 +52,11 @@ namespace WindowsCuotasApp
             }
         }
 
+
         private void Inicio()
         {
             CargarTodosLosCombos();
+            btnGrabar.Show();
             listBox1.Enabled = true;
             groupBox1.Enabled = false;
             btnGrabar.Enabled = false;
@@ -68,6 +70,7 @@ namespace WindowsCuotasApp
             ComprobarLista();
             txtBuscar.Enabled = true;
             txtFechaNac.Show();
+            btnUpdate.Hide();
             listBox1.SelectedIndex = 1;
         }
 
@@ -97,6 +100,7 @@ namespace WindowsCuotasApp
             listBox1.Enabled = false;
             txtBuscar.Enabled = false;
             groupBox1.Enabled = true;
+            btnUpdate.Show();
             txtNombre.Focus();
         }
 
@@ -440,6 +444,7 @@ namespace WindowsCuotasApp
                 if (MetroFramework.MetroMessageBox.Show(this, "Desea proseguir con la actualización de los datos del afiliado DNI nro: " + afiliadoUpdate.nroDoc + "?", "Actualizar datos de afiliado " + afiliadoUpdate.apellido.ToUpper(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     g.RegistrarAfiliado(afiliadoUpdate, "NewUpdateComando",2);
+                    Inicio();
                 }
                 else
                 {
