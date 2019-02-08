@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListadoSociosCuotas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblAnio = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.lblDetalleMes = new MetroFramework.Controls.MetroLabel();
@@ -40,7 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,157 +59,102 @@
             this.groupBox1.Controls.Add(this.lblMes);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(23, 147);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(931, 295);
-            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Listado de socios a cobrar por débito";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            resources.ApplyResources(this.button3, "button3");
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button3.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Todo_List2_16;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(771, 225);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 40);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Generar Listado";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblAnio
-            // 
-            this.lblAnio.AutoSize = true;
-            this.lblAnio.Location = new System.Drawing.Point(232, 42);
-            this.lblAnio.Name = "lblAnio";
-            this.lblAnio.Size = new System.Drawing.Size(18, 19);
-            this.lblAnio.TabIndex = 5;
-            this.lblAnio.Text = "...";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(190, 42);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(36, 19);
-            this.metroLabel2.TabIndex = 4;
-            this.metroLabel2.Text = "Año:";
-            // 
-            // lblDetalleMes
-            // 
-            this.lblDetalleMes.AutoSize = true;
-            this.lblDetalleMes.Location = new System.Drawing.Point(109, 42);
-            this.lblDetalleMes.Name = "lblDetalleMes";
-            this.lblDetalleMes.Size = new System.Drawing.Size(18, 19);
-            this.lblDetalleMes.TabIndex = 3;
-            this.lblDetalleMes.Text = "...";
-            // 
-            // lblMes
-            // 
-            this.lblMes.AutoSize = true;
-            this.lblMes.Location = new System.Drawing.Point(60, 42);
-            this.lblMes.Name = "lblMes";
-            this.lblMes.Size = new System.Drawing.Size(18, 19);
-            this.lblMes.TabIndex = 2;
-            this.lblMes.Text = "...";
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(18, 42);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(36, 19);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Mes:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(747, 184);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(20, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(934, 30);
-            this.label1.TabIndex = 1;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(14, 73);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(907, 184);
-            this.dataGridView2.TabIndex = 6;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(23, 448);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(931, 291);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Detalle de estado de cuota de los afiliados para el mes";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            resources.ApplyResources(this.button2, "button2");
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button2.Image = global::WindowsCuotasApp.Properties.Resources.icons8_US_Dollar_32;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(771, 179);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 40);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Generar Pagos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblAnio
+            // 
+            resources.ApplyResources(this.lblAnio, "lblAnio");
+            this.lblAnio.Name = "lblAnio";
+            // 
+            // metroLabel2
+            // 
+            resources.ApplyResources(this.metroLabel2, "metroLabel2");
+            this.metroLabel2.Name = "metroLabel2";
+            // 
+            // lblDetalleMes
+            // 
+            resources.ApplyResources(this.lblDetalleMes, "lblDetalleMes");
+            this.lblDetalleMes.Name = "lblDetalleMes";
+            // 
+            // lblMes
+            // 
+            resources.ApplyResources(this.lblMes, "lblMes");
+            this.lblMes.Name = "lblMes";
+            // 
+            // metroLabel1
+            // 
+            resources.ApplyResources(this.metroLabel1, "metroLabel1");
+            this.metroLabel1.Name = "metroLabel1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView2);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Debit_Card_64;
-            this.pictureBox1.Location = new System.Drawing.Point(453, 8);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 61);
-            this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
             // FormListadoSociosCuotas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 762);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormListadoSociosCuotas";
             this.Resizable = false;
-            this.Text = "Administración afiliados con débito";
             this.Load += new System.EventHandler(this.FormListadoSociosCuotas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

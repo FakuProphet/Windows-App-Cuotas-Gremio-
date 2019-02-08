@@ -30,10 +30,16 @@ namespace WindowsCuotasApp
        
         private void Inicio()
         {
-           if (dgvListadoEntrada.DataSource == null)
-           {
-                btnEfectuarCambios.Enabled = false;
-           }
+            if (dgvListadoEntrada.DataSource == null)
+            {
+                 btnEfectuarCambios.Enabled = false;
+            }
+            
+            btnContinuar.Show();
+            button1.Enabled = true;
+            btnEfectuarCambios.Enabled = false;
+            dgvListadoSalida.DataSource = null;
+            txtFiltrar.Focus();
         }
       
 
@@ -103,25 +109,50 @@ namespace WindowsCuotasApp
             TransaccionCuotaAfiliado t;
             const int condicion = 2;
             int contador = 0;
-            try
+
+            if (MetroFramework.MetroMessageBox.Show(this, "Desea continuar con la actualización de los registros?", "Renovar estado débitos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-
-                foreach (DataGridViewRow fila in dgvListadoEntrada.Rows)
+                try
                 {
-                    t = new TransaccionCuotaAfiliado();
-                    t.nro = Convert.ToInt32(fila.Cells[0].Value);
-                    t.condicion = condicion;
-                    Gestor.UpdateTransaccion(t);
-                    contador++;
+
+                    foreach (DataGridViewRow fila in dgvListadoEntrada.Rows)
+                    {
+                        t = new TransaccionCuotaAfiliado();
+                        t.nro = Convert.ToInt32(fila.Cells[0].Value);
+                        t.condicion = condicion;
+                        Gestor.UpdateTransaccion(t);
+                        contador++;
+                    }
+
+                    MetroFramework.MetroMessageBox.Show(this, "Se completaron con exito la transacciones: " + "\n" + "Total de registros actualizados: " + contador.ToString().ToUpper(), "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //Inicio();
+                    this.Dispose();
+                    this.Close();
+                    FormEditarDebitos nuevo = new FormEditarDebitos();
+                    nuevo.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Error al efectuar la transacción: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                MetroFramework.MetroMessageBox.Show(this, "Se completaron con exito la transacciones: " + "\n" + "Total de registros actualizados: " + contador.ToString().ToUpper(), "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                dgvListadoEntrada.DataSource = null;
             }
-            catch (Exception ex)
+        }
+
+
+        
+
+
+
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            if(MetroFramework.MetroMessageBox.Show(this, "Desea continuar con la actualización de los registros?","Renovar estado débitos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Error al efectuar la transacción: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnContinuar.Hide();
+                button1.Enabled = false;
+                btnEfectuarCambios.Enabled = true;
             }
         }
     }

@@ -61,146 +61,91 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblCodigoAfil);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(23, 63);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(765, 377);
-            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Afiliado ";
             // 
             // lblEstadoAfil
             // 
-            this.lblEstadoAfil.AutoSize = true;
-            this.lblEstadoAfil.Location = new System.Drawing.Point(261, 173);
+            resources.ApplyResources(this.lblEstadoAfil, "lblEstadoAfil");
             this.lblEstadoAfil.Name = "lblEstadoAfil";
-            this.lblEstadoAfil.Size = new System.Drawing.Size(23, 18);
-            this.lblEstadoAfil.TabIndex = 11;
-            this.lblEstadoAfil.Text = "...";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(109, 173);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Estado:";
             // 
             // lblNroDoc
             // 
-            this.lblNroDoc.AutoSize = true;
-            this.lblNroDoc.Location = new System.Drawing.Point(261, 140);
+            resources.ApplyResources(this.lblNroDoc, "lblNroDoc");
             this.lblNroDoc.Name = "lblNroDoc";
-            this.lblNroDoc.Size = new System.Drawing.Size(23, 18);
-            this.lblNroDoc.TabIndex = 9;
-            this.lblNroDoc.Text = "...";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(109, 140);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Nro documento:";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 210);
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(702, 131);
-            this.dataGridView1.TabIndex = 7;
             // 
             // lblTipoAfiliado
             // 
-            this.lblTipoAfiliado.AutoSize = true;
-            this.lblTipoAfiliado.Location = new System.Drawing.Point(261, 105);
+            resources.ApplyResources(this.lblTipoAfiliado, "lblTipoAfiliado");
             this.lblTipoAfiliado.Name = "lblTipoAfiliado";
-            this.lblTipoAfiliado.Size = new System.Drawing.Size(23, 18);
-            this.lblTipoAfiliado.TabIndex = 6;
-            this.lblTipoAfiliado.Text = "...";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(109, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 18);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tipo afiliado:";
             // 
             // lblNombreAfil
             // 
-            this.lblNombreAfil.AutoSize = true;
-            this.lblNombreAfil.Location = new System.Drawing.Point(261, 72);
+            resources.ApplyResources(this.lblNombreAfil, "lblNombreAfil");
             this.lblNombreAfil.Name = "lblNombreAfil";
-            this.lblNombreAfil.Size = new System.Drawing.Size(23, 18);
-            this.lblNombreAfil.TabIndex = 4;
-            this.lblNombreAfil.Text = "...";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(109, 72);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 18);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nombre Completo:";
             // 
             // lblCodigoAfil
             // 
-            this.lblCodigoAfil.AutoSize = true;
-            this.lblCodigoAfil.Location = new System.Drawing.Point(261, 39);
+            resources.ApplyResources(this.lblCodigoAfil, "lblCodigoAfil");
             this.lblCodigoAfil.Name = "lblCodigoAfil";
-            this.lblCodigoAfil.Size = new System.Drawing.Size(23, 18);
-            this.lblCodigoAfil.TabIndex = 2;
-            this.lblCodigoAfil.Text = "...";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(109, 39);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Codigo:";
             // 
             // btnOperar
             // 
-            this.btnOperar.Location = new System.Drawing.Point(656, 483);
+            resources.ApplyResources(this.btnOperar, "btnOperar");
             this.btnOperar.Name = "btnOperar";
-            this.btnOperar.Size = new System.Drawing.Size(101, 37);
-            this.btnOperar.TabIndex = 2;
-            this.btnOperar.Text = "button1";
             this.btnOperar.UseVisualStyleBackColor = true;
             this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsCuotasApp.Properties.Resources.Cash__96px1;
-            this.pictureBox1.Location = new System.Drawing.Point(378, 9);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // FormPagoCuota
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 560);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOperar);
             this.Controls.Add(this.groupBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormPagoCuota";
             this.Resizable = false;
-            this.Text = "Pago Cuota Afiliación en sede";
             this.Load += new System.EventHandler(this.FormPagoCuota_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

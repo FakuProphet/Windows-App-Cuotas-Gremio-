@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarDebitos));
             this.dgvListadoSalida = new System.Windows.Forms.DataGridView();
             this.dgvListadoEntrada = new System.Windows.Forms.DataGridView();
             this.NroComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +43,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEfectuarCambios = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnContinuar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoEntrada)).BeginInit();
@@ -54,13 +56,10 @@
             // dgvListadoSalida
             // 
             this.dgvListadoSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListadoSalida.Location = new System.Drawing.Point(14, 15);
-            this.dgvListadoSalida.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.dgvListadoSalida, "dgvListadoSalida");
             this.dgvListadoSalida.Name = "dgvListadoSalida";
             this.dgvListadoSalida.ReadOnly = true;
             this.dgvListadoSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListadoSalida.Size = new System.Drawing.Size(930, 200);
-            this.dgvListadoSalida.TabIndex = 0;
             // 
             // dgvListadoEntrada
             // 
@@ -71,34 +70,28 @@
             this.NroComprobante,
             this.AFILIADO,
             this.NRODNI});
-            this.dgvListadoEntrada.Location = new System.Drawing.Point(16, 15);
-            this.dgvListadoEntrada.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.dgvListadoEntrada, "dgvListadoEntrada");
             this.dgvListadoEntrada.Name = "dgvListadoEntrada";
             this.dgvListadoEntrada.ReadOnly = true;
-            this.dgvListadoEntrada.Size = new System.Drawing.Size(530, 172);
-            this.dgvListadoEntrada.TabIndex = 1;
             this.dgvListadoEntrada.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListadoEntrada_CellDoubleClick);
             // 
             // NroComprobante
             // 
-            this.NroComprobante.HeaderText = "NRO COMPROBANTE";
+            resources.ApplyResources(this.NroComprobante, "NroComprobante");
             this.NroComprobante.Name = "NroComprobante";
             this.NroComprobante.ReadOnly = true;
-            this.NroComprobante.Width = 170;
             // 
             // AFILIADO
             // 
-            this.AFILIADO.HeaderText = "NOMBRE AFILIADO";
+            resources.ApplyResources(this.AFILIADO, "AFILIADO");
             this.AFILIADO.Name = "AFILIADO";
             this.AFILIADO.ReadOnly = true;
-            this.AFILIADO.Width = 158;
             // 
             // NRODNI
             // 
-            this.NRODNI.HeaderText = "NRO. DOCUMENTO";
+            resources.ApplyResources(this.NRODNI, "NRODNI");
             this.NRODNI.Name = "NRODNI";
             this.NRODNI.ReadOnly = true;
-            this.NRODNI.Width = 159;
             // 
             // toolTip1
             // 
@@ -109,17 +102,17 @@
             // 
             // 
             // 
-            this.txtFiltrar.CustomButton.Image = null;
-            this.txtFiltrar.CustomButton.Location = new System.Drawing.Point(109, 1);
+            this.txtFiltrar.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.txtFiltrar.CustomButton.Location = ((System.Drawing.Point)(resources.GetObject("resource.Location")));
             this.txtFiltrar.CustomButton.Name = "";
-            this.txtFiltrar.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFiltrar.CustomButton.Size = ((System.Drawing.Size)(resources.GetObject("resource.Size")));
             this.txtFiltrar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtFiltrar.CustomButton.TabIndex = 1;
+            this.txtFiltrar.CustomButton.TabIndex = ((int)(resources.GetObject("resource.TabIndex")));
             this.txtFiltrar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtFiltrar.CustomButton.UseSelectable = true;
-            this.txtFiltrar.CustomButton.Visible = false;
+            this.txtFiltrar.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible")));
             this.txtFiltrar.Lines = new string[0];
-            this.txtFiltrar.Location = new System.Drawing.Point(189, 17);
+            resources.ApplyResources(this.txtFiltrar, "txtFiltrar");
             this.txtFiltrar.MaxLength = 32767;
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.PasswordChar = '\0';
@@ -128,8 +121,6 @@
             this.txtFiltrar.SelectionLength = 0;
             this.txtFiltrar.SelectionStart = 0;
             this.txtFiltrar.ShortcutsEnabled = true;
-            this.txtFiltrar.Size = new System.Drawing.Size(131, 23);
-            this.txtFiltrar.TabIndex = 5;
             this.txtFiltrar.UseSelectable = true;
             this.txtFiltrar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFiltrar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -138,22 +129,16 @@
             // 
             // metroLabel1
             // 
-            this.metroLabel1.AutoSize = true;
+            resources.ApplyResources(this.metroLabel1, "metroLabel1");
             this.metroLabel1.BackColor = System.Drawing.Color.White;
             this.metroLabel1.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel1.Location = new System.Drawing.Point(16, 17);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(167, 19);
-            this.metroLabel1.TabIndex = 6;
-            this.metroLabel1.Text = "Buscar por nro documento";
             // 
             // button1
             // 
             this.button1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Down_Arrow_32;
-            this.button1.Location = new System.Drawing.Point(969, 176);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 39);
-            this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -162,70 +147,60 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.metroLabel1);
             this.panel1.Controls.Add(this.txtFiltrar);
-            this.panel1.Location = new System.Drawing.Point(24, 83);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1031, 54);
-            this.panel1.TabIndex = 8;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.dgvListadoSalida);
-            this.panel2.Location = new System.Drawing.Point(24, 143);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 229);
-            this.panel2.TabIndex = 9;
             // 
             // btnEfectuarCambios
             // 
-            this.btnEfectuarCambios.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnEfectuarCambios, "btnEfectuarCambios");
             this.btnEfectuarCambios.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Update_321;
-            this.btnEfectuarCambios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEfectuarCambios.Location = new System.Drawing.Point(685, 141);
             this.btnEfectuarCambios.Name = "btnEfectuarCambios";
-            this.btnEfectuarCambios.Size = new System.Drawing.Size(122, 46);
-            this.btnEfectuarCambios.TabIndex = 10;
-            this.btnEfectuarCambios.Text = "Efectuar cambios";
-            this.btnEfectuarCambios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEfectuarCambios.UseVisualStyleBackColor = true;
             this.btnEfectuarCambios.Click += new System.EventHandler(this.btnEfectuarCambios_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.btnContinuar);
             this.panel3.Controls.Add(this.btnEfectuarCambios);
             this.panel3.Controls.Add(this.dgvListadoEntrada);
-            this.panel3.Location = new System.Drawing.Point(24, 378);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1031, 202);
-            this.panel3.TabIndex = 11;
+            // 
+            // btnContinuar
+            // 
+            resources.ApplyResources(this.btnContinuar, "btnContinuar");
+            this.btnContinuar.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Update_321;
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Debit_Card_64;
-            this.pictureBox1.Location = new System.Drawing.Point(499, 16);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 61);
-            this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
             // FormEditarDebitos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 643);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormEditarDebitos";
-            this.Padding = new System.Windows.Forms.Padding(30, 83, 30, 28);
             this.Resizable = false;
-            this.Text = "Editar débitos";
             this.Load += new System.EventHandler(this.FormEditarDebitos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSalida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoEntrada)).EndInit();
@@ -254,5 +229,6 @@
         private System.Windows.Forms.Button btnEfectuarCambios;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnContinuar;
     }
 }
