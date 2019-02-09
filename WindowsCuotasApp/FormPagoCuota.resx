@@ -447,7 +447,7 @@
     <value>2</value>
   </data>
   <data name="btnOperar.Text" xml:space="preserve">
-    <value>button1</value>
+    <value>Efectuar pago</value>
   </data>
   <data name="&gt;&gt;btnOperar.Name" xml:space="preserve">
     <value>btnOperar</value>

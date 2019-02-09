@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmAfiliados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.lblAfiliadoID = new System.Windows.Forms.Label();
             this.lblCheck = new System.Windows.Forms.Label();
             this.cboEstadosGremiales = new System.Windows.Forms.ComboBox();
@@ -69,7 +70,6 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +109,11 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // txtFechaNac
+            // 
+            resources.ApplyResources(this.txtFechaNac, "txtFechaNac");
+            this.txtFechaNac.Name = "txtFechaNac";
             // 
             // lblAfiliadoID
             // 
@@ -342,11 +347,6 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // txtFechaNac
-            // 
-            resources.ApplyResources(this.txtFechaNac, "txtFechaNac");
-            this.txtFechaNac.Name = "txtFechaNac";
             // 
             // FormAdmAfiliados
             // 

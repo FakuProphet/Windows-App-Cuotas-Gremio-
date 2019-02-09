@@ -18,6 +18,7 @@ namespace WindowsCuotasApp
 
         private void FormPagoCuota_Load(object sender, EventArgs e) => inicio();
 
+
         private void inicio()
         {
             /*Si la cuota existe, no se muestra el formulario de pago*/
@@ -47,26 +48,29 @@ namespace WindowsCuotasApp
             Fecha fecha;
             TransaccionCuotaAfiliado t;
             Afiliado nuevo;
+
+          
+                try
+                {
+
+                    t = new TransaccionCuotaAfiliado();
+                    nuevo = new Afiliado();
+                    fecha = new Fecha();
+                    nuevo.afiliadoID = afiliado.codigo;
+                    t.a = nuevo;
+                    t.fecha = fecha;
+                    if (MetroFramework.MetroMessageBox.Show(this, "Desea continuar con el pago de la cuota del afiliado", "Pago cuota en sede", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        gestorAfiliados.GenerarTransaccionCuota(t);
+                        MetroFramework.MetroMessageBox.Show(this, "Transaccion completada con éxito.", "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+                catch (Exception error)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Error en la transacción: " + error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             
-            try
-            {
-               
-                t = new TransaccionCuotaAfiliado();
-                nuevo = new Afiliado();
-                fecha = new Fecha();
-                nuevo.afiliadoID = afiliado.codigo;
-                t.a = nuevo;
-                t.fecha = fecha;
-                gestorAfiliados.GenerarTransaccionCuota(t);
-                MetroFramework.MetroMessageBox.Show(this, "Transaccion completada con éxito.", "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
-            }
-
-            catch (Exception error)
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Error en la transacción: " + error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
         }
     }
 }
