@@ -63,6 +63,16 @@ namespace WindowsCuotasApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Business_Report_96px {
+            get {
+                object obj = ResourceManager.GetObject("Business Report_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cash__96px {
             get {
                 object obj = ResourceManager.GetObject("Cash _96px", resourceCulture);
@@ -86,6 +96,16 @@ namespace WindowsCuotasApp.Properties {
         internal static System.Drawing.Bitmap icons8_Add_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Add_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Business_Report_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Business_Report_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +186,16 @@ namespace WindowsCuotasApp.Properties {
         internal static System.Drawing.Bitmap icons8_Save_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Save_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Shutdown_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Shutdown_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

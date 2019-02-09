@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace WindowsCuotasApp
 {
@@ -44,6 +45,23 @@ namespace WindowsCuotasApp
         {
             FormParametroPago nuevo = new FormParametroPago();
             nuevo.ShowDialog();
+        }
+
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MetroFramework.MetroMessageBox.Show(this, "Desea salir de la aplicación?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void FormPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

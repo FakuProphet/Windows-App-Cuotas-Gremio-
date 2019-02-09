@@ -189,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8_Business_Report_64.png" />
+    <None Include="Resources\Business Report_96px.png" />
+    <None Include="Resources\icons8_Shutdown_64.png" />
     <None Include="Resources\Cash _96px1.png" />
     <None Include="Resources\icons8_User_Groups_48.png" />
     <None Include="Resources\icons8_Debit_Card_64.png" />

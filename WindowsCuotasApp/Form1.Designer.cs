@@ -41,6 +41,9 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.efectuarPagoCuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +52,9 @@
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.afiliadoToolStripMenuItem,
-            this.cuotasToolStripMenuItem});
+            this.cuotasToolStripMenuItem,
+            this.reportesToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // afiliadoToolStripMenuItem
@@ -129,16 +134,36 @@
             resources.ApplyResources(this.efectuarPagoCuotaToolStripMenuItem, "efectuarPagoCuotaToolStripMenuItem");
             this.efectuarPagoCuotaToolStripMenuItem.Click += new System.EventHandler(this.efectuarPagoCuotaToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Business_Report_64;
+            resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Shutdown_64;
+            resources.ApplyResources(this.logoutToolStripMenuItem, "logoutToolStripMenuItem");
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            // 
+            // statusStrip1
+            // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            // 
             // FormPrincipal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipal";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -161,6 +186,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem efectuarPagoCuotaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem revisiónCuotasAfiliadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 
