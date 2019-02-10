@@ -145,6 +145,7 @@
             this.logoutToolStripMenuItem.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Shutdown_64;
             resources.ApplyResources(this.logoutToolStripMenuItem, "logoutToolStripMenuItem");
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 

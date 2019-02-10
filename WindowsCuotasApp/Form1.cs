@@ -63,5 +63,10 @@ namespace WindowsCuotasApp
         {
             Application.Exit();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
