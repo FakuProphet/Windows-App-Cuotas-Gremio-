@@ -113,6 +113,16 @@ namespace WindowsCuotasApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Business_Report_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Business_Report_641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Cancel_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Cancel_32", resourceCulture);
