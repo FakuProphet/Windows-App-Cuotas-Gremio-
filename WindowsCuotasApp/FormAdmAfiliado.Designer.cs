@@ -281,6 +281,7 @@
             resources.ApplyResources(this.txtBuscar, "txtBuscar");
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
             // listBox1
             // 
@@ -294,7 +295,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+//            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox1
             // 

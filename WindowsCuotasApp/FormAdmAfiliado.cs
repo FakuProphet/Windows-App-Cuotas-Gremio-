@@ -458,9 +458,26 @@ namespace WindowsCuotasApp
             }
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void BuscarDoc(string searchString)
         {
 
+            if (searchString != string.Empty)
+            {
+
+                int index = listBox1.FindString(searchString);
+
+                if (index != -1)
+                    listBox1.SetSelected(index, true);
+                else
+                    MetroFramework.MetroMessageBox.Show(this, "El nro de documento no existe...");
+            }
+
+        }
+
+        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            string docParametro = txtBuscar.Text;
+            BuscarDoc(docParametro);
         }
     }
 }
