@@ -209,6 +209,12 @@
   <data name="cuotasToolStripMenuItem.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
+  <data name="abriToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 34</value>
+  </data>
+  <data name="abriToolStripMenuItem.Text" xml:space="preserve">
+    <value>Abrir ventana</value>
+  </data>
   <data name="reportesToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
@@ -458,6 +464,12 @@
     <value>logoutToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;logoutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;abriToolStripMenuItem.Name" xml:space="preserve">
+    <value>abriToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;abriToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

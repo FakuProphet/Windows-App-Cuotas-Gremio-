@@ -68,5 +68,11 @@ namespace WindowsCuotasApp
         {
             this.Close();
         }
+
+        private void abriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReportes nuevo = new FormReportes();
+            nuevo.ShowDialog();
+        }
     }
 }

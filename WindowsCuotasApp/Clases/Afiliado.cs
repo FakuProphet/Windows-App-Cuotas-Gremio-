@@ -49,5 +49,10 @@ namespace WindowsCuotasApp.Clases
             this.cbu = cbu;
             this.estadoGremialID = estadoGremialID;
         }
+
+        public Afiliado(int nroDoc)
+        {
+            this.nroDoc = nroDoc;
+        }
     }
 }

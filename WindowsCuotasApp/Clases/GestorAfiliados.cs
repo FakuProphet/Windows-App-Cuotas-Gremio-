@@ -157,6 +157,30 @@ namespace WindowsCuotasApp.Clases
             return afiliado;
         }
 
+
+        public Afiliado GetAfiliadoPorDni(int parametroDoc)
+        {
+
+            Afiliado afiliado = null;
+
+            cmd = new SqlCommand("SP_GET_AFIL_DNI", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@DOC", SqlDbType.Int).Value = parametroDoc;
+           
+            dr = cmd.ExecuteReader();
+            Conectar.CerrarConexion();
+            if (dr.Read())
+            {
+
+                int nroDoc = dr.GetInt32(0);
+                afiliado = new Afiliado(nroDoc);
+               
+            }
+
+            return afiliado;
+        }
+
+
         public bool IsPedidoDebitosRealizada()
         {
             bool flag = false;
@@ -193,6 +217,10 @@ namespace WindowsCuotasApp.Clases
             
             return flag;
         }
+
+
+        
+
 
         public DataTable ConsultarTabla(string nombreTabla)
         {       

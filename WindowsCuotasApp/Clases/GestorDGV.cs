@@ -33,6 +33,14 @@ namespace WindowsCuotasApp.Clases
             miDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
+        public void DeshabilitarOrdenarDGV(DataGridView dgv)
+        {
+            foreach (DataGridViewColumn columna in dgv.Columns)
+            {
+                columna.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
 
         public void colorCeldasDGV(DataGridView dgv,Color color,int idCelda)
         {
