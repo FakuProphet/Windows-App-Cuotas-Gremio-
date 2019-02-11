@@ -20,6 +20,7 @@ namespace WindowsCuotasApp
 
         private void FormReportes_Load(object sender, EventArgs e) => inicio();
 
+
         private void txtParametroDni_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
             validar.soloNumeros(sender,e);
@@ -43,28 +44,38 @@ namespace WindowsCuotasApp
                 if (!string.IsNullOrEmpty(txtParametroDni.Text))
                 {
                     int dni = Convert.ToInt32(txtParametroDni.Text);
-                    GestorDGV.cargarDataGrid(dataGridView1, "SP_FILTRO_CUOTAS_POR_DNI_ANIO_EN_CURSO " + dni);
+                    GestorDGV.cargarDataGrid(dataGridView1, "SP_FILTRO " + dni);
                     GestorDGV.efectosDGV(dataGridView1);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Error en el registro del afiliado: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MetroFramework.MetroMessageBox.Show(this, "Error en la consulta posibles causas: " +"\n"+ " No existe dni del afiliado " + "\n"+ " Posible error en la conexión. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
            
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtParametroDos.Text))
+
+            try
             {
-                int dni = Convert.ToInt32(txtParametroDos.Text);
-                GestorDGV.cargarDataGrid(dataGridView2, "SP_FILTRO_CUOTAS_POR_DNI_ANIO_PASADO " + dni);
-                GestorDGV.efectosDGV(dataGridView2);
+                if (!string.IsNullOrEmpty(txtParametroDos.Text))
+                {
+                    int dni = Convert.ToInt32(txtParametroDos.Text);
+                    GestorDGV.cargarDataGrid(dataGridView2, "SP_FILTRO_CUOTAS_POR_DNI_ANIO_PASADO " + dni);
+                    GestorDGV.efectosDGV(dataGridView2);
+                }
             }
+            catch (Exception)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Error en la consulta posibles causas: " + "\n" + " No existe dni del afiliado " + "\n" + " Posible error en la conexión. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+
+     
         }
 
-        private void txtParametroDos_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        private void txtParametroDos_KeyPress(object sender, KeyPressEventArgs e)
         {
             validar.soloNumeros(sender,e);
         }

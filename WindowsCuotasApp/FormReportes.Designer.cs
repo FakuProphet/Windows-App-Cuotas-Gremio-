@@ -177,7 +177,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Business_Report_641;
-            this.pictureBox1.Location = new System.Drawing.Point(468, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(505, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
