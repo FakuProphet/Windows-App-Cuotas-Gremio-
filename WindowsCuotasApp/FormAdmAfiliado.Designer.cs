@@ -295,7 +295,6 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-//            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox1
             // 
@@ -368,6 +367,7 @@
             this.Name = "FormAdmAfiliados";
             this.Opacity = 0.95D;
             this.Resizable = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAdmAfiliados_FormClosing);
             this.Load += new System.EventHandler(this.FormAdmAfiliado_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
