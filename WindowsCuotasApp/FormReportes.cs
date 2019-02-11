@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows.Forms;
 using WindowsCuotasApp.Clases;
 
 namespace WindowsCuotasApp
@@ -37,12 +38,20 @@ namespace WindowsCuotasApp
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(txtParametroDni.Text))
+            try
             {
-                int dni = Convert.ToInt32( txtParametroDni.Text);
-                GestorDGV.cargarDataGrid(dataGridView1, "SP_FILTRO_CUOTAS_POR_DNI_ANIO_EN_CURSO " + dni);
-                GestorDGV.efectosDGV(dataGridView1);
+                if (!string.IsNullOrEmpty(txtParametroDni.Text))
+                {
+                    int dni = Convert.ToInt32(txtParametroDni.Text);
+                    GestorDGV.cargarDataGrid(dataGridView1, "SP_FILTRO_CUOTAS_POR_DNI_ANIO_EN_CURSO " + dni);
+                    GestorDGV.efectosDGV(dataGridView1);
+                }
             }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Error en el registro del afiliado: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+           
         }
 
         private void metroButton2_Click(object sender, EventArgs e)

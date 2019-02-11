@@ -49,7 +49,6 @@ namespace WindowsCuotasApp
             TransaccionCuotaAfiliado t;
             Afiliado nuevo;
 
-          
                 try
                 {
 
@@ -71,6 +70,7 @@ namespace WindowsCuotasApp
                     MetroFramework.MetroMessageBox.Show(this, "Error en la transacción: " + error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             
+                    
         }
     }
 }

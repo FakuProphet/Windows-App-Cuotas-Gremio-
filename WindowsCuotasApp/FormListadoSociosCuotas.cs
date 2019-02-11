@@ -78,22 +78,25 @@ namespace WindowsCuotasApp
             int filasAfectadas=0;
             try
             {
-                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                if (MetroFramework.MetroMessageBox.Show(this, "Desea registrar pagos por defecto?", "Débito de afiliado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    t = new TransaccionCuotaAfiliado();
-                    nuevo = new Afiliado();
-                    fecha = new Fecha();
-                    nuevo.afiliadoID = Convert.ToInt32(fila.Cells[0].Value);
-                    t.a = nuevo;
-                    t.fecha = fecha;              
-                    gestorAfiliados.GenerarTransaccionCuota(t);
-                    filasAfectadas++;
-                }
+                    foreach (DataGridViewRow fila in dataGridView1.Rows)
+                    {
+                        t = new TransaccionCuotaAfiliado();
+                        nuevo = new Afiliado();
+                        fecha = new Fecha();
+                        nuevo.afiliadoID = Convert.ToInt32(fila.Cells[0].Value);
+                        t.a = nuevo;
+                        t.fecha = fecha;
+                        gestorAfiliados.GenerarTransaccionCuota(t);
+                        filasAfectadas++;
+                    }
 
-                gestorAfiliados.SolicitudDebito(fecha = new Fecha());
-                MetroFramework.MetroMessageBox.Show(this, "Transacciones completadas con éxito. " +"\n"+ "Cantidad de registros:" +filasAfectadas, "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cargarDatosCuotasCanceladasMesAnioActual();
-                inicio();
+                    gestorAfiliados.SolicitudDebito(fecha = new Fecha());
+                    MetroFramework.MetroMessageBox.Show(this, "Transacciones completadas con éxito. " + "\n" + "Cantidad de registros:" + filasAfectadas, "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarDatosCuotasCanceladasMesAnioActual();
+                    inicio();
+                }
             }
 
             catch (SqlException error)

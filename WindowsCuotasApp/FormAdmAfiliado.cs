@@ -480,6 +480,7 @@ namespace WindowsCuotasApp
             BuscarDoc(docParametro);
         }
 
+
         private void FormAdmAfiliados_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MetroFramework.MetroMessageBox.Show(this, "Desea salir de la administración de afiliados?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
