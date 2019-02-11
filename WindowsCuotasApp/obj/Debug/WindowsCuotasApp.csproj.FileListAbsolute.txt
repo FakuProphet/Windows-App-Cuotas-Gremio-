@@ -54,3 +54,4 @@ C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-
 C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormParametroPago.resources
 C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.csprojAssemblyReference.cache
 C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormReportes.resources
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormLogin.resources

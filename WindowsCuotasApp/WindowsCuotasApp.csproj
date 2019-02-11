@@ -96,6 +96,12 @@
     <Compile Include="FormListadoSociosCuotas.Designer.cs">
       <DependentUpon>FormListadoSociosCuotas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPagoCuota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <EmbeddedResource Include="FormListadoSociosCuotas.resx">
       <DependentUpon>FormListadoSociosCuotas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPagoCuota.resx">
       <DependentUpon>FormPagoCuota.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8_Cancel_321.png" />
+    <None Include="Resources\icons8_Maximize_Window_32.png" />
+    <None Include="Resources\icons8_Minimize_Window_32.png" />
     <None Include="Resources\icons8_Business_Report_641.png" />
     <None Include="Resources\icons8_Business_Report_64.png" />
     <None Include="Resources\Business Report_96px.png" />

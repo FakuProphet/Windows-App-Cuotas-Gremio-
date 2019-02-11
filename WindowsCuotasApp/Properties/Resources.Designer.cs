@@ -133,6 +133,16 @@ namespace WindowsCuotasApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Cancel_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Cancel_321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Debit_Card_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Debit_Card_48", resourceCulture);
@@ -166,6 +176,26 @@ namespace WindowsCuotasApp.Properties {
         internal static System.Drawing.Bitmap icons8_Form_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Form_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Maximize_Window_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Maximize_Window_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Minimize_Window_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Minimize_Window_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
