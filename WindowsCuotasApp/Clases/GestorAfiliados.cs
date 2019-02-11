@@ -14,8 +14,9 @@ namespace WindowsCuotasApp.Clases
 
 
         public SqlDataReader pDr
-        { set { dr = value; } get { return dr; } }
+        { set { Dr = value; } get { return Dr; } }
 
+        public SqlDataReader Dr { get => dr; set => dr = value; }
 
         public void GenerarTransaccionCuota(TransaccionCuotaAfiliado t)
         {
@@ -95,24 +96,24 @@ namespace WindowsCuotasApp.Clases
             Afiliado nuevo;
             cmd = new SqlCommand("select * from afiliados order by 4", Conectar.ObtenerConexion());
             
-            dr = cmd.ExecuteReader();
+            Dr = cmd.ExecuteReader();
             Conectar.CerrarConexion();
-            while(dr.Read())
+            while(Dr.Read())
             {
-                int idAfiliado = dr.GetInt32(0);
-                string nombre = dr.GetString(1);
-                string apellido = dr.GetString(2);
-                int nroDoc = dr.GetInt32(3);
-                string fechaNac = dr.GetString(4);
-                string email = dr.GetString(5);
-                string nroTel = dr.GetString(6);
-                string direccion = dr.GetString(7);
-                string barrio = dr.GetString(8);
-                int idLocalidad = dr.GetInt32(9);
-                int tipoAfilID = dr.GetInt32(10);
-                int metodoPagoID = dr.GetInt32(11);
-                string nroCuenta = dr.GetString(12);
-                int estadoGremialID = dr.GetInt32(13);
+                int idAfiliado = Dr.GetInt32(0);
+                string nombre = Dr.GetString(1);
+                string apellido = Dr.GetString(2);
+                int nroDoc = Dr.GetInt32(3);
+                string fechaNac = Dr.GetString(4);
+                string email = Dr.GetString(5);
+                string nroTel = Dr.GetString(6);
+                string direccion = Dr.GetString(7);
+                string barrio = Dr.GetString(8);
+                int idLocalidad = Dr.GetInt32(9);
+                int tipoAfilID = Dr.GetInt32(10);
+                int metodoPagoID = Dr.GetInt32(11);
+                string nroCuenta = Dr.GetString(12);
+                int estadoGremialID = Dr.GetInt32(13);
 
                 nuevo = new Afiliado(idAfiliado,nombre,apellido,nroDoc,fechaNac,email,nroTel,
                                     direccion,barrio,idLocalidad,tipoAfilID,metodoPagoID,nroCuenta,estadoGremialID);
@@ -131,17 +132,17 @@ namespace WindowsCuotasApp.Clases
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@NRODOC", SqlDbType.Int).Value = parametroDoc;
             cmd.Parameters.Add("@METODOPAGO", SqlDbType.Int).Value = parametroMetodoPago;
-            dr =cmd.ExecuteReader();
+            Dr =cmd.ExecuteReader();
             Conectar.CerrarConexion();
-            if (dr.Read())
+            if (Dr.Read())
             {
                 
-                string nombreCompleto = dr.GetString(0);
-                int nroDoc = dr.GetInt32(1);
-                string tipoAfiliado = dr.GetString(2);
-                string estado = dr.GetString(3);
-                string formaPago = dr.GetString(4);
-                int codigo = dr.GetInt32(5);
+                string nombreCompleto = Dr.GetString(0);
+                int nroDoc = Dr.GetInt32(1);
+                string tipoAfiliado = Dr.GetString(2);
+                string estado = Dr.GetString(3);
+                string formaPago = Dr.GetString(4);
+                int codigo = Dr.GetInt32(5);
 
                 afiliado = new AfiliadoDTO
                 {
@@ -167,12 +168,12 @@ namespace WindowsCuotasApp.Clases
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@DOC", SqlDbType.Int).Value = parametroDoc;
            
-            dr = cmd.ExecuteReader();
+            Dr = cmd.ExecuteReader();
             Conectar.CerrarConexion();
-            if (dr.Read())
+            if (Dr.Read())
             {
 
-                int nroDoc = dr.GetInt32(0);
+                int nroDoc = Dr.GetInt32(0);
                 afiliado = new Afiliado(nroDoc);
                
             }
@@ -189,10 +190,10 @@ namespace WindowsCuotasApp.Clases
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@MES", SqlDbType.Int).Value =  fecha.getMes();
             cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = fecha.getAnio();
-            dr = cmd.ExecuteReader();
+            Dr = cmd.ExecuteReader();
             Conectar.CerrarConexion();
 
-            if (dr.Read())
+            if (Dr.Read())
             {
                 flag = true;
             }
@@ -207,10 +208,10 @@ namespace WindowsCuotasApp.Clases
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@AFILIADOID", SqlDbType.Int).Value = afiliadoID;
             cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = anio;
-            dr = cmd.ExecuteReader();
+            Dr = cmd.ExecuteReader();
             Conectar.CerrarConexion();
 
-            if (dr.Read())
+            if (Dr.Read())
             {
                 flag = true;
             }
