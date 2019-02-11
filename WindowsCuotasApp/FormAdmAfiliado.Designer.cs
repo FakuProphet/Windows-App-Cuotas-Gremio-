@@ -70,6 +70,12 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblTotalAfil = new System.Windows.Forms.Label();
+            this.lblCantAfilAct = new System.Windows.Forms.Label();
+            this.lblCantAfiliInact = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -348,10 +354,52 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Name = "label15";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Name = "label16";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Name = "label17";
+            // 
+            // lblTotalAfil
+            // 
+            resources.ApplyResources(this.lblTotalAfil, "lblTotalAfil");
+            this.lblTotalAfil.ForeColor = System.Drawing.Color.Blue;
+            this.lblTotalAfil.Name = "lblTotalAfil";
+            // 
+            // lblCantAfilAct
+            // 
+            resources.ApplyResources(this.lblCantAfilAct, "lblCantAfilAct");
+            this.lblCantAfilAct.ForeColor = System.Drawing.Color.Blue;
+            this.lblCantAfilAct.Name = "lblCantAfilAct";
+            // 
+            // lblCantAfiliInact
+            // 
+            resources.ApplyResources(this.lblCantAfiliInact, "lblCantAfiliInact");
+            this.lblCantAfiliInact.ForeColor = System.Drawing.Color.Blue;
+            this.lblCantAfiliInact.Name = "lblCantAfiliInact";
+            // 
             // FormAdmAfiliados
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblCantAfiliInact);
+            this.Controls.Add(this.lblCantAfilAct);
+            this.Controls.Add(this.lblTotalAfil);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnCancelar);
@@ -420,5 +468,11 @@
         private System.Windows.Forms.Label lblAfiliadoID;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtFechaNac;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblTotalAfil;
+        private System.Windows.Forms.Label lblCantAfilAct;
+        private System.Windows.Forms.Label lblCantAfiliInact;
     }
 }
