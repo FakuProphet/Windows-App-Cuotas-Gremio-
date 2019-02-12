@@ -7,12 +7,13 @@ namespace WindowsCuotasApp.Clases
 {
     class CryptorEngine
     {
+        /*uZSY+0yMT5RK7wYmQbcwAg==*/
         public static string Encrypt(string ToEncrypt, bool useHasing)
         {
             byte[] keyArray;
             byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(ToEncrypt);
             //System.Configuration.AppSettingsReader settingsReader = new  AppSettingsReader(); 
-            string Key = "Bhagwati";
+            string Key = "F@@kuProphet";
             if (useHasing)
             {
                 MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
