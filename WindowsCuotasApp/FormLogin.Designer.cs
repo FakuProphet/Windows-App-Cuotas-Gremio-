@@ -37,6 +37,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblMuestraEncriptado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
@@ -97,11 +98,18 @@
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Name = "label3";
             // 
+            // lblMuestraEncriptado
+            // 
+            resources.ApplyResources(this.lblMuestraEncriptado, "lblMuestraEncriptado");
+            this.lblMuestraEncriptado.ForeColor = System.Drawing.Color.DimGray;
+            this.lblMuestraEncriptado.Name = "lblMuestraEncriptado";
+            // 
             // FormLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Controls.Add(this.lblMuestraEncriptado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPass);
@@ -131,5 +139,6 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMuestraEncriptado;
     }
 }
