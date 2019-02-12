@@ -74,7 +74,6 @@
     <Compile Include="Clases\GestorAfiliados.cs" />
     <Compile Include="Clases\GestorDGV.cs" />
     <Compile Include="Clases\Localidad.cs" />
-    <Compile Include="Clases\Login.cs" />
     <Compile Include="Clases\TipoAfiliado.cs" />
     <Compile Include="Clases\TransaccionCuotaAfiliado.cs" />
     <Compile Include="Clases\Validar.cs" />
