@@ -5,6 +5,7 @@ using System.Text;
 
 namespace WindowsCuotasApp.Clases
 {
+    /*********/
     class CryptorEngine
     {
         /*uZSY+0yMT5RK7wYmQbcwAg==*/
