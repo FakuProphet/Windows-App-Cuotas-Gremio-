@@ -8,22 +8,27 @@ namespace WindowsCuotasApp
     {
         public FormSplash()
         {
-            Thread t = new Thread(new ThreadStart(Splash));
-            t.Start();
+            //Thread t = new Thread(new ThreadStart(Splash));
+            //t.Start();
             InitializeComponent();
-            string cadena = string.Empty;
-            for (int i = 0; i < 1000; i++)
-            {
-                cadena += i.ToString();
-            }
-            t.Abort();
+            //string cadena = string.Empty;
+            //for (int i = 0; i < 1000; i++)
+            //{
+            //    cadena += i.ToString();
+            //}
+            //t.Abort();
         }
 
-        void Splash()
+        //void Splash()
+        //{
+        //    SplashScreen.SplashForm nuevo = new SplashScreen.SplashForm();
+        //    nuevo.AppName = "AFIL 2";
+        //    Application.Run(nuevo);
+        //}
+
+        private void FormSplash_Load(object sender, System.EventArgs e)
         {
-            SplashScreen.SplashForm nuevo = new SplashScreen.SplashForm();
-            nuevo.AppName = "AFIL 2";
-            Application.Run(nuevo);
+            
         }
     }
 }

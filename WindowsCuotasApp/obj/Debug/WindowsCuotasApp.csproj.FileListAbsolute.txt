@@ -56,3 +56,4 @@ C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-
 C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormReportes.resources
 C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormLogin.resources
 C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\bin\Debug\SplashScreen.dll
+C:\Users\Prophet\Desktop\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormSplash.resources
