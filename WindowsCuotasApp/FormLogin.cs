@@ -36,8 +36,8 @@ namespace WindowsCuotasApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string entrada = txtUsuario.Text;
-            txtPass.Text = CryptorEngine.Encrypt(entrada, true);
+            //string entrada = txtUsuario.Text;
+            //txtPass.Text = CryptorEngine.Encrypt(entrada, true);
            // txtPass.Text = CryptorEngine.Decrypt(lblMuestraEncriptado.Text, true);
         }
     }
