@@ -1,6 +1,4 @@
-﻿
-using System.Threading;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace WindowsCuotasApp
 {
@@ -8,27 +6,30 @@ namespace WindowsCuotasApp
     {
         public FormSplash()
         {
-            //Thread t = new Thread(new ThreadStart(Splash));
-            //t.Start();
-            InitializeComponent();
-            //string cadena = string.Empty;
-            //for (int i = 0; i < 1000; i++)
-            //{
-            //    cadena += i.ToString();
-            //}
-            //t.Abort();
+            InitializeComponent();   
         }
 
-        //void Splash()
-        //{
-        //    SplashScreen.SplashForm nuevo = new SplashScreen.SplashForm();
-        //    nuevo.AppName = "AFIL 2";
-        //    Application.Run(nuevo);
-        //}
+       
+
+      
 
         private void FormSplash_Load(object sender, System.EventArgs e)
         {
             
+        }
+        int contador = 0;
+        private void timer1_Tick(object sender, System.EventArgs e)
+        {
+            
+            contador += 3;
+            lblContador.Text = contador.ToString()+"%";
+            if ( contador >= 100)
+            {
+                timer1.Stop();
+                this.Hide();
+                FormLogin fl = new FormLogin();
+                fl.ShowDialog();
+            }
         }
     }
 }
