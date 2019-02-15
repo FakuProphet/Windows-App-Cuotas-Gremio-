@@ -12,7 +12,7 @@ namespace WindowsCuotasApp.Clases.LOGUIN
 
         public SqlDataReader Dr { get => dr; set => dr = value; }
 
-        public User GetAfiliadoPorDni(string user,string pass)
+        public User GetUsuario(string user,string pass)
         {
 
             User u = null;
@@ -20,7 +20,7 @@ namespace WindowsCuotasApp.Clases.LOGUIN
             SqlCommand cmd = new SqlCommand("SP_GET_USUARIO_APP", Conectar.ObtenerConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@USUARIO", SqlDbType.VarChar).Value = user;
-            cmd.Parameters.Add("@CONTRASENIA", SqlDbType.VarChar).Value = user;
+            cmd.Parameters.Add("@CONTRASENIA", SqlDbType.VarChar).Value = pass;
 
             Dr = cmd.ExecuteReader();
             Conectar.CerrarConexion();

@@ -40,7 +40,7 @@ namespace WindowsCuotasApp.Clases
             byte[] toDecryptArray = Convert.FromBase64String(cypherString);
             //byte[] toEncryptArray = Convert.FromBase64String(cypherString); 
             //System.Configuration.AppSettingsReader settingReader = new  AppSettingsReader(); 
-            string key = "Bhagwati";
+            string key = "F@@kuProphet";
             if (useHasing)
             {
                 MD5CryptoServiceProvider hashmd = new MD5CryptoServiceProvider();

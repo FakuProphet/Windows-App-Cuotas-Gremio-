@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnCerrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -211,7 +211,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnMinimizar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -241,7 +241,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnMinimizar.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="txtUsuario.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -265,7 +265,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtUsuario.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txtPass.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -289,7 +289,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPass.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -322,7 +322,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -355,39 +355,78 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="lblMuestraEncriptado.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblUsuarioEncriptado.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblMuestraEncriptado.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblUsuarioEncriptado.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 14.25pt</value>
   </data>
-  <data name="lblMuestraEncriptado.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblUsuarioEncriptado.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblMuestraEncriptado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 311</value>
+  <data name="lblUsuarioEncriptado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 292</value>
   </data>
-  <data name="lblMuestraEncriptado.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblUsuarioEncriptado.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 22</value>
   </data>
-  <data name="lblMuestraEncriptado.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblUsuarioEncriptado.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="lblMuestraEncriptado.Text" xml:space="preserve">
+  <data name="lblUsuarioEncriptado.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <data name="&gt;&gt;lblMuestraEncriptado.Name" xml:space="preserve">
-    <value>lblMuestraEncriptado</value>
+  <data name="lblUsuarioEncriptado.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;lblMuestraEncriptado.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblUsuarioEncriptado.Name" xml:space="preserve">
+    <value>lblUsuarioEncriptado</value>
+  </data>
+  <data name="&gt;&gt;lblUsuarioEncriptado.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblMuestraEncriptado.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblUsuarioEncriptado.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblMuestraEncriptado.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblUsuarioEncriptado.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPasEncriptada.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPasEncriptada.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
+  </data>
+  <data name="lblPasEncriptada.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPasEncriptada.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 321</value>
+  </data>
+  <data name="lblPasEncriptada.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 22</value>
+  </data>
+  <data name="lblPasEncriptada.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblPasEncriptada.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblPasEncriptada.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblPasEncriptada.Name" xml:space="preserve">
+    <value>lblPasEncriptada</value>
+  </data>
+  <data name="&gt;&gt;lblPasEncriptada.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPasEncriptada.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPasEncriptada.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

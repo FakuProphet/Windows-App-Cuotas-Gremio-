@@ -357,13 +357,13 @@
             // label15
             // 
             resources.ApplyResources(this.label15, "label15");
-            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label15.Name = "label15";
             // 
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
-            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label16.Name = "label16";
             // 
             // label17
@@ -387,7 +387,7 @@
             // lblCantAfiliInact
             // 
             resources.ApplyResources(this.lblCantAfiliInact, "lblCantAfiliInact");
-            this.lblCantAfiliInact.ForeColor = System.Drawing.Color.Blue;
+            this.lblCantAfiliInact.ForeColor = System.Drawing.Color.Red;
             this.lblCantAfiliInact.Name = "lblCantAfiliInact";
             // 
             // FormAdmAfiliados
