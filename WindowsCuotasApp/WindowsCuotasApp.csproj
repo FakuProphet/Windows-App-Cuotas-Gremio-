@@ -67,13 +67,15 @@
   <ItemGroup>
     <Compile Include="Clases\Afiliado.cs" />
     <Compile Include="Clases\Conectar.cs" />
-    <Compile Include="Clases\CryptorEngine.cs" />
+    <Compile Include="Clases\LOGUIN\CryptorEngine.cs" />
     <Compile Include="Clases\DTO\AfiliadoDTO.cs" />
     <Compile Include="Clases\Fecha.cs" />
     <Compile Include="Clases\FormaPago.cs" />
     <Compile Include="Clases\GestorAfiliados.cs" />
     <Compile Include="Clases\GestorDGV.cs" />
     <Compile Include="Clases\Localidad.cs" />
+    <Compile Include="Clases\LOGUIN\GestorLoguin.cs" />
+    <Compile Include="Clases\LOGUIN\User.cs" />
     <Compile Include="Clases\TipoAfiliado.cs" />
     <Compile Include="Clases\TransaccionCuotaAfiliado.cs" />
     <Compile Include="Clases\Validar.cs" />
