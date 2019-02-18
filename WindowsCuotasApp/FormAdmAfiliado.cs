@@ -71,9 +71,19 @@ namespace WindowsCuotasApp
             txtBuscar.Enabled = true;
             txtFechaNac.Show();
             btnUpdate.Hide();
+            Cantidades();
             listBox1.SelectedIndex = 1;
         }
 
+        private void Cantidades()
+        {
+            int cantAfilInac = g.Get("SP_CANTIDAD_AFIL_IANCTIVOS");
+            int cantAfilActivos = g.Get("SP_CANTIDAD_AFIL_ACTIVOS");
+            int totalAfiliados = g.Get("SP_CANTIDAD_AFILIADOS");
+            lblCantAfilAct.Text = cantAfilActivos.ToString();
+            lblCantAfiliInact.Text = cantAfilInac.ToString();
+            lblTotalAfil.Text = totalAfiliados.ToString();
+        }
 
         private void NuevoAfiliado()
         {

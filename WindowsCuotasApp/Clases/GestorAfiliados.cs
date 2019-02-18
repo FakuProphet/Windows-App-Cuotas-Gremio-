@@ -158,6 +158,26 @@ namespace WindowsCuotasApp.Clases
             return afiliado;
         }
 
+        /*Mediante un procedimiento se obtienen las cantidades actuales de lo solicitado*/
+        public int Get(string parametroSP)
+        {
+
+            int cantidad = 0;
+
+            cmd = new SqlCommand(parametroSP, Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+           
+            Dr = cmd.ExecuteReader();
+            Conectar.CerrarConexion();
+            if (Dr.Read())
+            {
+                cantidad = Dr.GetInt32(0);
+            }
+
+            return cantidad;
+        }
+
+
 
         public Afiliado GetAfiliadoPorDni(int parametroDoc)
         {
