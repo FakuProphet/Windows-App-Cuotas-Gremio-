@@ -18,6 +18,12 @@ namespace WindowsCuotasApp.Clases
                 {
                     fila.Cells[celdaID].Style.BackColor = Color.Green;
                     fila.Cells[celdaID].Style.ForeColor = Color.White;
+                  
+                }
+                else
+                {
+                    fila.Cells[celdaID].Style.BackColor = Color.Red;
+                    fila.Cells[celdaID].Style.ForeColor = Color.White;
                 }
             }
         }

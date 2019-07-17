@@ -12,9 +12,7 @@ namespace WindowsCuotasApp
         public FormLogin()
         {
             InitializeComponent();
-            gestor = new GestorLoguin();
-            
-            
+            gestor = new GestorLoguin();         
         }
 
         private void FormLogin_Load(object sender, EventArgs e) => Inicio();
@@ -23,7 +21,7 @@ namespace WindowsCuotasApp
         void Inicio()
         {
             txtUsuario.Focus();
-            lblPasEncriptada.Visible = true;
+           // lblPasEncriptada.Visible = true;
         }
 
         
@@ -67,17 +65,11 @@ namespace WindowsCuotasApp
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //comentario
-        }
+      
+        /*bighead2019*/
+        /*Administrador*/
+        //string p = "bIKfd6UP6Bg1RHudOqQbLA==";
+        //lblPasEncriptada.Text = CryptorEngine.Decrypt(p, true);
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            /*bighead2019*/
-            /*Administrador*/
-            //string p = "bIKfd6UP6Bg1RHudOqQbLA==";
-            //lblPasEncriptada.Text = CryptorEngine.Decrypt(p, true);
-        }
     }
 }

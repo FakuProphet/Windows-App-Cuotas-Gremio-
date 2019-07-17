@@ -39,7 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblUsuarioEncriptado = new System.Windows.Forms.Label();
             this.lblPasEncriptada = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
@@ -112,19 +113,25 @@
             this.lblPasEncriptada.ForeColor = System.Drawing.Color.DimGray;
             this.lblPasEncriptada.Name = "lblPasEncriptada";
             // 
-            // button1
+            // label4
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Name = "label4";
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // FormLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblPasEncriptada);
             this.Controls.Add(this.lblUsuarioEncriptado);
             this.Controls.Add(this.label3);
@@ -158,6 +165,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblUsuarioEncriptado;
         private System.Windows.Forms.Label lblPasEncriptada;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

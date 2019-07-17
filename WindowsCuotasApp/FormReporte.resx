@@ -133,7 +133,7 @@
     <value>False</value>
   </data>
   <data name="crystalReportViewer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>760, 370</value>
+    <value>993, 433</value>
   </data>
   <data name="crystalReportViewer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -157,7 +157,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>1033, 513</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
