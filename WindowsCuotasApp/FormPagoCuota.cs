@@ -62,6 +62,7 @@ namespace WindowsCuotasApp
                     {
                         gestorAfiliados.GenerarTransaccionCuota(t);
                         MetroFramework.MetroMessageBox.Show(this, "Transaccion completada con éxito.", "Transacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Dispose();
                     }
                 }
 
