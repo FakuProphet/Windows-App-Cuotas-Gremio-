@@ -68,7 +68,7 @@ namespace WindowsCuotasApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            //comentario
         }
     }
 }
