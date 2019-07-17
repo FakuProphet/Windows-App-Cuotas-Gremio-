@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblUsuarioEncriptado = new System.Windows.Forms.Label();
             this.lblPasEncriptada = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
@@ -111,11 +112,19 @@
             this.lblPasEncriptada.ForeColor = System.Drawing.Color.DimGray;
             this.lblPasEncriptada.Name = "lblPasEncriptada";
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FormLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblPasEncriptada);
             this.Controls.Add(this.lblUsuarioEncriptado);
             this.Controls.Add(this.label3);
@@ -149,5 +158,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblUsuarioEncriptado;
         private System.Windows.Forms.Label lblPasEncriptada;
+        private System.Windows.Forms.Button button1;
     }
 }

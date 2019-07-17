@@ -23,6 +23,7 @@ namespace WindowsCuotasApp
         void Inicio()
         {
             txtUsuario.Focus();
+            lblPasEncriptada.Visible = true;
         }
 
         
@@ -48,9 +49,9 @@ namespace WindowsCuotasApp
                 string passEncriptada = CryptorEngine.Encrypt(entradaPass, true);
                 if (gestor.GetUsuario(usuarioEncriptado, passEncriptada) != null)
                 {
+                    this.Hide();
                     FormPrincipal nuevo = new FormPrincipal();
-                    this.Close();
-                    nuevo.ShowDialog();
+                    nuevo.Show();
                 }
                 else
                 {
@@ -69,6 +70,14 @@ namespace WindowsCuotasApp
         private void button1_Click(object sender, EventArgs e)
         {
             //comentario
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            /*bighead2019*/
+            /*Administrador*/
+            //string p = "bIKfd6UP6Bg1RHudOqQbLA==";
+            //lblPasEncriptada.Text = CryptorEngine.Decrypt(p, true);
         }
     }
 }
