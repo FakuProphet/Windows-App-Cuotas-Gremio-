@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.afiliadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,7 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirVentanaInformaciónBásicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,11 +60,6 @@
             this.logoutToolStripMenuItem,
             this.consultasToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
-            // 
-            // statusStrip1
-            // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
             // 
             // afiliadoToolStripMenuItem
             // 
@@ -178,6 +173,11 @@
             resources.ApplyResources(this.abrirVentanaInformaciónBásicaToolStripMenuItem, "abrirVentanaInformaciónBásicaToolStripMenuItem");
             this.abrirVentanaInformaciónBásicaToolStripMenuItem.Click += new System.EventHandler(this.abrirVentanaInformaciónBásicaToolStripMenuItem_Click);
             // 
+            // statusStrip1
+            // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            // 
             // FormPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -200,11 +200,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem afiliadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cuotasToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem administracionAfiliadosConDébitoToolStripMenuItem;
@@ -213,12 +209,15 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem efectuarPagoCuotaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem revisiónCuotasAfiliadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem abriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abrirVentanaInformaciónBásicaToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem afiliadoToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem cuotasToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
     }
 }
 

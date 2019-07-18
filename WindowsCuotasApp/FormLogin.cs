@@ -9,10 +9,12 @@ namespace WindowsCuotasApp
     {
         private const string V = "Error en la conexión: ";
         private GestorLoguin gestor;
+        private bool bandera;
         public FormLogin()
         {
             InitializeComponent();
-            gestor = new GestorLoguin();         
+            gestor = new GestorLoguin();
+            bandera = false;
         }
 
         private void FormLogin_Load(object sender, EventArgs e) => Inicio();
@@ -41,19 +43,41 @@ namespace WindowsCuotasApp
 
             try
             {
-                string entradaUser = txtUsuario.Text.Trim();
-                string entradaPass = txtPass.Text.Trim();
-                string usuarioEncriptado = CryptorEngine.Encrypt(entradaUser, true);
-                string passEncriptada = CryptorEngine.Encrypt(entradaPass, true);
-                if (gestor.GetUsuario(usuarioEncriptado, passEncriptada) != null)
+                if (!bandera)
                 {
-                    this.Hide();
-                    FormPrincipal nuevo = new FormPrincipal();
-                    nuevo.Show();
+                    string entradaUser = txtUsuario.Text.Trim();
+                    string entradaPass = txtPass.Text.Trim();
+                    string usuarioEncriptado = CryptorEngine.Encrypt(entradaUser, true);
+                    string passEncriptada = CryptorEngine.Encrypt(entradaPass, true);
+                    if (gestor.GetUsuario(usuarioEncriptado, passEncriptada) != null)
+                    {
+                        this.Hide();
+                        FormPrincipal nuevo = new FormPrincipal();
+                        nuevo.Show();
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "El usuario o contraseña del administrador son incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "El usuario o contraseña ingresados son incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    string entradaUserInvitado = txtUsuario.Text.Trim();
+                    string entradaPassInvitado = txtPass.Text.Trim();
+
+                    if (gestor.GetUsuario(entradaUserInvitado, entradaPassInvitado) != null)
+                    {
+                        this.Hide();
+                        FormPrincipal nuevo = new FormPrincipal();
+                        nuevo.afiliadoToolStripMenuItem.Enabled = false;
+                        nuevo.cuotasToolStripMenuItem.Enabled = false;
+                        nuevo.reportesToolStripMenuItem.Enabled = false;
+                        nuevo.Show();
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "El usuario o contraseña del usuario invitado son incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
                 }
             }
             catch (Exception ex)
@@ -65,7 +89,21 @@ namespace WindowsCuotasApp
 
         }
 
-      
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                bandera = true;
+                
+            }
+            else
+            {
+                bandera = false;
+                
+            }
+        }
+
+
         /*bighead2019*/
         /*Administrador*/
         //string p = "bIKfd6UP6Bg1RHudOqQbLA==";

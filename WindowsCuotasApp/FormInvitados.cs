@@ -71,7 +71,7 @@ namespace WindowsCuotasApp
         {
             try
             {
-                (dataGridView2.DataSource as DataTable).DefaultView.RowFilter =
+                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
                 string.Format("DNI LIKE '{0}%' OR DNI LIKE '% {0}%'", txtFiltroDni.Text);
 
             }
