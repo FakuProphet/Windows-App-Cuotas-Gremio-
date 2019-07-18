@@ -76,6 +76,7 @@
     <Compile Include="Clases\Localidad.cs" />
     <Compile Include="Clases\LOGUIN\GestorLoguin.cs" />
     <Compile Include="Clases\LOGUIN\User.cs" />
+    <Compile Include="Clases\Mes.cs" />
     <Compile Include="Clases\TipoAfiliado.cs" />
     <Compile Include="Clases\TransaccionCuotaAfiliado.cs" />
     <Compile Include="Clases\Validar.cs" />
@@ -216,6 +217,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\User_96px.png" />
+    <None Include="Resources\icons8_Todo_List5_64.png" />
     <None Include="Resources\icons8_Cancel_321.png" />
     <None Include="Resources\icons8_Maximize_Window_32.png" />
     <None Include="Resources\icons8_Minimize_Window_32.png" />

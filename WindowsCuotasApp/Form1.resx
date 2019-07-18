@@ -245,6 +245,27 @@
   <data name="logoutToolStripMenuItem.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
+  <data name="abrirVentanaInformaciónBásicaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 34</value>
+  </data>
+  <data name="abrirVentanaInformaciónBásicaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Abrir ventana información básica</value>
+  </data>
+  <data name="consultasToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="consultasToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="consultasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 98</value>
+  </data>
+  <data name="consultasToolStripMenuItem.Text" xml:space="preserve">
+    <value>Consultas</value>
+  </data>
+  <data name="consultasToolStripMenuItem.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 60</value>
   </data>
@@ -460,16 +481,28 @@
   <data name="&gt;&gt;reportesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;abriToolStripMenuItem.Name" xml:space="preserve">
+    <value>abriToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;abriToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;logoutToolStripMenuItem.Name" xml:space="preserve">
     <value>logoutToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;logoutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;abriToolStripMenuItem.Name" xml:space="preserve">
-    <value>abriToolStripMenuItem</value>
+  <data name="&gt;&gt;consultasToolStripMenuItem.Name" xml:space="preserve">
+    <value>consultasToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;abriToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;consultasToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;abrirVentanaInformaciónBásicaToolStripMenuItem.Name" xml:space="preserve">
+    <value>abrirVentanaInformaciónBásicaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;abrirVentanaInformaciónBásicaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

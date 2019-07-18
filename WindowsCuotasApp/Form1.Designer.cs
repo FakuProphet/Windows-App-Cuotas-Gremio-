@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.afiliadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,9 +43,10 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.efectuarPagoCuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.abriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirVentanaInformaciónBásicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,8 +57,14 @@
             this.afiliadoToolStripMenuItem,
             this.cuotasToolStripMenuItem,
             this.reportesToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.logoutToolStripMenuItem,
+            this.consultasToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
+            // 
+            // statusStrip1
+            // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
             // 
             // afiliadoToolStripMenuItem
             // 
@@ -143,6 +151,12 @@
             resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             // 
+            // abriToolStripMenuItem
+            // 
+            this.abriToolStripMenuItem.Name = "abriToolStripMenuItem";
+            resources.ApplyResources(this.abriToolStripMenuItem, "abriToolStripMenuItem");
+            this.abriToolStripMenuItem.Click += new System.EventHandler(this.abriToolStripMenuItem_Click);
+            // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Shutdown_64;
@@ -150,16 +164,19 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
-            // statusStrip1
+            // consultasToolStripMenuItem
             // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirVentanaInformaciónBásicaToolStripMenuItem});
+            this.consultasToolStripMenuItem.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Todo_List5_64;
+            resources.ApplyResources(this.consultasToolStripMenuItem, "consultasToolStripMenuItem");
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             // 
-            // abriToolStripMenuItem
+            // abrirVentanaInformaciónBásicaToolStripMenuItem
             // 
-            this.abriToolStripMenuItem.Name = "abriToolStripMenuItem";
-            resources.ApplyResources(this.abriToolStripMenuItem, "abriToolStripMenuItem");
-            this.abriToolStripMenuItem.Click += new System.EventHandler(this.abriToolStripMenuItem_Click);
+            this.abrirVentanaInformaciónBásicaToolStripMenuItem.Name = "abrirVentanaInformaciónBásicaToolStripMenuItem";
+            resources.ApplyResources(this.abrirVentanaInformaciónBásicaToolStripMenuItem, "abrirVentanaInformaciónBásicaToolStripMenuItem");
+            this.abrirVentanaInformaciónBásicaToolStripMenuItem.Click += new System.EventHandler(this.abrirVentanaInformaciónBásicaToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -200,6 +217,8 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem abriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abrirVentanaInformaciónBásicaToolStripMenuItem;
     }
 }
 

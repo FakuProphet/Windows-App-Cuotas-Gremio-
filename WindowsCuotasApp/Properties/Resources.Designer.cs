@@ -263,6 +263,16 @@ namespace WindowsCuotasApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Todo_List5_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Todo_List5_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Update_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Update_32", resourceCulture);
@@ -306,6 +316,16 @@ namespace WindowsCuotasApp.Properties {
         internal static System.Drawing.Bitmap icons8_User_Groups_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_User_Groups_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_96px {
+            get {
+                object obj = ResourceManager.GetObject("User_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

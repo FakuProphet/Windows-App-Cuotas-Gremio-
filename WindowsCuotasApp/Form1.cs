@@ -74,5 +74,11 @@ namespace WindowsCuotasApp
             FormReportes nuevo = new FormReportes();
             nuevo.ShowDialog();
         }
+
+        private void abrirVentanaInformaciónBásicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormInvitados nuevo = new FormInvitados();
+            nuevo.ShowDialog();
+        }
     }
 }

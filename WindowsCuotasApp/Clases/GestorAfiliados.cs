@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using WindowsCuotasApp.Clases.DTO;
 
 namespace WindowsCuotasApp.Clases
@@ -240,7 +242,17 @@ namespace WindowsCuotasApp.Clases
         }
 
 
-        
+        public DataTable Consultar(string query)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataSet ds = new DataSet();
+            da.SelectCommand = new SqlCommand(query, Conectar.ObtenerConexion());
+            da.Fill(ds);
+            dt = ds.Tables[0];
+            Conectar.CerrarConexion();
+            return dt;
+        }
 
 
         public DataTable ConsultarTabla(string nombreTabla)
@@ -254,5 +266,46 @@ namespace WindowsCuotasApp.Clases
             Conectar.CerrarConexion();
             return dt;
         }
+
+
+
+        public void CargarCombo(ComboBox elCombo)
+        {
+
+            //Definir coneccion SQL
+           
+            string textoCmd = "	select descripcion from v_meses_validos";
+            try
+            {
+
+                
+
+                //Ejecutar sentencia SQL
+                SqlCommand cmd = new SqlCommand(textoCmd, Conectar.ObtenerConexion());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+                        //Agrear información al combo
+                        elCombo.Items.Add(reader["descripcion"].ToString());   //elCombo.Items.Add(reader.GetString(0));   tambien funciona
+
+                        //elCombo.Items.Add(reader[0].ToString()); tambien funciona
+                    }
+                }
+
+                elCombo.DropDownStyle = ComboBoxStyle.DropDownList;
+                Conectar.CerrarConexion();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+
+
+
     }
 }
