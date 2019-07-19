@@ -14,14 +14,17 @@ namespace WindowsCuotasApp
 
         GestorAfiliados g;
         ArrayList listado;
+        ArrayList listadoInactivos;
         Validar validar;
         private bool bandera;
+        private bool existenAfiliadosInactivos;
         public FormAdmAfiliados()
         {
             InitializeComponent();
             g = new GestorAfiliados();
             validar = new Validar();
             bandera = false;
+            existenAfiliadosInactivos = false;
         }
 
 
@@ -40,6 +43,30 @@ namespace WindowsCuotasApp
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
             combo.SelectedIndex = 0;
+        }
+
+
+        private void CargarListaAfiliadosInactivos()
+        {
+            listadoInactivos = new ArrayList();
+
+            foreach (Afiliado a in listado)
+            {
+                if (a.estadoGremialID.Equals(2))
+                {
+                    listadoInactivos.Add(a);
+                    listBox1.Items.Add(a.nroDoc);
+                }
+            }
+
+            if(listadoInactivos.Count>0)
+            {
+                existenAfiliadosInactivos = true;
+            }
+            else
+            {
+                existenAfiliadosInactivos = false;
+            }
         }
 
 
@@ -69,6 +96,7 @@ namespace WindowsCuotasApp
             CargarLista();
             ComprobarLista();
             txtBuscar.Enabled = true;
+            ckbAfilInactivos.Enabled = true;
             txtFechaNac.Show();
             btnUpdate.Hide();
             Cantidades();
@@ -96,6 +124,7 @@ namespace WindowsCuotasApp
             listBox1.Enabled = false;
             LimpiarCampos();
             txtBuscar.Enabled = false;
+            ckbAfilInactivos.Enabled = false;
             txtNombre.Focus();
             txtFechaNac.Hide();
         }
@@ -103,20 +132,21 @@ namespace WindowsCuotasApp
         void ActualizarAfiliado()
         {
             btnGrabar.Hide();
-            txtFechaNac.Hide();
+           // txtFechaNac.Hide();
             btnActualizar.Enabled = false;
             btnNuevo.Enabled = false;
             btnCancelar.Enabled = true;
             listBox1.Enabled = false;
             txtBuscar.Enabled = false;
             groupBox1.Enabled = true;
+            ckbAfilInactivos.Enabled = false;
             btnUpdate.Show();
             txtNombre.Focus();
         }
 
         private void CargarCampos(int x)
         {
-            Afiliado[] miVector = convertir();
+            Afiliado[] miVector = convertir(listado);
             txtNombre.Text = miVector[x].nombre;
             txtApellido.Text = miVector[x].apellido;
             txtNroDoc.Text = miVector[x].nroDoc.ToString();
@@ -133,6 +163,25 @@ namespace WindowsCuotasApp
             txtFechaNac.Text = miVector[x].fechaNac.ToString();
         }
 
+
+        private void CargarCamposDatosAfilInactivos(int x)
+        {
+            Afiliado[] miVector = convertir(listadoInactivos);
+            txtNombre.Text = miVector[x].nombre;
+            txtApellido.Text = miVector[x].apellido;
+            txtNroDoc.Text = miVector[x].nroDoc.ToString();
+            txtEmail.Text = miVector[x].email;
+            txtNroTel.Text = miVector[x].nroTel;
+            txtDir.Text = miVector[x].direccion;
+            txtBarrio.Text = miVector[x].barrio;
+            cboLocalidades.SelectedValue = miVector[x].localidad;
+            cboTipoAfil.SelectedValue = miVector[x].tipoAfiliado;
+            cboForma.SelectedValue = miVector[x].formaPago;
+            txtCbu.Text = miVector[x].cbu;
+            cboEstadosGremiales.SelectedValue = miVector[x].estadoGremialID;
+            lblAfiliadoID.Text = miVector[x].afiliadoID.ToString();
+            txtFechaNac.Text = miVector[x].fechaNac.ToString();
+        }
 
 
         private void CargarTodosLosCombos()
@@ -369,9 +418,9 @@ namespace WindowsCuotasApp
          * Convertirmos el ArrayList a un vector, para facilitar el recorrido
          * y cargar los campos correspondientes a cada item del ListBox
          */
-        Afiliado[] convertir()
+        Afiliado[] convertir(ArrayList miArray)
         {
-            Afiliado[] vector = listado.ToArray(typeof(Afiliado)) as Afiliado[];
+            Afiliado[] vector = miArray.ToArray(typeof(Afiliado)) as Afiliado[];
             return vector;
         }
 
@@ -379,7 +428,24 @@ namespace WindowsCuotasApp
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarCampos(listBox1.SelectedIndex);
+            try
+            {
+                if(existenAfiliadosInactivos)
+                {
+                    CargarCamposDatosAfilInactivos(listBox1.SelectedIndex);
+                }
+                if(!existenAfiliadosInactivos)
+                {
+                    CargarCampos(listBox1.SelectedIndex);
+                }
+            }
+            catch (Exception)
+            {
+
+               
+            }
+           
+            
         }
 
 
@@ -440,7 +506,7 @@ namespace WindowsCuotasApp
                 afiliadoUpdate.nroDoc = Convert.ToInt32(txtNroDoc.Text);
                 afiliadoUpdate.nroTel = txtNroTel.Text;
                 afiliadoUpdate.email = txtEmail.Text;
-                afiliadoUpdate.fechaNac = dtpFechaNac.Value.ToShortDateString();
+                afiliadoUpdate.fechaNac = txtFechaNac.Text;
                 afiliadoUpdate.localidad = Convert.ToInt32(cboLocalidades.SelectedValue);
                 afiliadoUpdate.formaPago = Convert.ToInt32(cboForma.SelectedValue);
                 afiliadoUpdate.tipoAfiliado = Convert.ToInt32(cboTipoAfil.SelectedValue);
@@ -500,6 +566,36 @@ namespace WindowsCuotasApp
             else
             {
                 e.Cancel = true;
+            }
+        }
+
+        private void ckbAfilInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ckbAfilInactivos.Checked)
+            {
+                listBox1.Items.Clear();
+                CargarListaAfiliadosInactivos();
+                if(listBox1.Items.Count>0)
+                {
+                    listBox1.SelectedIndex = 0 ;      
+                }
+                else
+                {
+                    LimpiarCampos();
+                    btnActualizar.Enabled = false;
+                    btnNuevo.Enabled = false;
+                }
+                txtBuscar.Clear();
+            }
+            else
+            {
+                listBox1.Items.Clear();
+                CargarLista();
+                listBox1.SelectedIndex = 1;
+                btnActualizar.Enabled = true;
+                btnNuevo.Enabled = true;
+                existenAfiliadosInactivos = false;
+                txtBuscar.Clear();
             }
         }
     }

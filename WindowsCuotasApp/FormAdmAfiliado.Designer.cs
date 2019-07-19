@@ -76,6 +76,7 @@
             this.lblTotalAfil = new System.Windows.Forms.Label();
             this.lblCantAfilAct = new System.Windows.Forms.Label();
             this.lblCantAfiliInact = new System.Windows.Forms.Label();
+            this.ckbAfilInactivos = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -390,10 +391,18 @@
             this.lblCantAfiliInact.ForeColor = System.Drawing.Color.Red;
             this.lblCantAfiliInact.Name = "lblCantAfiliInact";
             // 
+            // ckbAfilInactivos
+            // 
+            resources.ApplyResources(this.ckbAfilInactivos, "ckbAfilInactivos");
+            this.ckbAfilInactivos.Name = "ckbAfilInactivos";
+            this.ckbAfilInactivos.UseVisualStyleBackColor = true;
+            this.ckbAfilInactivos.CheckedChanged += new System.EventHandler(this.ckbAfilInactivos_CheckedChanged);
+            // 
             // FormAdmAfiliados
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ckbAfilInactivos);
             this.Controls.Add(this.lblCantAfiliInact);
             this.Controls.Add(this.lblCantAfilAct);
             this.Controls.Add(this.lblTotalAfil);
@@ -474,5 +483,6 @@
         private System.Windows.Forms.Label lblTotalAfil;
         private System.Windows.Forms.Label lblCantAfilAct;
         private System.Windows.Forms.Label lblCantAfiliInact;
+        private System.Windows.Forms.CheckBox ckbAfilInactivos;
     }
 }
