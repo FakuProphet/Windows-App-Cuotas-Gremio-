@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using WindowsCuotasApp.Clases;
 
 namespace WindowsCuotasApp
@@ -81,6 +74,13 @@ namespace WindowsCuotasApp
                
             }
 
+        }
+
+        private void btnFiltro_MouseHover(object sender, EventArgs e)
+        {
+
+            string mensaje = "El control se habilita automáticamente el día 20 de cada mes.";
+            toolTip1.SetToolTip(btnFiltro,mensaje);
         }
     }
 }

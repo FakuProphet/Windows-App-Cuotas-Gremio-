@@ -79,6 +79,7 @@ namespace WindowsCuotasApp
                         nuevo.afiliadoToolStripMenuItem.Enabled = false;
                         nuevo.cuotasToolStripMenuItem.Enabled = false;
                         nuevo.reportesToolStripMenuItem.Enabled = false;
+                        nuevo.actividadDelSistemaToolStripMenuItem.Enabled = false;
                         nuevo.Show();
                     }
                     else

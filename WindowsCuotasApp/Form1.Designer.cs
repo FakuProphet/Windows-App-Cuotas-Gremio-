@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.afiliadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +48,8 @@
             this.abrirVentanaInformaciónBásicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDeIngresosAlSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,11 +64,6 @@
             this.consultasToolStripMenuItem,
             this.actividadDelSistemaToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
-            // 
-            // statusStrip1
-            // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
             // 
             // afiliadoToolStripMenuItem
             // 
@@ -184,7 +180,8 @@
             // actividadDelSistemaToolStripMenuItem
             // 
             this.actividadDelSistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.historialDeIngresosAlSistemaToolStripMenuItem});
+            this.historialDeIngresosAlSistemaToolStripMenuItem,
+            this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem});
             this.actividadDelSistemaToolStripMenuItem.Image = global::WindowsCuotasApp.Properties.Resources.icons8_System_Task_64;
             resources.ApplyResources(this.actividadDelSistemaToolStripMenuItem, "actividadDelSistemaToolStripMenuItem");
             this.actividadDelSistemaToolStripMenuItem.Name = "actividadDelSistemaToolStripMenuItem";
@@ -194,6 +191,17 @@
             this.historialDeIngresosAlSistemaToolStripMenuItem.Name = "historialDeIngresosAlSistemaToolStripMenuItem";
             resources.ApplyResources(this.historialDeIngresosAlSistemaToolStripMenuItem, "historialDeIngresosAlSistemaToolStripMenuItem");
             this.historialDeIngresosAlSistemaToolStripMenuItem.Click += new System.EventHandler(this.historialDeIngresosAlSistemaToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // registroDeActividadesYAlteracionDeDatosToolStripMenuItem
+            // 
+            this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Name = "registroDeActividadesYAlteracionDeDatosToolStripMenuItem";
+            resources.ApplyResources(this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem, "registroDeActividadesYAlteracionDeDatosToolStripMenuItem");
+            this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Click += new System.EventHandler(this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -235,8 +243,9 @@
         public System.Windows.Forms.ToolStripMenuItem afiliadoToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem cuotasToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actividadDelSistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historialDeIngresosAlSistemaToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem actividadDelSistemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeActividadesYAlteracionDeDatosToolStripMenuItem;
     }
 }
 

@@ -1,25 +1,22 @@
 ﻿using System;
 using WindowsCuotasApp.Clases;
-using WindowsCuotasApp.Clases.LOGUIN;
 
 namespace WindowsCuotasApp
 {
-    public partial class FormInformeLogin : MetroFramework.Forms.MetroForm
+    public partial class FormActividades : MetroFramework.Forms.MetroForm
     {
-        private const string Consulta = "select * from v_ingresos order by USUARIO";
+        private const string Consulta = "select * from v_act_sistema order by DNI";
         GestorDGV gestor;
-        public FormInformeLogin()
+        public FormActividades()
         {
             InitializeComponent();
             gestor = new GestorDGV();
         }
 
-        private void FormInformeLogin_Load(object sender, EventArgs e)
+        private void FormActividades_Load(object sender, EventArgs e)
         {
             gestor.cargarDataGrid(dataGridView1, Consulta);
             gestor.efectosDGV(dataGridView1);
         }
-
-       
     }
 }

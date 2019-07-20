@@ -267,10 +267,16 @@
     <value>ImageAboveText</value>
   </data>
   <data name="historialDeIngresosAlSistemaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 34</value>
+    <value>498, 34</value>
   </data>
   <data name="historialDeIngresosAlSistemaToolStripMenuItem.Text" xml:space="preserve">
     <value>Historial de ingresos al sistema </value>
+  </data>
+  <data name="registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>498, 34</value>
+  </data>
+  <data name="registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Registro de actividades y alteración de datos</value>
   </data>
   <data name="actividadDelSistemaToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -536,6 +542,12 @@
     <value>historialDeIngresosAlSistemaToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;historialDeIngresosAlSistemaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Name" xml:space="preserve">
+    <value>registroDeActividadesYAlteracionDeDatosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

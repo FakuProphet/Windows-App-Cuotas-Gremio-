@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInvitados));
             this.cboMesesHabilitados = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@
             this.btnFiltro = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFiltroDni = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +85,7 @@
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.UseVisualStyleBackColor = true;
             this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
+            this.btnFiltro.MouseHover += new System.EventHandler(this.btnFiltro_MouseHover);
             // 
             // label3
             // 
@@ -131,5 +134,6 @@
         private System.Windows.Forms.Button btnFiltro;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFiltroDni;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

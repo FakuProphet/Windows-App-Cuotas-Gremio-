@@ -94,5 +94,11 @@ namespace WindowsCuotasApp
             FormInformeLogin nuevo = new FormInformeLogin();
             nuevo.ShowDialog();
         }
+
+        private void registroDeActividadesYAlteracionDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormActividades nuevo = new FormActividades();
+            nuevo.ShowDialog();
+        }
     }
 }
