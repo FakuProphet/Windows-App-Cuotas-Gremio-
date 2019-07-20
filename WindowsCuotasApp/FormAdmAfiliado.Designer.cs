@@ -457,13 +457,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.TextBox txtCbu;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cboForma;
@@ -483,6 +479,10 @@
         private System.Windows.Forms.Label lblTotalAfil;
         private System.Windows.Forms.Label lblCantAfilAct;
         private System.Windows.Forms.Label lblCantAfiliInact;
-        private System.Windows.Forms.CheckBox ckbAfilInactivos;
+        public System.Windows.Forms.Button btnNuevo;
+        public System.Windows.Forms.Button btnActualizar;
+        public System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Button btnGrabar;
+        public System.Windows.Forms.CheckBox ckbAfilInactivos;
     }
 }

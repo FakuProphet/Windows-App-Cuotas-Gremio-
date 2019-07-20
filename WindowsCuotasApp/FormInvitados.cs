@@ -38,9 +38,10 @@ namespace WindowsCuotasApp
             DateTime fecha = DateTime.Now;
             int diaDelMes = fecha.Day;
 
-            if (diaDelMes > 17)
+            if (diaDelMes >= 20)
             {
                 btnFiltro.Enabled = true;
+                txtFiltroDni.Enabled = true;
             }
         }
 
@@ -81,6 +82,27 @@ namespace WindowsCuotasApp
 
             string mensaje = "El control se habilita automáticamente el día 20 de cada mes.";
             toolTip1.SetToolTip(btnFiltro,mensaje);
+        }
+
+        private void btnVerInactivos_Click(object sender, EventArgs e)
+        {
+            FormInactivos nuevo = new FormInactivos();
+            nuevo.ShowDialog();
+        }
+
+        private void txtFiltroDniEnPasado_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+                string.Format("DNI LIKE '{0}%' OR DNI LIKE '% {0}%'", txtFiltroDniEnPasado.Text);
+
+            }
+            catch (Exception)
+            {
+
+
+            }
         }
     }
 }
