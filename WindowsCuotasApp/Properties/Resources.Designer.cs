@@ -183,6 +183,16 @@ namespace WindowsCuotasApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Login_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Login_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Maximize_Window_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Maximize_Window_32", resourceCulture);
@@ -236,6 +246,16 @@ namespace WindowsCuotasApp.Properties {
         internal static System.Drawing.Bitmap icons8_Shutdown_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Shutdown_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_System_Task_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_System_Task_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -316,6 +336,26 @@ namespace WindowsCuotasApp.Properties {
         internal static System.Drawing.Bitmap icons8_User_Groups_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_User_Groups_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_100px {
+            get {
+                object obj = ResourceManager.GetObject("Login_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_50px {
+            get {
+                object obj = ResourceManager.GetObject("Login_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,5 +1,6 @@
 ﻿
 
+using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -36,5 +37,20 @@ namespace WindowsCuotasApp.Clases.LOGUIN
 
             return u;
         }
+
+
+        public void GuardarIngresoSistema(User usuario)
+        {
+
+            SqlCommand cmd = new SqlCommand("sp_guardar_loguin", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario.Usuario;
+            cmd.ExecuteNonQuery();
+            
+        }
+
+
+
+
     }
 }

@@ -1,18 +1,26 @@
 ﻿using System;
 using System.Windows.Forms;
+using WindowsCuotasApp.Clases.LOGUIN;
 
 namespace WindowsCuotasApp
 {
     public partial class FormPrincipal : MetroFramework.Forms.MetroForm
     {
+        GestorLoguin gl;
+        User user;
         public FormPrincipal()
         {
             InitializeComponent();
+            gl = new GestorLoguin();
+            user = new User();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+          
+                //user.Usuario = Ingreso.usuario;
+                //gl.GuardarIngresoSistema(user);
+           
         }
 
       
@@ -78,6 +86,12 @@ namespace WindowsCuotasApp
         private void abrirVentanaInformaciónBásicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormInvitados nuevo = new FormInvitados();
+            nuevo.ShowDialog();
+        }
+
+        private void historialDeIngresosAlSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormInformeLogin nuevo = new FormInformeLogin();
             nuevo.ShowDialog();
         }
     }

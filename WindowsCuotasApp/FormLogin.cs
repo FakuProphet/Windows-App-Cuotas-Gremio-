@@ -49,9 +49,13 @@ namespace WindowsCuotasApp
                     string entradaPass = txtPass.Text.Trim();
                     string usuarioEncriptado = CryptorEngine.Encrypt(entradaUser, true);
                     string passEncriptada = CryptorEngine.Encrypt(entradaPass, true);
-                    if (gestor.GetUsuario(usuarioEncriptado, passEncriptada) != null)
+                    User usuarioAdm = new User();
+                    usuarioAdm = gestor.GetUsuario(usuarioEncriptado, passEncriptada);
+                    if ( usuarioAdm != null)
                     {
+                        
                         this.Hide();
+                        Ingreso.usuario = usuarioAdm.Usuario;
                         FormPrincipal nuevo = new FormPrincipal();
                         nuevo.Show();
                     }
@@ -64,10 +68,13 @@ namespace WindowsCuotasApp
                 {
                     string entradaUserInvitado = txtUsuario.Text.Trim();
                     string entradaPassInvitado = txtPass.Text.Trim();
+                    User usuarioInv = new User();
+                    usuarioInv = gestor.GetUsuario(entradaUserInvitado, entradaPassInvitado);
 
-                    if (gestor.GetUsuario(entradaUserInvitado, entradaPassInvitado) != null)
+                    if ( usuarioInv != null)
                     {
                         this.Hide();
+                        Ingreso.usuario = usuarioInv.Usuario;
                         FormPrincipal nuevo = new FormPrincipal();
                         nuevo.afiliadoToolStripMenuItem.Enabled = false;
                         nuevo.cuotasToolStripMenuItem.Enabled = false;
@@ -79,6 +86,10 @@ namespace WindowsCuotasApp
                         MetroFramework.MetroMessageBox.Show(this, "El usuario o contraseña del usuario invitado son incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     }
                 }
+
+                //datos de quien loguea
+
+
             }
             catch (Exception ex)
             {

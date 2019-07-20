@@ -75,6 +75,8 @@
     <Compile Include="Clases\GestorDGV.cs" />
     <Compile Include="Clases\Localidad.cs" />
     <Compile Include="Clases\LOGUIN\GestorLoguin.cs" />
+    <Compile Include="Clases\LOGUIN\Ingreso.cs" />
+    <Compile Include="Clases\LOGUIN\Login.cs" />
     <Compile Include="Clases\LOGUIN\User.cs" />
     <Compile Include="Clases\Mes.cs" />
     <Compile Include="Clases\TipoAfiliado.cs" />
@@ -97,6 +99,12 @@
     </Compile>
     <Compile Include="FormEditarDebitos.Designer.cs">
       <DependentUpon>FormEditarDebitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformeLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformeLogin.Designer.cs">
+      <DependentUpon>FormInformeLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInvitados.cs">
       <SubType>Form</SubType>
@@ -163,6 +171,9 @@
     <EmbeddedResource Include="FormEditarDebitos.resx">
       <DependentUpon>FormEditarDebitos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInformeLogin.resx">
+      <DependentUpon>FormInformeLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInvitados.resx">
       <DependentUpon>FormInvitados.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +228,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8_System_Task_64.png" />
+    <None Include="Resources\icons8_Login_64.png" />
+    <None Include="Resources\Login_100px.png" />
+    <None Include="Resources\Login_50px.png" />
     <None Include="Resources\User_96px.png" />
     <None Include="Resources\icons8_Todo_List5_64.png" />
     <None Include="Resources\icons8_Cancel_321.png" />
