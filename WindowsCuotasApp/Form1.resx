@@ -180,10 +180,16 @@
     <value>368, 6</value>
   </data>
   <data name="efectuarPagoCuotaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>273, 34</value>
+    <value>317, 34</value>
   </data>
   <data name="efectuarPagoCuotaToolStripMenuItem.Text" xml:space="preserve">
     <value>Efectuar pago cuota</value>
+  </data>
+  <data name="efectuarPagosDeDeudaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 34</value>
+  </data>
+  <data name="efectuarPagosDeDeudaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Efectuar pagos de deuda</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>371, 34</value>
@@ -548,6 +554,12 @@
     <value>registroDeActividadesYAlteracionDeDatosToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;efectuarPagosDeDeudaToolStripMenuItem.Name" xml:space="preserve">
+    <value>efectuarPagosDeDeudaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;efectuarPagosDeDeudaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

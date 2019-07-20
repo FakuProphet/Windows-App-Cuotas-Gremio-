@@ -5,6 +5,7 @@ namespace WindowsCuotasApp
 {
     public partial class FormActividades : MetroFramework.Forms.MetroForm
     {
+        //vista
         private const string Consulta = "select * from v_act_sistema order by DNI";
         GestorDGV gestor;
         public FormActividades()
@@ -15,8 +16,17 @@ namespace WindowsCuotasApp
 
         private void FormActividades_Load(object sender, EventArgs e)
         {
-            gestor.cargarDataGrid(dataGridView1, Consulta);
-            gestor.efectosDGV(dataGridView1);
+            try
+            {
+                gestor.cargarDataGrid(dataGridView1, Consulta);
+                gestor.efectosDGV(dataGridView1);
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            
         }
     }
 }

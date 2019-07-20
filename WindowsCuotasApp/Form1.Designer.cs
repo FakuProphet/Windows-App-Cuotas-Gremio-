@@ -48,8 +48,9 @@
             this.abrirVentanaInformaciónBásicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDeIngresosAlSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.efectuarPagosDeDeudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,7 +132,8 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.efectuarPagoCuotaToolStripMenuItem});
+            this.efectuarPagoCuotaToolStripMenuItem,
+            this.efectuarPagosDeDeudaToolStripMenuItem});
             this.toolStripMenuItem2.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Receive_Cash_48;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
@@ -192,16 +194,22 @@
             resources.ApplyResources(this.historialDeIngresosAlSistemaToolStripMenuItem, "historialDeIngresosAlSistemaToolStripMenuItem");
             this.historialDeIngresosAlSistemaToolStripMenuItem.Click += new System.EventHandler(this.historialDeIngresosAlSistemaToolStripMenuItem_Click);
             // 
-            // statusStrip1
-            // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
-            // 
             // registroDeActividadesYAlteracionDeDatosToolStripMenuItem
             // 
             this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Name = "registroDeActividadesYAlteracionDeDatosToolStripMenuItem";
             resources.ApplyResources(this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem, "registroDeActividadesYAlteracionDeDatosToolStripMenuItem");
             this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Click += new System.EventHandler(this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // efectuarPagosDeDeudaToolStripMenuItem
+            // 
+            this.efectuarPagosDeDeudaToolStripMenuItem.Name = "efectuarPagosDeDeudaToolStripMenuItem";
+            resources.ApplyResources(this.efectuarPagosDeDeudaToolStripMenuItem, "efectuarPagosDeDeudaToolStripMenuItem");
+            this.efectuarPagosDeDeudaToolStripMenuItem.Click += new System.EventHandler(this.efectuarPagosDeDeudaToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -246,6 +254,7 @@
         private System.Windows.Forms.ToolStripMenuItem historialDeIngresosAlSistemaToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem actividadDelSistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeActividadesYAlteracionDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem efectuarPagosDeDeudaToolStripMenuItem;
     }
 }
 

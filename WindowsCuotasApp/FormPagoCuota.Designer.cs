@@ -43,6 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnOperar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblMes = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblMes);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblEstadoAfil);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lblNroDoc);
@@ -136,6 +140,17 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // lblMes
+            // 
+            resources.ApplyResources(this.lblMes, "lblMes");
+            this.lblMes.Name = "lblMes";
+            // 
             // FormPagoCuota
             // 
             resources.ApplyResources(this, "$this");
@@ -170,5 +185,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnOperar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMes;
     }
 }

@@ -100,6 +100,12 @@
     <Compile Include="FormAdmAfiliado.Designer.cs">
       <DependentUpon>FormAdmAfiliado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCancelarDeuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCancelarDeuda.Designer.cs">
+      <DependentUpon>FormCancelarDeuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarDebitos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmAfiliado.resx">
       <DependentUpon>FormAdmAfiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCancelarDeuda.resx">
+      <DependentUpon>FormCancelarDeuda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarDebitos.resx">
       <DependentUpon>FormEditarDebitos.cs</DependentUpon>

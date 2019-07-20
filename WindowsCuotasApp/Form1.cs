@@ -100,5 +100,11 @@ namespace WindowsCuotasApp
             FormActividades nuevo = new FormActividades();
             nuevo.ShowDialog();
         }
+
+        private void efectuarPagosDeDeudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCancelarDeuda nuevo = new FormCancelarDeuda();
+            nuevo.ShowDialog();
+        }
     }
 }

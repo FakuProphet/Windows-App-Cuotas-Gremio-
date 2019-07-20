@@ -36,10 +36,17 @@ namespace WindowsCuotasApp
                 lblTipoAfiliado.Text = afiliado.tipoAfiliado;
                 lblNroDoc.Text = afiliado.nroDocumento.ToString();
                 lblEstadoAfil.Text = afiliado.estado;
+                MiMes();
             }
         }
 
-        
+        private void MiMes()
+        {
+            DateTime hoy = DateTime.Now;
+            string mes = hoy.ToString("MMMM"); //te da el nombre completo en la cultura default
+            lblMes.Text = mes.ToUpper();
+            // string mes2 = hoy.ToString("MMMM", CultureInfo.CreateSpecificCulture("en-US")); //en ingles
+        }
 
 
         private void btnOperar_Click(object sender, EventArgs e)
@@ -72,6 +79,11 @@ namespace WindowsCuotasApp
                 }
             
                     
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

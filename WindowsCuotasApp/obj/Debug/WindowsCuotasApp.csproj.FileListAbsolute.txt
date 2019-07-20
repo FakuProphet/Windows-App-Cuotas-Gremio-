@@ -103,3 +103,4 @@ E:\PROGRAMACION\C-SHARP\proyecto Cuotas Juan\En reposotorio github\Windows-App-C
 E:\PROGRAMACION\C-SHARP\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormInvitados.resources
 E:\PROGRAMACION\C-SHARP\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormInformeLogin.resources
 E:\PROGRAMACION\C-SHARP\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormActividades.resources
+E:\PROGRAMACION\C-SHARP\proyecto Cuotas Juan\En reposotorio github\Windows-App-Cuotas-Gremio-\WindowsCuotasApp\obj\Debug\WindowsCuotasApp.FormCancelarDeuda.resources
