@@ -48,9 +48,9 @@ namespace WindowsCuotasApp
         private void mostrarMes()
         {
             Fecha fecha = new Fecha();
-            lblMes.Text = fecha.getMes().ToString();
+            lblMes.Text = (fecha.getMes() - 1).ToString();
             lblAnio.Text = fecha.getAnio().ToString();
-            lblDetalleMes.Text = fecha.detalleMes(Convert.ToInt16(fecha.getMes().ToString()));
+            lblDetalleMes.Text = fecha.detalleMes(Convert.ToInt16(fecha.getMes()-1));
         }
 
 

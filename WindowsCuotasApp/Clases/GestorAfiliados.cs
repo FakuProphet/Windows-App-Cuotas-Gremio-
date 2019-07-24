@@ -26,7 +26,7 @@ namespace WindowsCuotasApp.Clases
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@AFILIADOID", SqlDbType.Int).Value = t.a.afiliadoID;
             cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = t.fecha.getAnio();
-            cmd.Parameters.Add("@MES", SqlDbType.Int).Value = t.fecha.getMes();
+            cmd.Parameters.Add("@MES", SqlDbType.Int).Value = t.fecha.getMes() - 1;
             cmd.ExecuteNonQuery();
             Conectar.CerrarConexion();
         }
