@@ -164,7 +164,7 @@
             this.groupBox3.Size = new System.Drawing.Size(957, 268);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Listado detalle  pagos año y mes actuales";
+            this.groupBox3.Text = "...";
             // 
             // dataGridView3
             // 

@@ -34,8 +34,20 @@ namespace WindowsCuotasApp
             GestorDGV.PersonalizarColorCeldasDGV(dataGridView3, 6, "Cancelada");
             GestorDGV.colorCeldasDGV(dataGridView3, Color.Aqua, 7);
             GestorDGV.colorCeldasDGV(dataGridView3, Color.IndianRed, 1);
-           // GestorDGV.DeshabilitarOrdenarDGV(dataGridView3);
+            // GestorDGV.DeshabilitarOrdenarDGV(dataGridView3);
+            MiMes();
         }
+
+
+        private void MiMes()
+        {
+            Fecha f = new Fecha();
+            DateTime hoy = DateTime.Now;
+            int mes = hoy.Month - 1;
+            string mesPasado = f.detalleMes(mes);
+            groupBox3.Text = "Detalle de pagos año " + f.getAnio() + " para el mes de: "+mesPasado.ToUpper();        
+        }
+
 
         private void metroButton1_Click(object sender, EventArgs e)
         {

@@ -42,9 +42,13 @@ namespace WindowsCuotasApp
 
         private void MiMes()
         {
+            Fecha f = new Fecha();
             DateTime hoy = DateTime.Now;
-            string mes = hoy.ToString("MMMM"); //te da el nombre completo en la cultura default
-            lblMes.Text = mes.ToUpper();
+            int mes = hoy.Month - 1;
+            string mesPasado = f.detalleMes(mes);
+            lblMes.Text = mesPasado;
+            //string mes = hoy.ToString("MMMM"); //te da el nombre completo en la cultura default
+            //lblMes.Text = mes.ToUpper();
             // string mes2 = hoy.ToString("MMMM", CultureInfo.CreateSpecificCulture("en-US")); //en ingles
         }
 
