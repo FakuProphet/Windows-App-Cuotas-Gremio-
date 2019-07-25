@@ -31,6 +31,19 @@ namespace WindowsCuotasApp.Clases
             Conectar.CerrarConexion();
         }
 
+
+        public void TransaccionCancelarDeuda(int mes, int dni)
+        {
+            SqlCommand cmd = new SqlCommand("SP_TRANSACCION_CANCELACION_CUOTAS", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@DNI", SqlDbType.Int).Value = dni ;
+            cmd.Parameters.Add("@MES", SqlDbType.Int).Value = mes ;
+            cmd.ExecuteNonQuery();
+            Conectar.CerrarConexion();
+        }
+
+
+
         public void UpdateTransaccion(TransaccionCuotaAfiliado t)
         {
             SqlCommand cmd = new SqlCommand("SP_TRANSACCION_CUOTA_AFIL_UPDATE", Conectar.ObtenerConexion());
