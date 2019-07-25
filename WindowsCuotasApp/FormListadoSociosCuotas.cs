@@ -37,10 +37,12 @@ namespace WindowsCuotasApp
             if (gestorAfiliados.IsPedidoDebitosRealizada())
             {
                 button2.Enabled = false;
+                btnCancelarOpereaciones.Enabled = true;
             }
             else
             {
                 button2.Enabled = true;
+                btnCancelarOpereaciones.Enabled = false;
             }
         }
 
@@ -106,6 +108,23 @@ namespace WindowsCuotasApp
 
             
 
+        }
+
+        private void btnCancelarOpereaciones_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fecha fecha = new Fecha();
+                int mes = (fecha.getMesPasado());
+                gestorAfiliados.CancelarSolicitudDebito(mes);
+                this.Dispose();
+                FormListadoSociosCuotas f = new FormListadoSociosCuotas();
+                f.ShowDialog();
+            }
+            catch (Exception)
+            {
+   
+            }
         }
     }
 }

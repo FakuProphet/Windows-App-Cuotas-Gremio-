@@ -42,6 +42,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCancelarOpereaciones = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCancelarOpereaciones);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.lblAnio);
@@ -144,6 +146,17 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // btnCancelarOpereaciones
+            // 
+            this.btnCancelarOpereaciones.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnCancelarOpereaciones, "btnCancelarOpereaciones");
+            this.btnCancelarOpereaciones.FlatAppearance.BorderSize = 0;
+            this.btnCancelarOpereaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCancelarOpereaciones.Image = global::WindowsCuotasApp.Properties.Resources.icons8_Cancel_321;
+            this.btnCancelarOpereaciones.Name = "btnCancelarOpereaciones";
+            this.btnCancelarOpereaciones.UseVisualStyleBackColor = false;
+            this.btnCancelarOpereaciones.Click += new System.EventHandler(this.btnCancelarOpereaciones_Click);
+            // 
             // FormListadoSociosCuotas
             // 
             resources.ApplyResources(this, "$this");
@@ -181,5 +194,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCancelarOpereaciones;
     }
 }

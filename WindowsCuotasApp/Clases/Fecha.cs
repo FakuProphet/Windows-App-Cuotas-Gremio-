@@ -7,6 +7,12 @@ namespace WindowsCuotasApp.Clases
         public int mes { get; set; }
         public int anio { get; set; }
 
+        public int getMesPasado()
+        {
+            mes = DateTime.Now.Month - 1;
+            return mes;
+        }
+
         public int getMes()
         {
             mes = DateTime.Now.Month;

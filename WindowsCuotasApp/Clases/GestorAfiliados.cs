@@ -41,16 +41,26 @@ namespace WindowsCuotasApp.Clases
             Conectar.CerrarConexion();
         }
 
-        public void SolicitudDebito(Fecha fecha )
+        public void SolicitudDebito(Fecha fecha)
         {
             SqlCommand cmd = new SqlCommand("SP_SOLICITUD_DEBITO", Conectar.ObtenerConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = fecha.getAnio();
-            cmd.Parameters.Add("@MES", SqlDbType.Int).Value = fecha.getMes();
+            cmd.Parameters.Add("@MES", SqlDbType.Int).Value = fecha.getMesPasado();
             cmd.ExecuteNonQuery();
             Conectar.CerrarConexion();
         }
 
+
+        public void CancelarSolicitudDebito(int mes)
+        {
+            //el anio se calcula en bbdd
+            SqlCommand cmd = new SqlCommand("SP_CANCELAR_DEBITO", Conectar.ObtenerConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MES", SqlDbType.Int).Value = mes;
+            cmd.ExecuteNonQuery();
+            Conectar.CerrarConexion();
+        }
 
         public void RegistrarAfiliado(Afiliado a ,string sp, int evento)
         {
@@ -210,7 +220,7 @@ namespace WindowsCuotasApp.Clases
             Fecha fecha = new Fecha();
             cmd = new SqlCommand("SP_AUDITORIA_CONSULTA", Conectar.ObtenerConexion());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@MES", SqlDbType.Int).Value =  fecha.getMes();
+            cmd.Parameters.Add("@MES", SqlDbType.Int).Value =  fecha.getMesPasado();
             cmd.Parameters.Add("@ANIO", SqlDbType.Int).Value = fecha.getAnio();
             Dr = cmd.ExecuteReader();
             Conectar.CerrarConexion();
