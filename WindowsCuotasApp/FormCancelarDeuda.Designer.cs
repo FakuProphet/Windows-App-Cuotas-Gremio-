@@ -77,6 +77,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(398, 190);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnCargarDatos
             // 
@@ -86,6 +87,7 @@
             this.btnCargarDatos.TabIndex = 5;
             this.btnCargarDatos.Text = "Cargar selección";
             this.btnCargarDatos.UseVisualStyleBackColor = true;
+            this.btnCargarDatos.Visible = false;
             this.btnCargarDatos.Click += new System.EventHandler(this.btnCargarDatos_Click);
             // 
             // label2
@@ -116,6 +118,7 @@
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnConfirmarPago
             // 

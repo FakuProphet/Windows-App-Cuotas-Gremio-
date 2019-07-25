@@ -50,9 +50,11 @@ namespace WindowsCuotasApp
 
                 if (check)
                 {
+                    listaMesesID.Clear();
                     listaMesesID.Add(Convert.ToInt32(row.Cells[0].Value));
                     c++;         
-                }    
+                }
+               
                        
                                
             }
@@ -63,8 +65,15 @@ namespace WindowsCuotasApp
                 btnCancelar.Enabled = true;
                 dni = Convert.ToInt32( txtDni.Text);
             }
+            
 
             label2.Text = c.ToString();
+
+            if (label2.Text.Equals("0"))
+            {
+                btnContinuar.Enabled = false;
+                btnCancelar.Enabled = false;
+            }
         }
 
 
@@ -141,11 +150,34 @@ namespace WindowsCuotasApp
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            if (MetroFramework.MetroMessageBox.Show(this, "Desea continuar con la cancelación de la deuda de el afiliado, dni nro: " + dni + "?", "Cancelación deuda", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (listaMesesID.Count > 0)
             {
-                habilitarControles(false);
+                if (MetroFramework.MetroMessageBox.Show(this, "Desea continuar con la cancelación de la deuda de el afiliado, dni nro: " + dni + "?", "Cancelación deuda", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    habilitarControles(false);
+                }
             }
-            
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (MetroFramework.MetroMessageBox.Show(this, "Desea cancelar y volver a iniciar?", "Cancelar operación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Dispose();
+                FormCancelarDeuda n = new FormCancelarDeuda();
+                n.ShowDialog();
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCheckBoxCell cell = this.dataGridView1.CurrentCell as DataGridViewCheckBoxCell;
+
+            if (cell != null && !cell.ReadOnly)
+            {
+                cell.Value = cell.Value == null || !((bool)cell.Value);
+                SelecccionDeMesesAPagar();
+            }
         }
     }
 }
