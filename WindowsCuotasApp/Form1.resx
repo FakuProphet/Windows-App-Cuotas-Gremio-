@@ -284,6 +284,12 @@
   <data name="registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Text" xml:space="preserve">
     <value>Registro de actividades y alteración de datos</value>
   </data>
+  <data name="anotacionesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>498, 34</value>
+  </data>
+  <data name="anotacionesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Anotaciones </value>
+  </data>
   <data name="actividadDelSistemaToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
@@ -508,6 +514,12 @@
   <data name="&gt;&gt;efectuarPagoCuotaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;efectuarPagosDeDeudaToolStripMenuItem.Name" xml:space="preserve">
+    <value>efectuarPagosDeDeudaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;efectuarPagosDeDeudaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;reportesToolStripMenuItem.Name" xml:space="preserve">
     <value>reportesToolStripMenuItem</value>
   </data>
@@ -556,10 +568,10 @@
   <data name="&gt;&gt;registroDeActividadesYAlteracionDeDatosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;efectuarPagosDeDeudaToolStripMenuItem.Name" xml:space="preserve">
-    <value>efectuarPagosDeDeudaToolStripMenuItem</value>
+  <data name="&gt;&gt;anotacionesToolStripMenuItem.Name" xml:space="preserve">
+    <value>anotacionesToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;efectuarPagosDeDeudaToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;anotacionesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

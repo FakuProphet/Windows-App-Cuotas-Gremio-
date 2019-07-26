@@ -56,6 +56,7 @@ namespace WindowsCuotasApp
                         
                         this.Hide();
                         Ingreso.usuario = usuarioAdm.Usuario;
+                        Ingreso.descripcionUsuario = entradaUser;
                         FormPrincipal nuevo = new FormPrincipal();
                         nuevo.Show();
                     }

@@ -41,6 +41,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.efectuarPagoCuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.efectuarPagosDeDeudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,7 @@
             this.historialDeIngresosAlSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.efectuarPagosDeDeudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anotacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,6 +145,12 @@
             resources.ApplyResources(this.efectuarPagoCuotaToolStripMenuItem, "efectuarPagoCuotaToolStripMenuItem");
             this.efectuarPagoCuotaToolStripMenuItem.Click += new System.EventHandler(this.efectuarPagoCuotaToolStripMenuItem_Click);
             // 
+            // efectuarPagosDeDeudaToolStripMenuItem
+            // 
+            this.efectuarPagosDeDeudaToolStripMenuItem.Name = "efectuarPagosDeDeudaToolStripMenuItem";
+            resources.ApplyResources(this.efectuarPagosDeDeudaToolStripMenuItem, "efectuarPagosDeDeudaToolStripMenuItem");
+            this.efectuarPagosDeDeudaToolStripMenuItem.Click += new System.EventHandler(this.efectuarPagosDeDeudaToolStripMenuItem_Click);
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -183,7 +190,8 @@
             // 
             this.actividadDelSistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.historialDeIngresosAlSistemaToolStripMenuItem,
-            this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem});
+            this.registroDeActividadesYAlteracionDeDatosToolStripMenuItem,
+            this.anotacionesToolStripMenuItem});
             this.actividadDelSistemaToolStripMenuItem.Image = global::WindowsCuotasApp.Properties.Resources.icons8_System_Task_64;
             resources.ApplyResources(this.actividadDelSistemaToolStripMenuItem, "actividadDelSistemaToolStripMenuItem");
             this.actividadDelSistemaToolStripMenuItem.Name = "actividadDelSistemaToolStripMenuItem";
@@ -205,11 +213,11 @@
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
-            // efectuarPagosDeDeudaToolStripMenuItem
+            // anotacionesToolStripMenuItem
             // 
-            this.efectuarPagosDeDeudaToolStripMenuItem.Name = "efectuarPagosDeDeudaToolStripMenuItem";
-            resources.ApplyResources(this.efectuarPagosDeDeudaToolStripMenuItem, "efectuarPagosDeDeudaToolStripMenuItem");
-            this.efectuarPagosDeDeudaToolStripMenuItem.Click += new System.EventHandler(this.efectuarPagosDeDeudaToolStripMenuItem_Click);
+            this.anotacionesToolStripMenuItem.Name = "anotacionesToolStripMenuItem";
+            resources.ApplyResources(this.anotacionesToolStripMenuItem, "anotacionesToolStripMenuItem");
+            this.anotacionesToolStripMenuItem.Click += new System.EventHandler(this.anotacionesToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -255,6 +263,7 @@
         public System.Windows.Forms.ToolStripMenuItem actividadDelSistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeActividadesYAlteracionDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem efectuarPagosDeDeudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anotacionesToolStripMenuItem;
     }
 }
 
